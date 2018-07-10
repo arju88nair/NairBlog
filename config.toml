@@ -1,6 +1,6 @@
 baseurl = "/"
-title = "Hugo Themes"
-copyright = "Copyright (c) 2008 - 2014, all rights reserved."
+title = "Today I learned"
+copyright = "Copyright (c) 2008 - 2018, all rights reserved."
 languageCode = "en-US"
 canonifyurls = true
 paginate = 3
@@ -36,11 +36,11 @@ pygmentsCodeFences = true
   description = "Personal blog."
 
 [params]
-  email = "myemail"
-  github = "github id"
+  email = "arju88nair@gmail.com"
+  github = "https://github.com/arju88nair"
   #gitlab = "gitlab id"
-  twitter = "twitter id"
-  #linkedin = "linkedin id"
+  twitter = "https://github.com/arju88nair"
+  Website = "thenair.tk"
 
 [params.colors]
   # hugo-dusk colors
