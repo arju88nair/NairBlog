@@ -5,10 +5,13 @@ date: 2018-07-10T21:36:16+05:30
 
 ## Make command
 
- - The make command accepts targets as command line arguments. These targets are usually specified in a file named 'Makefile', which also contains the associated action corresponding to the targets.
+ > The make command accepts targets as command line arguments. These targets are usually specified in a file named 'Makefile', which also contains the associated action corresponding to the targets.
  
  
  ***
+
+
+
 
 
  ## Splat operator
