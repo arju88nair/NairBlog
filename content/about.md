@@ -1,5 +1,5 @@
 +++
-title = "About TIL"
+title = "About"
 date = "2018-07-10"
 menu = "main"
 weight = 100
