@@ -14,7 +14,7 @@ date: 2018-07-10T21:36:16+05:30
 
 
 
- ## Splat operator
+## Splat operator
  
  This feature allows you to capture a variable number of arguments to a function, combined with "normal" arguments passed in if you like. It's easiest to see with an example:
 
