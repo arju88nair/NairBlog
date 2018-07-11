@@ -13,6 +13,6 @@ You can reach me at :
 
 * [Website](https://thenair.tk)
 * [Github](https://github.com/arju88nair)
-* [Twitter](https://twitter.com/@itsnair)
+* [Twitter](https://twitter.com/itsnair)
 * Mail - arju88nair@gmail.com
 

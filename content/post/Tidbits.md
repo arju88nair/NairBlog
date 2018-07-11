@@ -1,7 +1,15 @@
----
-title: "Tidbits"
-date: 2018-07-10T21:36:16+05:30
----
++++
+title = "Tidbits"
+description = "Some tidbits I came across"
+tags = [
+    "random",
+    "linux",
+   ]
+date = "2014-04-02"
+categories = [
+    "Learning",
+]
++++
 
 ## Make command
 

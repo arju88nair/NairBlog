@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2008 - 2018, all rights reserved.</copyright>
-    <lastBuildDate>Tue, 10 Jul 2018 21:36:16 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,10 +15,12 @@
     <item>
       <title>Tidbits</title>
       <link>/post/tidbits/</link>
-      <pubDate>Tue, 10 Jul 2018 21:36:16 +0530</pubDate>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>/post/tidbits/</guid>
-      <description>Blah</description>
+      <description>Make command  The make command accepts targets as command line arguments. These targets are usually specified in a file named &amp;lsquo;Makefile&amp;rsquo;, which also contains the associated action corresponding to the targets.
+ Splat operator This feature allows you to capture a variable number of arguments to a function, combined with &amp;ldquo;normal&amp;rdquo; arguments passed in if you like. It&amp;rsquo;s easiest to see with an example:
+ function concatenate($transform, ...$strings) { $string = &#39;&#39;; foreach($strings as $piece) { $string .</description>
     </item>
     
   </channel>

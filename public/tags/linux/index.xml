@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Today I learned</title>
-    <link>/</link>
-    <description>Recent content on Today I learned</description>
+    <title>Linux on Today I learned</title>
+    <link>/tags/linux/</link>
+    <description>Recent content in Linux on Today I learned</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2008 - 2018, all rights reserved.</copyright>
-    <lastBuildDate>Tue, 10 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Tue, 10 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>This is a note keeping and to keep track the musings (I guess you can call that) of Nair
-I do not own any of these contents.
-You can reach me at :
- Website Github Twitter Mail - arju88nair@gmail.com  </description>
-    </item>
     
     <item>
       <title>Tidbits</title>
