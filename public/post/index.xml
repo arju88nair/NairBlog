@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2018, all rights reserved.</copyright>
-    <lastBuildDate>Wed, 11 Jul 2018 17:31:55 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 11 Jul 2018 21:20:13 +0530</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>When I Did</title>
+      <link>/post/when-i-did/</link>
+      <pubDate>Wed, 11 Jul 2018 21:20:13 +0530</pubDate>
+      
+      <guid>/post/when-i-did/</guid>
+      <description>Trifle hacks I did Bash commands for lazying Lazy git  For easy git add, commit and push
+function gitl() { git add . git commit -a -m &amp;quot;$*&amp;quot; git push origin master }   PHP switches  Switching between PHP versions
+ function on7() { sudo a2dismod php5.6 &amp;amp;&amp;amp; sudo a2enmod php7.1 &amp;amp;&amp;amp; sudo service apache2 restart }  function on5() { sudo a2dismod php7.1 &amp;amp;&amp;amp; sudo a2enmod php5.</description>
+    </item>
     
     <item>
       <title>Nginx Server Block</title>

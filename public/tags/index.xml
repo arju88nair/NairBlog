@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2018, all rights reserved.</copyright>
-    <lastBuildDate>Wed, 11 Jul 2018 17:02:17 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 11 Jul 2018 21:20:13 +0530</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hacks</title>
+      <link>/tags/hacks/</link>
+      <pubDate>Wed, 11 Jul 2018 21:20:13 +0530</pubDate>
+      
+      <guid>/tags/hacks/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Interview</title>
@@ -69,9 +78,18 @@
     <item>
       <title>Random</title>
       <link>/tags/random/</link>
-      <pubDate>Wed, 11 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 11 Jul 2018 21:20:13 +0530</pubDate>
       
       <guid>/tags/random/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stupid</title>
+      <link>/tags/stupid/</link>
+      <pubDate>Wed, 11 Jul 2018 21:20:13 +0530</pubDate>
+      
+      <guid>/tags/stupid/</guid>
       <description></description>
     </item>
     
