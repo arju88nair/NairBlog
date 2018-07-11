@@ -5,9 +5,9 @@ menu = "main"
 weight = 100
 +++
 
-This is a note keeping and to keep track the musings (I guess you can call that) of [Nair](thenair.tk)
+This is to take notes and to keep track of my musings (If you can call that)
 
-I do not own any of these contents.
+Disclaimer : I do not own any of these contents.
 
 You can reach me at :  
 
