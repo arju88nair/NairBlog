@@ -6,25 +6,70 @@
     <description>Recent content in Tags on Today I learned</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>Copyright (c) 2008 - 2018, all rights reserved.</copyright>
-    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <copyright>Copyright (c) 2018, all rights reserved.</copyright>
+    <lastBuildDate>Wed, 11 Jul 2018 17:02:17 +0530</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Interview</title>
+      <link>/tags/interview/</link>
+      <pubDate>Wed, 11 Jul 2018 17:02:17 +0530</pubDate>
+      
+      <guid>/tags/interview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Linux</title>
       <link>/tags/linux/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 11 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Nginx</title>
+      <link>/tags/nginx/</link>
+      <pubDate>Wed, 11 Jul 2018 17:31:55 +0530</pubDate>
+      
+      <guid>/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oop</title>
+      <link>/tags/oop/</link>
+      <pubDate>Wed, 11 Jul 2018 17:02:17 +0530</pubDate>
+      
+      <guid>/tags/oop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Php</title>
+      <link>/tags/php/</link>
+      <pubDate>Wed, 11 Jul 2018 17:31:55 +0530</pubDate>
+      
+      <guid>/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>/tags/python/</link>
+      <pubDate>Wed, 11 Jul 2018 17:31:55 +0530</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Random</title>
       <link>/tags/random/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 11 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/random/</guid>
       <description></description>

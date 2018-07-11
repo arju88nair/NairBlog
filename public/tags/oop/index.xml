@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oop on Today I learned</title>
+    <link>/tags/oop/</link>
+    <description>Recent content in Oop on Today I learned</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2018, all rights reserved.</copyright>
+    <lastBuildDate>Wed, 11 Jul 2018 17:02:17 +0530</lastBuildDate>
+    
+	<atom:link href="/tags/oop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PHP Part 1</title>
+      <link>/post/php-1/</link>
+      <pubDate>Wed, 11 Jul 2018 17:02:17 +0530</pubDate>
+      
+      <guid>/post/php-1/</guid>
+      <description>Polymorphism - which classes have different functionality while sharing a common interface.
+ Implements to extend an interface in PM
+ An interface is similar to a class except that it cannot contain code. An interface can define method names and arguments, but not the contents of the methods An interface does not contain any code,it contain only declaration of methods,properties,events. Interfaces allow us to code which specifies which methods a class must have implement .</description>
+    </item>
+    
+  </channel>
+</rss>

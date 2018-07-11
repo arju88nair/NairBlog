@@ -1,7 +1,11 @@
 ---
-title: "PHP"
+title: "PHP Part 1"
 date: 2018-07-11T17:02:17+05:30
-draft: true
+tags : [
+    "PHP",
+    "OOP",
+    "Interview"
+   ]
 ---
 
 - Polymorphism - which classes have different functionality while sharing a common interface.
@@ -197,6 +201,8 @@ ini_set('display_errors', 1)  error_reporting(E_ALL)
 ---
 
 - Traits are a mechanism that allows you to create reusable code in languages like PHP where multiple inheritance is not supported. A Trait cannot be instantiated on its own.
+
+
 ```
 <?php
 trait Sharable {
@@ -324,10 +330,10 @@ Token -CSRF
 
 
 
-##Design Patterns
+## Design Patterns
 
 
-###Singleton Pattern
+### Singleton Pattern
 > A Class has one instance, It provides a global access point to it, Following code will explain about singleton concept.
 ```
 <?php
@@ -363,7 +369,7 @@ Token -CSRF
 ```
 
 
-###Factory
+### Factory
 
 > A Class Simple Creates the object and you want to use that object
 ```
@@ -394,7 +400,7 @@ Token -CSRF
 ?>
 ```
 
-###Strategy pattern
+### Strategy pattern
 
 > Makes a family algorithm and encapsulates each algorithm. 
 ```
@@ -426,6 +432,7 @@ Token -CSRF
 ?>
 
 ```
-###Abstract factory
+
+### Abstract factory
 
 >An abstract factory defines what objects the non-abstract or concrete factory will need to be able to create. 
