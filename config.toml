@@ -1,6 +1,6 @@
 baseurl = "/"
 title = "Today I learned"
-copyright = "Copyright (c) 2008 - 2018, all rights reserved."
+copyright = "Copyright (c) 2018, all rights reserved."
 languageCode = "en-US"
 canonifyurls = true
 paginate = 3
