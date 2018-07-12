@@ -25,7 +25,16 @@ You can reach me at :
     </item>
     
     <item>
-      <title>When I Did</title>
+      <title>PHP7</title>
+      <link>/post/php7/</link>
+      <pubDate>Thu, 12 Jul 2018 17:13:19 +0530</pubDate>
+      
+      <guid>/post/php7/</guid>
+      <description>PHP 7  Scalar type declarations, has been introduced. Scalar type declaration has two options − coercive - coercive is default mode and need not to be specified. ``` &amp;lt;?php // Coercive mode function sum(int &amp;hellip;$ints) { return array_sum($ints); } print(sum(2, &amp;lsquo;3&amp;rsquo;, 4.1));  - strict - strict mode has to explicitly hinted.  	&amp;lt;?php // Strict mode declare(strict_types=1); function sum(int &amp;hellip;$ints) { return array_sum($ints); } print(sum(2, &amp;lsquo;3&amp;rsquo;, 4.</description>
+    </item>
+    
+    <item>
+      <title>What I Did</title>
       <link>/post/when-i-did/</link>
       <pubDate>Wed, 11 Jul 2018 21:20:13 +0530</pubDate>
       
