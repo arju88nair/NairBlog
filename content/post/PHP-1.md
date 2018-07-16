@@ -297,17 +297,6 @@ class MyClass {
 
 - Use an abstract class when you want to force developers working in your system (yourself included) to implement a set numbers of methods and you want to provide some base methods that will help them develop their child classes.
 
----------
-
-New to PHP 7
-- New Zend engine
-- Fast
-- Facilitates Error Handling using exceptions
-- 64-Bit Windows Systems Support
-- New Spaceship and Null Coalescing Operators(<=> The spaceship operator returns 0 if both operands are equal, 1 if the left is greater, 
-	and -1 if the right is greater. It’s also called a three-way comparison operator)
-
----
 
 - Java (interpreted) and C (or C++) (compiled) might have been a better example. Basically, compiled code can be executed directly by the computer’s CPU. The code of interpreted languages however must be translated at run-time from any format to CPU machine instructions. This translation is done by an interpreter.
 

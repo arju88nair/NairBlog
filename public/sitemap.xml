@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/post/php-2/</loc>
+    <lastmod>2018-07-16T13:14:11+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/php7/</loc>
     <lastmod>2018-07-12T17:13:19+05:30</lastmod>
   </url>
@@ -45,7 +50,7 @@
   
   <url>
     <loc>/tags/interview/</loc>
-    <lastmod>2018-07-12T17:13:19+05:30</lastmod>
+    <lastmod>2018-07-16T13:14:11+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -69,19 +74,19 @@
   
   <url>
     <loc>/tags/oop/</loc>
-    <lastmod>2018-07-12T17:13:19+05:30</lastmod>
+    <lastmod>2018-07-16T13:14:11+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/php/</loc>
-    <lastmod>2018-07-12T17:13:19+05:30</lastmod>
+    <lastmod>2018-07-16T13:14:11+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-07-12T17:13:19+05:30</lastmod>
+    <lastmod>2018-07-16T13:14:11+05:30</lastmod>
     <priority>0</priority>
   </url>
   
