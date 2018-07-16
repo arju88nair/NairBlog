@@ -39,3 +39,10 @@ categories = [
     echo concatenate("strtoupper", "I'd ", "like ",
         4 + 2, " apples");
  ```
+ 
+ ## SVN CPIO command
+ > To get the different file changes between two revisions, remove the first empty characters and create folder structure and paste i
+ 
+ ```
+ sudo svn diff -r 8:HEAD --summarize | cut -c9-99999 | cpio -pvdmu /var/www/html/Blah
+```

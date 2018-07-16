@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c0d9298-0792-4b3b-b185-f6c14bbbd28a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/content/post/PHP-2.md" afterPath="$PROJECT_DIR$/content/post/PHP-2.md" />
+      <change beforePath="$PROJECT_DIR$/content/post/Tidbits.md" afterPath="$PROJECT_DIR$/content/post/Tidbits.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,90 +14,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PHP-1.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/post/PHP-1.md">
+      <file leaf-file-name="Maths-Algebra.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/content/post/Maths-Algebra.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="60">
-                <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="4" />
+              <first_editor relative-caret-position="220">
+                <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
                 <folding />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Nginx-Server-Block.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/post/Nginx-Server-Block.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="160">
-                <caret line="8" column="4" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="8" selection-end-column="4" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="When-I-Did.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/post/When-I-Did.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="140">
-                <caret line="7" column="4" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="4" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PHP7.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/post/PHP7.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="180">
-                <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PHP-2.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/content/post/PHP-2.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="284">
-                <caret line="24" column="4" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="3" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/about.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="180">
-                <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.toml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.toml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -106,8 +31,21 @@
         <entry file="file://$PROJECT_DIR$/content/post/Tidbits.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="140">
-                <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+              <first_editor relative-caret-position="365">
+                <caret line="46" column="10" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PHP-2.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content/post/PHP-2.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="180">
+                <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -138,6 +76,8 @@
         <option value="$PROJECT_DIR$/content/post/PHP-1.md" />
         <option value="$PROJECT_DIR$/content/post/PHP7.md" />
         <option value="$PROJECT_DIR$/content/post/PHP-2.md" />
+        <option value="$PROJECT_DIR$/content/post/Maths-Algebra.md" />
+        <option value="$PROJECT_DIR$/content/post/Tidbits.md" />
       </list>
     </option>
   </component>
@@ -235,12 +175,12 @@
       <workItem from="1531395747747" duration="967000" />
       <workItem from="1531409402190" duration="3000" />
       <workItem from="1531727040866" duration="537000" />
-      <workItem from="1531733866214" duration="79000" />
+      <workItem from="1531733866214" duration="3527000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5237000" />
+    <option name="totallyTimeSpent" value="8685000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1368" height="724" extended-state="6" />
@@ -655,17 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/post/Tidbits.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="140">
-            <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.toml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -721,8 +650,19 @@
     <entry file="file://$PROJECT_DIR$/content/post/PHP-1.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="4" />
+          <first_editor relative-caret-position="20">
+            <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/Tidbits.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="365">
+            <caret line="46" column="10" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
             <folding />
           </first_editor>
           <second_editor />
@@ -732,8 +672,19 @@
     <entry file="file://$PROJECT_DIR$/content/post/PHP-2.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="284">
-            <caret line="24" column="4" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="3" />
+          <first_editor relative-caret-position="180">
+            <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/Maths-Algebra.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="220">
+            <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
             <folding />
           </first_editor>
           <second_editor />

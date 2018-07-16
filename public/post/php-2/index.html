@@ -11,9 +11,10 @@
 
 <link rel="canonical" href="/post/php-2/">
 <base href="/" />
-<meta property="og:title" content="PHP 2" />
+<meta property="og:title" content="PHP Part 2" />
 <meta property="og:description" content=" Error Control Operators  @ - Suppresses errors
- " />
+ extract()  It converts array keys into variable names and array values into variable value.
+  // input array $state = array(&quot;AS&quot;=&gt;&quot;ASSAM&quot;, &quot;OR&quot;=&gt;&quot;ORRISA&quot;, &quot;KR&quot;=&gt;&quot;KERELA&quot;); extract($state); // after using extract() function echo&quot;\$AS is $AS\n\$KR is $KR\n\$OR is $OR&quot;; ------ $AS is ASSAM $KR is KERELA $OR is ORRISA  " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/php-2/" />
 
@@ -34,20 +35,22 @@
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="PHP 2"/>
+<meta name="twitter:title" content="PHP Part 2"/>
 <meta name="twitter:description" content=" Error Control Operators  @ - Suppresses errors
- "/>
+ extract()  It converts array keys into variable names and array values into variable value.
+  // input array $state = array(&quot;AS&quot;=&gt;&quot;ASSAM&quot;, &quot;OR&quot;=&gt;&quot;ORRISA&quot;, &quot;KR&quot;=&gt;&quot;KERELA&quot;); extract($state); // after using extract() function echo&quot;\$AS is $AS\n\$KR is $KR\n\$OR is $OR&quot;; ------ $AS is ASSAM $KR is KERELA $OR is ORRISA  "/>
 
 
 
-<meta itemprop="name" content="PHP 2">
+<meta itemprop="name" content="PHP Part 2">
 <meta itemprop="description" content=" Error Control Operators  @ - Suppresses errors
- ">
+ extract()  It converts array keys into variable names and array values into variable value.
+  // input array $state = array(&quot;AS&quot;=&gt;&quot;ASSAM&quot;, &quot;OR&quot;=&gt;&quot;ORRISA&quot;, &quot;KR&quot;=&gt;&quot;KERELA&quot;); extract($state); // after using extract() function echo&quot;\$AS is $AS\n\$KR is $KR\n\$OR is $OR&quot;; ------ $AS is ASSAM $KR is KERELA $OR is ORRISA  ">
 
 
 <meta itemprop="datePublished" content="2018-07-16T13:14:11&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-16T13:14:11&#43;05:30" />
-<meta itemprop="wordCount" content="7">
+<meta itemprop="wordCount" content="52">
 
 
 
@@ -126,7 +129,7 @@ th {
 <title>
 
 
-     PHP 2 
+     PHP Part 2 
 
 </title>
 
@@ -182,7 +185,7 @@ th {
 
 
 <article class="post">
-    <h1 class="title"> PHP 2 </h1>
+    <h1 class="title"> PHP Part 2 </h1>
     <div class="content"> 
 
 <h2 id="error-control-operators">Error Control Operators</h2>
@@ -190,6 +193,28 @@ th {
 <blockquote>
 <p>@ -  Suppresses errors</p>
 </blockquote>
+
+<h2 id="extract">extract()</h2>
+
+<blockquote>
+<p>It converts array keys into variable names and array values into variable value.</p>
+</blockquote>
+
+<pre><code> // input array
+    $state = array(&quot;AS&quot;=&gt;&quot;ASSAM&quot;, &quot;OR&quot;=&gt;&quot;ORRISA&quot;, &quot;KR&quot;=&gt;&quot;KERELA&quot;);
+     
+    extract($state);
+     
+    // after using extract() function
+    echo&quot;\$AS is $AS\n\$KR is $KR\n\$OR is $OR&quot;;
+    
+    
+ ------
+ $AS is ASSAM
+ $KR is KERELA
+ $OR is ORRISA
+ 
+</code></pre>
  </div>
     <footer class="post-footer">
 
