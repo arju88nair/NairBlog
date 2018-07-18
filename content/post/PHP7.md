@@ -102,9 +102,14 @@ declare(strict_types = 1);
    $app->getLogger()->log("My first Log Message");
 ?>
 ```
+
 ---
 
-- Closure::call() method is added as a shorthand way to temporarily bind an object scope to a closure and invoke it.
+
+
+> Closure::call() method is added as a shorthand way to temporarily bind an object scope to a closure and invoke it.
+
+
 
 ```
 <?php
@@ -126,7 +131,12 @@ It produces the following browser output −
 1
 
 ```
+
+
+---
 > PHP7
+
+
 ```
 <?php
    class A {
