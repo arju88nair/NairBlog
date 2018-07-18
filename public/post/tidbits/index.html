@@ -44,7 +44,7 @@
 
 <meta itemprop="datePublished" content="2018-07-11T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-07-11T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="130">
+<meta itemprop="wordCount" content="153">
 
 
 
@@ -211,6 +211,24 @@ th {
  &gt; To get the different file changes between two revisions, remove the first empty characters and create folder structure and paste i</p>
 
 <pre><code> sudo svn diff -r 8:HEAD --summarize | cut -c9-99999 | cpio -pvdmu /var/www/html/Blah
+</code></pre>
+
+<h2 id="bash-while-loop">BASH while loop</h2>
+
+<pre><code>
+
+#!/bin/bash
+# This script opens 4 terminal windows.
+
+i=&quot;0&quot;
+
+while [ $i -lt 4 ]
+do
+xterm &amp;
+i=$[$i+1]
+done
+
+
 </code></pre>
  </div>
     <footer class="post-footer">

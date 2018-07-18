@@ -46,3 +46,21 @@ categories = [
  ```
  sudo svn diff -r 8:HEAD --summarize | cut -c9-99999 | cpio -pvdmu /var/www/html/Blah
 ```
+
+## BASH while loop
+```
+
+
+#!/bin/bash
+# This script opens 4 terminal windows.
+
+i="0"
+
+while [ $i -lt 4 ]
+do
+xterm &
+i=$[$i+1]
+done
+
+
+```
