@@ -12,7 +12,7 @@
 <link rel="canonical" href="/post/php7/">
 <base href="/" />
 <meta property="og:title" content="PHP7" />
-<meta property="og:description" content="New to PHP 7  New Zend engine Fast Facilitates Error Handling using exceptions 64-Bit Windows Systems Support New Spaceship and Null Coalescing Operators(&lt;=&gt; The spaceship operator returns 0 if both operands are equal, 1 if the left is greater, and -1 if the right is greater. It’s also called a three-way comparison operator)  PHP 7  Scalar type declarations, has been introduced. Scalar type declaration has two options &gt; coercive - coercive is default mode and need not to be specified." />
+<meta property="og:description" content="New to PHP 7  New Zend engine Fast Facilitates Error Handling using exceptions 64-Bit Windows Systems Support New Spaceship and Null Coalescing Operators(&lt;=&gt; The spaceship operator returns 0 if both operands are equal, 1 if the left is greater, and -1 if the right is greater. It’s also called a three-way comparison operator)  PHP 7  Scalar type declarations, has been introduced. Scalar type declaration has two options   coercive - coercive is default mode and need not to be specified." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/php7/" />
 
@@ -34,17 +34,17 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="PHP7"/>
-<meta name="twitter:description" content="New to PHP 7  New Zend engine Fast Facilitates Error Handling using exceptions 64-Bit Windows Systems Support New Spaceship and Null Coalescing Operators(&lt;=&gt; The spaceship operator returns 0 if both operands are equal, 1 if the left is greater, and -1 if the right is greater. It’s also called a three-way comparison operator)  PHP 7  Scalar type declarations, has been introduced. Scalar type declaration has two options &gt; coercive - coercive is default mode and need not to be specified."/>
+<meta name="twitter:description" content="New to PHP 7  New Zend engine Fast Facilitates Error Handling using exceptions 64-Bit Windows Systems Support New Spaceship and Null Coalescing Operators(&lt;=&gt; The spaceship operator returns 0 if both operands are equal, 1 if the left is greater, and -1 if the right is greater. It’s also called a three-way comparison operator)  PHP 7  Scalar type declarations, has been introduced. Scalar type declaration has two options   coercive - coercive is default mode and need not to be specified."/>
 
 
 
 <meta itemprop="name" content="PHP7">
-<meta itemprop="description" content="New to PHP 7  New Zend engine Fast Facilitates Error Handling using exceptions 64-Bit Windows Systems Support New Spaceship and Null Coalescing Operators(&lt;=&gt; The spaceship operator returns 0 if both operands are equal, 1 if the left is greater, and -1 if the right is greater. It’s also called a three-way comparison operator)  PHP 7  Scalar type declarations, has been introduced. Scalar type declaration has two options &gt; coercive - coercive is default mode and need not to be specified.">
+<meta itemprop="description" content="New to PHP 7  New Zend engine Fast Facilitates Error Handling using exceptions 64-Bit Windows Systems Support New Spaceship and Null Coalescing Operators(&lt;=&gt; The spaceship operator returns 0 if both operands are equal, 1 if the left is greater, and -1 if the right is greater. It’s also called a three-way comparison operator)  PHP 7  Scalar type declarations, has been introduced. Scalar type declaration has two options   coercive - coercive is default mode and need not to be specified.">
 
 
 <meta itemprop="datePublished" content="2018-07-12T17:13:19&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-12T17:13:19&#43;05:30" />
-<meta itemprop="wordCount" content="115">
+<meta itemprop="wordCount" content="336">
 
 
 
@@ -200,9 +200,12 @@ and -1 if the right is greater. It’s also called a three-way comparison operat
 <h1 id="php-7">PHP 7</h1>
 
 <ul>
-<li>Scalar type declarations, has been introduced. Scalar type declaration has two options
-&gt; coercive - coercive is default mode and need not to be specified.</li>
+<li>Scalar type declarations, has been introduced. Scalar type declaration has two options</li>
 </ul>
+
+<blockquote>
+<p>coercive - coercive is default mode and need not to be specified.</p>
+</blockquote>
 
 <pre><code>	&lt;?php
    function sum(int ...$ints) {
@@ -224,6 +227,111 @@ and -1 if the right is greater. It’s also called a three-way comparison operat
    print(sum(2, '3', 4.1));
    //Error.Has to be int
    
+</code></pre>
+
+<hr />
+
+<blockquote>
+<p>Return type declarations has been introduced. Return type declaration specifies the type of value that a function should return.</p>
+
+<pre><code>declare(strict_types = 1);
+   function returnIntValue(int $value): int {
+      return $value;
+   }
+   print(returnIntValue(5));
+</code></pre>
+</blockquote>
+
+<hr />
+
+<blockquote>
+<p>Null coalescing operator (??). Terinary operator with isset()</p>
+</blockquote>
+
+<pre><code> $username = $_GET['username'] ?? 'not passed';
+ 
+ // Equivalent code using ternary operator
+ $username = isset($_GET['username']) ? $_GET['username'] : 'not passed';
+</code></pre>
+
+<hr />
+
+<blockquote>
+<p>Anonymous classes can now be defined using new class. Anonymous class can be used in place of a full class definition.</p>
+</blockquote>
+
+<pre><code>&lt;?php
+   interface Logger {
+      public function log(string $msg);
+   }
+
+   class Application {
+      private $logger;
+
+      public function getLogger(): Logger {
+         return $this-&gt;logger;
+      }
+
+      public function setLogger(Logger $logger) {
+         $this-&gt;logger = $logger;
+      }  
+   }
+
+   $app = new Application;
+   $app-&gt;setLogger(new class implements Logger {
+      public function log(string $msg) {
+         print($msg);
+      }
+   });
+
+   $app-&gt;getLogger()-&gt;log(&quot;My first Log Message&quot;);
+?&gt;
+</code></pre>
+
+<hr />
+
+<blockquote>
+<p>Closure::call() method is added as a shorthand way to temporarily bind an object scope to a closure and invoke it.</p>
+</blockquote>
+
+<pre><code>&lt;?php
+   class A {
+      private $x = 1;
+   }
+
+   // Define a closure Pre PHP 7 code
+   $getValue = function() {
+      return $this-&gt;x;
+   };
+
+   // Bind a clousure
+   $value = $getValue-&gt;bindTo(new A, 'A'); 
+
+   print($value());
+?&gt;
+It produces the following browser output −
+1
+
+</code></pre>
+
+<hr />
+
+<blockquote>
+<p>PHP7</p>
+</blockquote>
+
+<pre><code>&lt;?php
+   class A {
+      private $x = 1;
+   }
+
+   // PHP 7+ code, Define
+   $value = function() {
+      return $this-&gt;x;
+   };
+
+   print($value-&gt;call(new A));
+?&gt;
 </code></pre>
  </div>
     <footer class="post-footer">

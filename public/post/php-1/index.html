@@ -12,9 +12,9 @@
 <link rel="canonical" href="/post/php-1/">
 <base href="/" />
 <meta property="og:title" content="PHP Part 1" />
-<meta property="og:description" content="Polymorphism - which classes have different functionality while sharing a common interface.
+<meta property="og:description" content="One important principle of OOP is that a class should do one thing, and it should do it well.  Polymorphism - which classes have different functionality while sharing a common interface.
  Implements to extend an interface in PM
- An interface is similar to a class except that it cannot contain code. An interface can define method names and arguments, but not the contents of the methods An interface does not contain any code,it contain only declaration of methods,properties,events. Interfaces allow us to code which specifies which methods a class must have implement ." />
+ An interface is similar to a class except that it cannot contain code. An interface can define method names and arguments, but not the contents of the methods.A class can implement multiple interfaces." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/php-1/" />
 
@@ -36,21 +36,21 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="PHP Part 1"/>
-<meta name="twitter:description" content="Polymorphism - which classes have different functionality while sharing a common interface.
+<meta name="twitter:description" content="One important principle of OOP is that a class should do one thing, and it should do it well.  Polymorphism - which classes have different functionality while sharing a common interface.
  Implements to extend an interface in PM
- An interface is similar to a class except that it cannot contain code. An interface can define method names and arguments, but not the contents of the methods An interface does not contain any code,it contain only declaration of methods,properties,events. Interfaces allow us to code which specifies which methods a class must have implement ."/>
+ An interface is similar to a class except that it cannot contain code. An interface can define method names and arguments, but not the contents of the methods.A class can implement multiple interfaces."/>
 
 
 
 <meta itemprop="name" content="PHP Part 1">
-<meta itemprop="description" content="Polymorphism - which classes have different functionality while sharing a common interface.
+<meta itemprop="description" content="One important principle of OOP is that a class should do one thing, and it should do it well.  Polymorphism - which classes have different functionality while sharing a common interface.
  Implements to extend an interface in PM
- An interface is similar to a class except that it cannot contain code. An interface can define method names and arguments, but not the contents of the methods An interface does not contain any code,it contain only declaration of methods,properties,events. Interfaces allow us to code which specifies which methods a class must have implement .">
+ An interface is similar to a class except that it cannot contain code. An interface can define method names and arguments, but not the contents of the methods.A class can implement multiple interfaces.">
 
 
 <meta itemprop="datePublished" content="2018-07-11T17:02:17&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-11T17:02:17&#43;05:30" />
-<meta itemprop="wordCount" content="1987">
+<meta itemprop="wordCount" content="2011">
 
 
 
@@ -188,12 +188,16 @@ th {
     <h1 class="title"> PHP Part 1 </h1>
     <div class="content"> 
 
+<h2 id="one-important-principle-of-oop-is-that-a-class-should-do-one-thing-and-it-should-do-it-well">One important principle of OOP is that a class should do one thing, and it should do it well.</h2>
+
+<hr />
+
 <ul>
 <li><p>Polymorphism - which classes have different functionality while sharing a common interface.</p></li>
 
 <li><p>Implements to extend an interface in PM</p></li>
 
-<li><p>An interface is similar to a class except that it cannot contain code. An interface can define method names and arguments, but not the contents of the methods
+<li><p>An interface is similar to a class except that it cannot contain code. An interface can define method names and arguments, but not the contents of the methods.A class can implement multiple interfaces.
 An interface does not contain any code,it contain only declaration of methods,properties,events. Interfaces allow us to code which specifies which methods a class must have implement . Interfaces defines with the word interface . All methods in interfaces must be public</p></li>
 </ul>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-<?php" data-lang="<?php">interface Shape {

@@ -29,7 +29,7 @@
       <pubDate>Thu, 12 Jul 2018 17:13:19 +0530</pubDate>
       
       <guid>/post/php7/</guid>
-      <description>New to PHP 7  New Zend engine Fast Facilitates Error Handling using exceptions 64-Bit Windows Systems Support New Spaceship and Null Coalescing Operators(&amp;lt;=&amp;gt; The spaceship operator returns 0 if both operands are equal, 1 if the left is greater, and -1 if the right is greater. It’s also called a three-way comparison operator)  PHP 7  Scalar type declarations, has been introduced. Scalar type declaration has two options &amp;gt; coercive - coercive is default mode and need not to be specified.</description>
+      <description>New to PHP 7  New Zend engine Fast Facilitates Error Handling using exceptions 64-Bit Windows Systems Support New Spaceship and Null Coalescing Operators(&amp;lt;=&amp;gt; The spaceship operator returns 0 if both operands are equal, 1 if the left is greater, and -1 if the right is greater. It’s also called a three-way comparison operator)  PHP 7  Scalar type declarations, has been introduced. Scalar type declaration has two options   coercive - coercive is default mode and need not to be specified.</description>
     </item>
     
     <item>
@@ -38,9 +38,9 @@
       <pubDate>Wed, 11 Jul 2018 17:02:17 +0530</pubDate>
       
       <guid>/post/php-1/</guid>
-      <description>Polymorphism - which classes have different functionality while sharing a common interface.
+      <description>One important principle of OOP is that a class should do one thing, and it should do it well.  Polymorphism - which classes have different functionality while sharing a common interface.
  Implements to extend an interface in PM
- An interface is similar to a class except that it cannot contain code. An interface can define method names and arguments, but not the contents of the methods An interface does not contain any code,it contain only declaration of methods,properties,events. Interfaces allow us to code which specifies which methods a class must have implement .</description>
+ An interface is similar to a class except that it cannot contain code. An interface can define method names and arguments, but not the contents of the methods.A class can implement multiple interfaces.</description>
     </item>
     
   </channel>

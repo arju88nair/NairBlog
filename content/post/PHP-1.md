@@ -8,11 +8,15 @@ tags : [
    ]
 ---
 
+## One important principle of OOP is that a class should do one thing, and it should do it well.
+
+---
+
 - Polymorphism - which classes have different functionality while sharing a common interface.
 
 - Implements to extend an interface in PM
 
-- An interface is similar to a class except that it cannot contain code. An interface can define method names and arguments, but not the contents of the methods
+- An interface is similar to a class except that it cannot contain code. An interface can define method names and arguments, but not the contents of the methods.A class can implement multiple interfaces.
 An interface does not contain any code,it contain only declaration of methods,properties,events. Interfaces allow us to code which specifies which methods a class must have implement . Interfaces defines with the word interface . All methods in interfaces must be public
 
  ```  <?php
