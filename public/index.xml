@@ -19,7 +19,7 @@
       
       <guid>/about/</guid>
       <description>This is to take notes and to keep track of my musings (If you can call that)
-Disclaimer : I do not own any of these contents.
+Disclaimer : I do not own any of these contents.Almost all of them are from different sites and blogs. Most of the time, I don&amp;rsquo;t remember where I got these contents from. Credits to those owners
 You can reach me at :
  Website Github Twitter Mail - arju88nair@gmail.com  </description>
     </item>
@@ -30,9 +30,9 @@ You can reach me at :
       <pubDate>Mon, 16 Jul 2018 13:14:11 +0530</pubDate>
       
       <guid>/post/php-2/</guid>
-      <description> Error Control Operators  @ - Suppresses errors
+      <description>Error Control Operators  @ - Suppresses errors
  extract()  It converts array keys into variable names and array values into variable value.
-  // input array $state = array(&amp;quot;AS&amp;quot;=&amp;gt;&amp;quot;ASSAM&amp;quot;, &amp;quot;OR&amp;quot;=&amp;gt;&amp;quot;ORRISA&amp;quot;, &amp;quot;KR&amp;quot;=&amp;gt;&amp;quot;KERELA&amp;quot;); extract($state); // after using extract() function echo&amp;quot;\$AS is $AS\n\$KR is $KR\n\$OR is $OR&amp;quot;; ------ $AS is ASSAM $KR is KERELA $OR is ORRISA  </description>
+  // input array $state = array(&amp;quot;AS&amp;quot;=&amp;gt;&amp;quot;ASSAM&amp;quot;, &amp;quot;OR&amp;quot;=&amp;gt;&amp;quot;ORRISA&amp;quot;, &amp;quot;KR&amp;quot;=&amp;gt;&amp;quot;KERELA&amp;quot;); extract($state); // after using extract() function echo&amp;quot;\$AS is $AS\n\$KR is $KR\n\$OR is $OR&amp;quot;; ------ $AS is ASSAM $KR is KERELA $OR is ORRISA  Autoload Every time you want to use a new class in your PHP project, first you need to include this class .</description>
     </item>
     
     <item>

@@ -12,9 +12,9 @@
 <link rel="canonical" href="/post/php-2/">
 <base href="/" />
 <meta property="og:title" content="PHP Part 2" />
-<meta property="og:description" content=" Error Control Operators  @ - Suppresses errors
+<meta property="og:description" content="Error Control Operators  @ - Suppresses errors
  extract()  It converts array keys into variable names and array values into variable value.
-  // input array $state = array(&quot;AS&quot;=&gt;&quot;ASSAM&quot;, &quot;OR&quot;=&gt;&quot;ORRISA&quot;, &quot;KR&quot;=&gt;&quot;KERELA&quot;); extract($state); // after using extract() function echo&quot;\$AS is $AS\n\$KR is $KR\n\$OR is $OR&quot;; ------ $AS is ASSAM $KR is KERELA $OR is ORRISA  " />
+  // input array $state = array(&quot;AS&quot;=&gt;&quot;ASSAM&quot;, &quot;OR&quot;=&gt;&quot;ORRISA&quot;, &quot;KR&quot;=&gt;&quot;KERELA&quot;); extract($state); // after using extract() function echo&quot;\$AS is $AS\n\$KR is $KR\n\$OR is $OR&quot;; ------ $AS is ASSAM $KR is KERELA $OR is ORRISA  Autoload Every time you want to use a new class in your PHP project, first you need to include this class ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/php-2/" />
 
@@ -36,21 +36,21 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="PHP Part 2"/>
-<meta name="twitter:description" content=" Error Control Operators  @ - Suppresses errors
+<meta name="twitter:description" content="Error Control Operators  @ - Suppresses errors
  extract()  It converts array keys into variable names and array values into variable value.
-  // input array $state = array(&quot;AS&quot;=&gt;&quot;ASSAM&quot;, &quot;OR&quot;=&gt;&quot;ORRISA&quot;, &quot;KR&quot;=&gt;&quot;KERELA&quot;); extract($state); // after using extract() function echo&quot;\$AS is $AS\n\$KR is $KR\n\$OR is $OR&quot;; ------ $AS is ASSAM $KR is KERELA $OR is ORRISA  "/>
+  // input array $state = array(&quot;AS&quot;=&gt;&quot;ASSAM&quot;, &quot;OR&quot;=&gt;&quot;ORRISA&quot;, &quot;KR&quot;=&gt;&quot;KERELA&quot;); extract($state); // after using extract() function echo&quot;\$AS is $AS\n\$KR is $KR\n\$OR is $OR&quot;; ------ $AS is ASSAM $KR is KERELA $OR is ORRISA  Autoload Every time you want to use a new class in your PHP project, first you need to include this class ."/>
 
 
 
 <meta itemprop="name" content="PHP Part 2">
-<meta itemprop="description" content=" Error Control Operators  @ - Suppresses errors
+<meta itemprop="description" content="Error Control Operators  @ - Suppresses errors
  extract()  It converts array keys into variable names and array values into variable value.
-  // input array $state = array(&quot;AS&quot;=&gt;&quot;ASSAM&quot;, &quot;OR&quot;=&gt;&quot;ORRISA&quot;, &quot;KR&quot;=&gt;&quot;KERELA&quot;); extract($state); // after using extract() function echo&quot;\$AS is $AS\n\$KR is $KR\n\$OR is $OR&quot;; ------ $AS is ASSAM $KR is KERELA $OR is ORRISA  ">
+  // input array $state = array(&quot;AS&quot;=&gt;&quot;ASSAM&quot;, &quot;OR&quot;=&gt;&quot;ORRISA&quot;, &quot;KR&quot;=&gt;&quot;KERELA&quot;); extract($state); // after using extract() function echo&quot;\$AS is $AS\n\$KR is $KR\n\$OR is $OR&quot;; ------ $AS is ASSAM $KR is KERELA $OR is ORRISA  Autoload Every time you want to use a new class in your PHP project, first you need to include this class .">
 
 
 <meta itemprop="datePublished" content="2018-07-16T13:14:11&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-16T13:14:11&#43;05:30" />
-<meta itemprop="wordCount" content="52">
+<meta itemprop="wordCount" content="196">
 
 
 
@@ -215,6 +215,48 @@ th {
  $OR is ORRISA
  
 </code></pre>
+
+<h2 id="autoload">Autoload</h2>
+
+<p>Every time you want to use a new class in your PHP project, first you need to include this class . However if you have __autoload function defined, inclusion will handle itself.</p>
+
+<pre><code>// Without autoload
+include &quot;classes/class.Foo.php&quot;;
+ 
+$foo = new Foo;
+$foo-&gt;start();
+$foo-&gt;stop();
+</code></pre>
+
+<pre><code>// By autload
+function __autoload($class_name) 
+{
+    require_once $DOCUMENT_ROOT.“classes/class.”.$class_name.“.php”;
+}
+ 
+$foo = new Foo;
+$foo-&gt;start();
+$foo-&gt;stop();
+</code></pre>
+
+<hr />
+
+<blockquote>
+<p>A closure is good when you want a local function that&rsquo;s only used for some small, specific purpose.</p>
+</blockquote>
+
+<pre><code> function replace_spaces ($text) {
+     $replacement = function ($matches) {
+         return str_replace ($matches[1], ' ', '&amp;nbsp;').' ';
+     };
+     return preg_replace_callback ('/( +) /', $replacement, $text);
+ }
+ 
+</code></pre>
+
+<p>This lets you define the replacement function locally inside replace_spaces(), so that it&rsquo;s not:
+ 1) Cluttering up the global namespace
+ 2) Making people three years down the line wonder why there&rsquo;s a function defined globally that&rsquo;s only used inside one other function</p>
  </div>
     <footer class="post-footer">
 
