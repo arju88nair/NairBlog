@@ -25,6 +25,16 @@ You can reach me at :
     </item>
     
     <item>
+      <title>Laravel</title>
+      <link>/post/laravel/</link>
+      <pubDate>Fri, 20 Jul 2018 18:08:33 +0530</pubDate>
+      
+      <guid>/post/laravel/</guid>
+      <description>LifeCycle
+ Index.php loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application from bootstrap/app.php script. HTTP / Console Kernels Next, the incoming request is sent to either the HTTP kernel or the console kernel, depending on the type of request that is entering the application. These two kernels serve as the central location that all requests flow through. The HTTP kernel extends the Illuminate\Foundation\Http\Kernel class, which defines an array of bootstrappers that will be run before the request is executed.</description>
+    </item>
+    
+    <item>
       <title>PHP Part 2</title>
       <link>/post/php-2/</link>
       <pubDate>Mon, 16 Jul 2018 13:14:11 +0530</pubDate>
