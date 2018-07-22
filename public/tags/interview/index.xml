@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2018, all rights reserved.</copyright>
-    <lastBuildDate>Fri, 20 Jul 2018 18:08:33 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 22 Jul 2018 13:51:09 +0530</lastBuildDate>
     
 	<atom:link href="/tags/interview/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Programms</title>
+      <link>/post/programms/</link>
+      <pubDate>Sun, 22 Jul 2018 13:51:09 +0530</pubDate>
+      
+      <guid>/post/programms/</guid>
+      <description>Factorial &amp;lt;?php $number = 6; /*number to get factorial */ $fact = 1; for($k=1;$k&amp;lt;=$number;++$k) { $fact = $fact*$k; } echo &amp;quot;Factorial of $number is &amp;quot;.$fact; ?&amp;gt;  Fibonacci &amp;lt;?PHP $first = 0; $second = 1; echo $first.&#39;&amp;amp;nbsp;,&#39;; echo $second.&#39;&amp;amp;nbsp;,&#39;; for($limit=0;$limit&amp;lt;10;$limit++) { $third = $first+$second; echo $third.&#39;&amp;amp;nbsp;,&#39;;; $first = $second; $second = $third; } ?&amp;gt;  Amstrong &amp;lt;?php $number = $_POST[ &#39;number&#39; ]; // get the number entered by user $temp = $number; $sum = 0; while($temp !</description>
+    </item>
     
     <item>
       <title>Laravel</title>
