@@ -19,9 +19,17 @@
       
       <guid>/about/</guid>
       <description>This is to take notes and to keep track of my musings (If you can call that)
-Disclaimer : I do not own any of these contents.Almost all of them are from different sites and blogs. Most of the time, I don&amp;rsquo;t remember where I got these contents from. Credits to those owners
-You can reach me at :
- Website Github Twitter Mail - arju88nair@gmail.com  </description>
+Disclaimer : I do not own most of these contents.Almost all of them are from different sites and blogs.This is just for me to have my learning resources in one place. Most of the time, I don&amp;rsquo;t remember where I got these contents from. Credits to those owners
+You can reach me at :</description>
+    </item>
+    
+    <item>
+      <title>What Happens When</title>
+      <link>/post/what-happens-when/</link>
+      <pubDate>Mon, 23 Jul 2018 11:43:30 +0530</pubDate>
+      
+      <guid>/post/what-happens-when/</guid>
+      <description>This is a short version of the question what happens when you enter google.com in your browser.  credit When you type &amp;ldquo;G&amp;rdquo;  The browser receives the event and the auto-complete functions kick in. Various suggestions will be presented to you in the dropbox below the URL bar   When you press &amp;ldquo;Enter&amp;rdquo;  Small amount of current to flow into the logic circuitry of the keyboard, which scans the state of each key switch, debounces the electrical noise of the rapid intermittent closure of the switch, and converts it to a keycode integer, in this case 13.</description>
     </item>
     
     <item>

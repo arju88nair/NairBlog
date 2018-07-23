@@ -7,7 +7,7 @@ weight = 100
 
 This is to take notes and to keep track of my musings (If you can call that)
 
-Disclaimer : I do not own any of these contents.Almost all of them are from different sites and blogs. Most of the time, I don't remember where I got these contents from. Credits to those owners
+Disclaimer : I do not own most of these contents.Almost all of them are from different sites and blogs.This is just for me to have my learning resources in one place. Most of the time, I don't remember where I got these contents from. Credits to those owners
 
 You can reach me at :  
 
