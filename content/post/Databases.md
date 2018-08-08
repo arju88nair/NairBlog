@@ -1,0 +1,63 @@
++++
+title= "Databases"
+date= 2018-08-08T19:59:38+05:30
+tags = [
+    "Databases",
+    "SQL"
+   ]
++++
+
+- Relational databases like MySQL, PostgreSQL and SQLite3 represent and store data in tables and rows. 
+
+- They're based on a branch of algebraic set theory known as relational algebra.
+
+- Mongo query targets of data are technically represented as BSON (binary JASON).
+
+- Relational databases use Structured Querying Language (SQL), making them a good choice for applications that involve the management of several 
+transactions. 
+
+- ACID -  Atomicity (each transaction be "all or nothing"), Consistency (any transaction will bring the database from one valid state to another), Isoloation (concurrent execution of transactions results in a system state that would be obtained if transactions were executed sequentially), Durability (once a transaction has been committed, it will remain so)
+
+- Object-Relational Mapping (ORM) is a technique that lets you query and manipulate data from a database using an object-oriented paradigm
+
+
+
+-DECODE is a function in Oracle and is used to provide if-then-else type of logic to SQL.
+
+
+##### To fetch ALTERNATE records from a table. (EVEN NUMBERED)
+
+```select * from emp where rowid in (select decode(mod(rownum,2),0,rowid, null) from emp);```
+
+##### To select ALTERNATE records from a table. (ODD NUMBERED)
+``` select * from emp where rowid in (select decode(mod(rownum,2),0,null ,rowid) from emp);```
+
+##### Find the 3rd MAX salary in the emp table.
+``` select distinct sal from emp e1 where 3 = (select count(distinct sal) from emp e2 where e1.sal <= e2.sal);```
+
+``` Alter table table_name add(columnname1 datatype(size), columname2 datatype(size),....);```
+
+```Alter table table_name modify(columnname1 datatype(size), columnname2 datatype(size),....);```
+
+- Truncate table command it is used to delete all rows permanently from the table.
+
+
+- DDL – Data Definition Language
+DML – Data Manipulation Language
+
+
+- Normalization is the process of efficiently organizing data in a database. There are two goals of the normalization process: eliminating redundant data (for example, storing the same data in more than one table) and ensuring data dependencies make sense (only storing related data in a table)
+
+#####Benefits :
+-  Eliminate data redundancy
+- Improve performance
+- Query optimization
+- Faster update due to less number of columns in one table
+- Index improvement
+
+
+
+- Row-level locks are placed on single records (rows) that the statements in a transaction define. The locks are placed as soon as any piece of the row is accessed.
+Row-level locks are always implicit, solidDB sets the locks when necessary. You cannot lock or unlock row-level locks manually.
+
+- Table-level locks can be thought of as metadata locks; they prevent concurrent users from making schema changes (DDL operations) simultaneously or while records within the table are being changed.

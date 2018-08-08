@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2018, all rights reserved.</copyright>
-    <lastBuildDate>Mon, 23 Jul 2018 11:43:30 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 08 Aug 2018 19:59:38 +0530</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Databases</title>
+      <link>/post/databases/</link>
+      <pubDate>Wed, 08 Aug 2018 19:59:38 +0530</pubDate>
+      
+      <guid>/post/databases/</guid>
+      <description>Relational databases like MySQL, PostgreSQL and SQLite3 represent and store data in tables and rows.
+ They&amp;rsquo;re based on a branch of algebraic set theory known as relational algebra.
+ Mongo query targets of data are technically represented as BSON (binary JASON).
+ Relational databases use Structured Querying Language (SQL), making them a good choice for applications that involve the management of several transactions.
+ ACID - Atomicity (each transaction be &amp;ldquo;all or nothing&amp;rdquo;), Consistency (any transaction will bring the database from one valid state to another), Isoloation (concurrent execution of transactions results in a system state that would be obtained if transactions were executed sequentially), Durability (once a transaction has been committed, it will remain so)</description>
+    </item>
     
     <item>
       <title>What Happens When</title>

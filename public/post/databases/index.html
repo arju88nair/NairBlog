@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.46" />
+
+<link rel="canonical" href="/post/databases/">
+<base href="/" />
+<meta property="og:title" content="Databases" />
+<meta property="og:description" content="Relational databases like MySQL, PostgreSQL and SQLite3 represent and store data in tables and rows.
+ They&rsquo;re based on a branch of algebraic set theory known as relational algebra.
+ Mongo query targets of data are technically represented as BSON (binary JASON).
+ Relational databases use Structured Querying Language (SQL), making them a good choice for applications that involve the management of several transactions.
+ ACID - Atomicity (each transaction be &ldquo;all or nothing&rdquo;), Consistency (any transaction will bring the database from one valid state to another), Isoloation (concurrent execution of transactions results in a system state that would be obtained if transactions were executed sequentially), Durability (once a transaction has been committed, it will remain so)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/databases/" />
+
+
+
+<meta property="article:published_time" content="2018-08-08T19:59:38&#43;05:30"/>
+
+<meta property="article:modified_time" content="2018-08-08T19:59:38&#43;05:30"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Databases"/>
+<meta name="twitter:description" content="Relational databases like MySQL, PostgreSQL and SQLite3 represent and store data in tables and rows.
+ They&rsquo;re based on a branch of algebraic set theory known as relational algebra.
+ Mongo query targets of data are technically represented as BSON (binary JASON).
+ Relational databases use Structured Querying Language (SQL), making them a good choice for applications that involve the management of several transactions.
+ ACID - Atomicity (each transaction be &ldquo;all or nothing&rdquo;), Consistency (any transaction will bring the database from one valid state to another), Isoloation (concurrent execution of transactions results in a system state that would be obtained if transactions were executed sequentially), Durability (once a transaction has been committed, it will remain so)"/>
+
+
+
+<meta itemprop="name" content="Databases">
+<meta itemprop="description" content="Relational databases like MySQL, PostgreSQL and SQLite3 represent and store data in tables and rows.
+ They&rsquo;re based on a branch of algebraic set theory known as relational algebra.
+ Mongo query targets of data are technically represented as BSON (binary JASON).
+ Relational databases use Structured Querying Language (SQL), making them a good choice for applications that involve the management of several transactions.
+ ACID - Atomicity (each transaction be &ldquo;all or nothing&rdquo;), Consistency (any transaction will bring the database from one valid state to another), Isoloation (concurrent execution of transactions results in a system state that would be obtained if transactions were executed sequentially), Durability (once a transaction has been committed, it will remain so)">
+
+
+<meta itemprop="datePublished" content="2018-08-08T19:59:38&#43;05:30" />
+<meta itemprop="dateModified" content="2018-08-08T19:59:38&#43;05:30" />
+<meta itemprop="wordCount" content="408">
+
+
+
+<meta itemprop="keywords" content="Databases,SQL," />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: #1D1F21;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: #1D1F21;
+}
+
+blockquote {
+  background: #1D1F21;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: yellow; }
+
+.post .content h1{ color: yellow; }
+.post .content h2{ color: yellow; }
+.post .content h3{ color: yellow; }
+.post .content h4{ color: yellow; }
+.post .content h5{ color: yellow; }
+.post .content h6{ color: yellow; }
+.post .content a:hover { color: yellow; }
+.social-link:hover { color: yellow; }
+.nav-item-title:hover { color: yellow; }
+.tag a:hover { color: yellow; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: yellow; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: yellow;
+}
+.post-list .title { color: yellow; }
+.rmore { color: yellow; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+</style>
+
+
+
+<title>
+
+
+     Databases 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Today I learned</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="/about/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">gh</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">twtr</div></a>
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Databases </h1>
+    <div class="content"> 
+
+<ul>
+<li><p>Relational databases like MySQL, PostgreSQL and SQLite3 represent and store data in tables and rows.</p></li>
+
+<li><p>They&rsquo;re based on a branch of algebraic set theory known as relational algebra.</p></li>
+
+<li><p>Mongo query targets of data are technically represented as BSON (binary JASON).</p></li>
+
+<li><p>Relational databases use Structured Querying Language (SQL), making them a good choice for applications that involve the management of several
+transactions.</p></li>
+
+<li><p>ACID -  Atomicity (each transaction be &ldquo;all or nothing&rdquo;), Consistency (any transaction will bring the database from one valid state to another), Isoloation (concurrent execution of transactions results in a system state that would be obtained if transactions were executed sequentially), Durability (once a transaction has been committed, it will remain so)</p></li>
+
+<li><p>Object-Relational Mapping (ORM) is a technique that lets you query and manipulate data from a database using an object-oriented paradigm</p></li>
+</ul>
+
+<p>-DECODE is a function in Oracle and is used to provide if-then-else type of logic to SQL.</p>
+
+<h5 id="to-fetch-alternate-records-from-a-table-even-numbered">To fetch ALTERNATE records from a table. (EVEN NUMBERED)</h5>
+
+<p><code>select * from emp where rowid in (select decode(mod(rownum,2),0,rowid, null) from emp);</code></p>
+
+<h5 id="to-select-alternate-records-from-a-table-odd-numbered">To select ALTERNATE records from a table. (ODD NUMBERED)</h5>
+
+<p><code>select * from emp where rowid in (select decode(mod(rownum,2),0,null ,rowid) from emp);</code></p>
+
+<h5 id="find-the-3rd-max-salary-in-the-emp-table">Find the 3rd MAX salary in the emp table.</h5>
+
+<p><code>select distinct sal from emp e1 where 3 = (select count(distinct sal) from emp e2 where e1.sal &lt;= e2.sal);</code></p>
+
+<p><code>Alter table table_name add(columnname1 datatype(size), columname2 datatype(size),....);</code></p>
+
+<p><code>Alter table table_name modify(columnname1 datatype(size), columnname2 datatype(size),....);</code></p>
+
+<ul>
+<li><p>Truncate table command it is used to delete all rows permanently from the table.</p></li>
+
+<li><p>DDL – Data Definition Language
+DML – Data Manipulation Language</p></li>
+
+<li><p>Normalization is the process of efficiently organizing data in a database. There are two goals of the normalization process: eliminating redundant data (for example, storing the same data in more than one table) and ensuring data dependencies make sense (only storing related data in a table)</p></li>
+</ul>
+
+<p>#####Benefits :
+-  Eliminate data redundancy
+- Improve performance
+- Query optimization
+- Faster update due to less number of columns in one table
+- Index improvement</p>
+
+<ul>
+<li><p>Row-level locks are placed on single records (rows) that the statements in a transaction define. The locks are placed as soon as any piece of the row is accessed.
+Row-level locks are always implicit, solidDB sets the locks when necessary. You cannot lock or unlock row-level locks manually.</p></li>
+
+<li><p>Table-level locks can be thought of as metadata locks; they prevent concurrent users from making schema changes (DDL operations) simultaneously or while records within the table are being changed.</p></li>
+</ul>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/databases">#Databases</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/sql">#SQL</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Aug 8, 2018 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "thenair" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2018, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+
