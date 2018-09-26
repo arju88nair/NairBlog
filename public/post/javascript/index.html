@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.47.1" />
+
+<link rel="canonical" href="/post/javascript/">
+<base href="/" />
+<meta property="og:title" content="Javascript" />
+<meta property="og:description" content="Callback functions They are derived from a programming paradigm known as functional programmings
+A callback function, also known as a higher-order function, is a function that is passed to another function Eg:
+ $(&quot;#btn_1&quot;).click(function() { alert(&quot;Btn 1 Clicked&quot;); });  Functional programming (often abbreviated FP) is the process of building software by composing pure functions, avoiding shared state, mutable data, and side-effects
+A pure function is a function which: Given the same inputs, always returns the same output, and Has no side-effects" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/javascript/" /><meta property="article:published_time" content="2018-07-22T13:50:50&#43;05:30"/>
+<meta property="article:modified_time" content="2018-07-22T13:50:50&#43;05:30"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Javascript"/>
+<meta name="twitter:description" content="Callback functions They are derived from a programming paradigm known as functional programmings
+A callback function, also known as a higher-order function, is a function that is passed to another function Eg:
+ $(&quot;#btn_1&quot;).click(function() { alert(&quot;Btn 1 Clicked&quot;); });  Functional programming (often abbreviated FP) is the process of building software by composing pure functions, avoiding shared state, mutable data, and side-effects
+A pure function is a function which: Given the same inputs, always returns the same output, and Has no side-effects"/>
+
+
+
+<meta itemprop="name" content="Javascript">
+<meta itemprop="description" content="Callback functions They are derived from a programming paradigm known as functional programmings
+A callback function, also known as a higher-order function, is a function that is passed to another function Eg:
+ $(&quot;#btn_1&quot;).click(function() { alert(&quot;Btn 1 Clicked&quot;); });  Functional programming (often abbreviated FP) is the process of building software by composing pure functions, avoiding shared state, mutable data, and side-effects
+A pure function is a function which: Given the same inputs, always returns the same output, and Has no side-effects">
+
+
+<meta itemprop="datePublished" content="2018-07-22T13:50:50&#43;05:30" />
+<meta itemprop="dateModified" content="2018-07-22T13:50:50&#43;05:30" />
+<meta itemprop="wordCount" content="1193">
+
+
+
+<meta itemprop="keywords" content="Javascript,Interview," />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: #1D1F21;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: #1D1F21;
+}
+
+blockquote {
+  background: #1D1F21;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: yellow; }
+
+.post .content h1{ color: yellow; }
+.post .content h2{ color: yellow; }
+.post .content h3{ color: yellow; }
+.post .content h4{ color: yellow; }
+.post .content h5{ color: yellow; }
+.post .content h6{ color: yellow; }
+.post .content a:hover { color: yellow; }
+.social-link:hover { color: yellow; }
+.nav-item-title:hover { color: yellow; }
+.tag a:hover { color: yellow; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: yellow; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: yellow;
+}
+.post-list .title { color: yellow; }
+.rmore { color: yellow; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+</style>
+
+
+
+<title>
+
+
+     Javascript 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Today I learned</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="/about/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">gh</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">twtr</div></a>
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Javascript </h1>
+    <div class="content"> 
+
+<h2 id="callback-functions">Callback functions</h2>
+
+<hr />
+
+<p>They are derived from a programming paradigm known as functional programmings</p>
+
+<p>A callback function, also known as a higher-order function, is a function that is passed to another function
+Eg:</p>
+
+<pre><code>
+$(&quot;#btn_1&quot;).click(function() {
+  alert(&quot;Btn 1 Clicked&quot;);
+});
+
+</code></pre>
+
+<p>Functional programming (often abbreviated FP) is the process of building software by composing pure functions, avoiding shared state, mutable data, and side-effects</p>
+
+<p>A pure function is a function which:
+Given the same inputs, always returns the same output, and
+Has no side-effects</p>
+
+<p>Shared state is any variable, object, or memory space that exists in a shared scope, or as the property of an object being passed between scopes.</p>
+
+<hr />
+
+<p>(<a href="https://developers.google.com/web/updates/2015/03/introduction-to-fetch#response_types">https://developers.google.com/web/updates/2015/03/introduction-to-fetch#response_types</a>)
+An XMLHttpRequest would need two listeners to be set to handle the success and error cases and a call to open() and send().</p>
+
+<pre><code>function reqListener() {
+  var data = JSON.parse(this.responseText);
+  console.log(data);
+}
+
+function reqError(err) {
+  console.log('Fetch Error :-S', err);
+}
+
+var oReq = new XMLHttpRequest();
+oReq.onload = reqListener;
+oReq.onerror = reqError;
+oReq.open('get', './api/some.json', true);
+oReq.send();
+
+</code></pre>
+
+<p>Replaces with</p>
+
+<pre><code>
+fetch('./api/some.json')
+  .then(
+    function(response) {
+      if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+          response.status);
+        return;
+      }
+
+      // Examine the text in the response
+      response.json().then(function(data) {
+        console.log(data);
+      });
+    }
+  )
+  .catch(function(err) {
+    console.log('Fetch Error :-S', err);
+  });
+
+</code></pre>
+
+<blockquote>
+<p>Types</p>
+</blockquote>
+
+<pre><code>fetch('users.json').then(function(response) {
+    console.log(response.headers.get('Content-Type'));
+    console.log(response.headers.get('Date'));
+
+    console.log(response.status);
+    console.log(response.statusText);
+    console.log(response.type);
+    console.log(response.url);
+});
+</code></pre>
+
+<p>Gives response.type of &ldquo;basic&rdquo;, &ldquo;cors&rdquo; or &ldquo;opaque&rdquo;.</p>
+
+<p>When a request is made for a resource on the same origin, the response will have a basic type and there aren&rsquo;t any restrictions on what you can view from the response.</p>
+
+<p>If a request is made for a resource on another origin which returns the CORs headers, then the type is cors. cors and basic responses are almost identical except that a cors response restricts the headers you can view to <code>Cache-Control</code>, <code>Content-Language</code>, <code>Content-Type</code>, <code>Expires</code>, <code>Last-Modified</code>, and <code>Pragma</code>.
+An opaque response is for a request made for a resource on a different origin that doesn&rsquo;t return CORS headers. With an opaque response we won&rsquo;t be able to read the data returned or view the status of the request, meaning we can&rsquo;t check if the request was successful or not.</p>
+
+<blockquote>
+<p>POST</p>
+
+<pre><code>fetch(url, {
+    method: 'post',
+    headers: {
+      &quot;Content-type&quot;: &quot;application/x-www-form-urlencoded; charset=UTF-8&quot;
+    },
+    body: 'foo=bar&amp;lorem=ipsum'
+  })
+  .then(json)
+  .then(function (data) {
+    console.log('Request succeeded with JSON response', data);
+  })
+  .catch(function (error) {
+    console.log('Request failed', error);
+  });
+
+</code></pre>
+
+<p>Example</p>
+
+<pre><code>    function createNode(element) {
+      return document.createElement(element);
+  }
+
+  function append(parent, el) {
+    return parent.appendChild(el);
+  }
+
+  const ul = document.getElementById('authors');
+  const url = 'https://randomuser.me/api/?results=10';
+  fetch(url)
+  .then((resp) =&gt; resp.json())
+  .then(function(data) {
+    let authors = data.results;
+    return authors.map(function(author) {
+      let li = createNode('li'),
+          img = createNode('img'),
+          span = createNode('span');
+      img.src = author.picture.medium;
+      span.innerHTML = `${author.name.first} ${author.name.last}`;
+      append(li, img);
+      append(li, span);
+      append(ul, li);
+    })
+  })
+  .catch(function(error) {
+    console.log(JSON.stringify(error));
+  });   
+
+</code></pre>
+</blockquote>
+
+<hr />
+
+<p>A callback is a function that is to be executed after another function (normally asynchronous) has finished executing — hence the name ‘call back’.</p>
+
+<p>(<a href="https://javascript.info/callbacks">https://javascript.info/callbacks</a>)</p>
+
+<p>Most of the JS functions are asynchronous</p>
+
+<pre><code>
+function loadScript(src) {
+  let script = document.createElement('script');
+  script.src = src;
+  document.head.append(script);
+}
+
+loadScript('/my/script.js'); // the script has &quot;function newFunction() {…}&quot;
+newFunction(); // no such function!
+Will fail
+</code></pre>
+
+<p>So we add callbacks</p>
+
+<pre><code>function loadScript(src, callback) {
+  let script = document.createElement('script');
+  script.src = src;
+
+  script.onload = () =&gt; callback(script);
+
+  document.head.append(script);
+}
+
+Now if we want to call new functions from the script, we should write that in the callback:
+
+loadScript('/my/script.js', function() {
+  // the callback runs after the script is loaded
+  newFunction(); // so now it works
+  ...
+});
+
+</code></pre>
+
+<pre><code>
+function loadScript(src, callback) {
+  let script = document.createElement('script');
+  script.src = src;
+  script.onload = () =&gt; callback(script);
+  document.head.append(script);
+}
+
+loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', script =&gt; {
+  alert(`Cool, the ${script.src} is loaded`);
+  alert( _ ); // function declared in the loaded script
+});
+</code></pre>
+
+<p>Here, after the script.onload, callback is loaded witht eh argument script.</p>
+
+<blockquote>
+<p>Error handling</p>
+
+<pre><code>function loadScript(src, callback) {
+  let script = document.createElement('script');
+  script.src = src;
+
+  script.onload = () =&gt; callback(null, script);
+  script.onerror = () =&gt; callback(new Error(`Script load error for ${src}`));
+
+  document.head.append(script);
+}
+
+</code></pre>
+
+<hr />
+</blockquote>
+
+<p>let works similarly to var, but the variable it declares is block-scoped, it only exists within the current block. var is function-scoped.</p>
+
+<pre><code>function order(x, y) {
+    if (x &gt; y) { // (A)
+        let tmp = x;
+        x = y;
+        y = tmp;
+    }
+    console.log(tmp===x); // ReferenceError: tmp is not defined
+    return [x, y];
+}
+
+</code></pre>
+
+<p>const works like let, but the variable you declare must be immediately initialized, with a value that can’t be changed afterwards.</p>
+
+<pre><code>const foo;
+    // SyntaxError: missing = in const declaration
+
+const bar = 123;
+bar = 456;
+    // TypeError: `bar` is read-only
+
+</code></pre>
+
+<p>In contrast, var-declared variables are function-scoped:</p>
+
+<pre><code>function func() {
+    if (true) {
+        var tmp = 123;
+    }
+    console.log(tmp); // 123
+}
+</code></pre>
+
+<hr />
+
+<p>(<a href="http://exploringjs.com/es6/ch_arrow-functions.html">http://exploringjs.com/es6/ch_arrow-functions.html</a>)</p>
+
+<h2 id="arrow-function">Arrow function</h2>
+
+<pre><code>const arr = [1, 2, 3];
+const squares = arr.map(x =&gt; x * x);
+
+// Traditional function expression:
+const squares = arr.map(function (x) { return x * x });
+
+--------------
+let user = new Object(); // &quot;object constructor&quot; syntax
+let user = {};  // &quot;object literal&quot; syntax
+let user = {
+  name: &quot;John&quot;,
+  age: 30,
+  &quot;likes birds&quot;: true  // multiword property name must be quoted
+};
+</code></pre>
+
+<hr />
+
+<p>The main concept of memory management in JavaScript is reachability.</p>
+
+<hr />
+
+<p>This</p>
+
+<pre><code>let user = {
+  name: &quot;John&quot;,
+  age: 30
+};
+
+user.sayHi = function() {
+  alert(&quot;Hello!&quot;);
+};
+
+user.sayHi(); // Hello!
+
+</code></pre>
+
+<p>It’s common that an object method needs to access the information stored in the object to do its job.</p>
+
+<pre><code>let user = {
+  name: &quot;John&quot;,
+  age: 30,
+
+  sayHi() {
+    alert(this.name);
+  }
+
+};
+
+user.sayHi(); // John
+
+</code></pre>
+
+<hr />
+
+<blockquote>
+<p>jQuery .live()
+Attach an event handler for all elements which match the current selector, now and in the future.</p>
+
+<p>jQuery .on()
+Attach an event handler function for one or more events to the selected elements.</p>
+</blockquote>
+
+<pre><code>$(function () {
+    $(&quot;#container a&quot;).bind(&quot;click&quot;, function () {
+        console.log(&quot;clicked&quot;);
+    });
+});
+
+</code></pre>
+
+<p>When you are calling bind() , you are attaching an event handler to every single matched element in the selection, in our case every anchor element in the div ‘container’.</p>
+
+<p>The same code can also be written using click() which is a shorthand way of writing bind().</p>
+
+<pre><code>$(&quot;#container a&quot;).click(function () {
+    console.log(&quot;clicked&quot;);
+});
+</code></pre>
+
+<pre><code>$(function () {
+    $(&quot;#container a&quot;).live(&quot;click&quot;, function () {
+        console.log(&quot;clicked&quot;);
+    });
+});
+</code></pre>
+
+<p>live() implements event delegation. The handler bound to live() is not bound to the anchor element, as it may so appear. Instead live() binds a handler to the root of the DOM. So rather than attaching 100’s of event handlers to all the anchor elements in the ‘container’ div, using live() attaches just one event handler to the root document, along with the associated selector (in our case #container a) and event information.</p>
+
+<hr />
+
+<h2 id="async">Async</h2>
+
+<pre><code>function resolveAfter2Seconds() {
+  return new Promise(resolve =&gt; {
+    setTimeout(() =&gt; {
+      resolve('resolved');
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log('calling');
+  var result = await resolveAfter2Seconds();
+  console.log(result);
+  // expected output: &quot;resolved&quot;
+}
+
+asyncCall();
+
+</code></pre>
+
+<p>Returns an AsyncFunction object. An asynchronous function is a function which operates asynchronously via the event loop, using an implicit Promise to return its result</p>
+
+<hr />
+
+<p>Class Inheritance: A class is like a blueprint — a description of the object to be created. Classes inherit from classes can create subclass relationships</p>
+
+<p>Prototypal Inheritance: A prototype is a working object instance. Objects inherit directly from other objects.
+Class objects have a property called <code>prototype</code>, which is also an object.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/javascript">#Javascript</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/interview">#Interview</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Jul 22, 2018 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "thenair" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2018, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+

@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>/post/javascript/</loc>
+    <lastmod>2018-07-22T13:50:50+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/laravel/</loc>
     <lastmod>2018-07-20T18:08:33+05:30</lastmod>
   </url>
@@ -77,6 +82,12 @@
   <url>
     <loc>/tags/interview/</loc>
     <lastmod>2018-07-23T11:43:30+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/javascript/</loc>
+    <lastmod>2018-07-22T13:50:50+05:30</lastmod>
     <priority>0</priority>
   </url>
   
