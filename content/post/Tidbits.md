@@ -64,3 +64,8 @@ done
 
 
 ```
+
+## Code checking
+-  Make sure that the code got enough comments and documentation
+- Make sure that there aren't unwanted variables and which can be turned to globals
+- Function static or non-static

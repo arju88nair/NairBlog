@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.49" />
+
+<link rel="canonical" href="/post/redux-1/">
+<base href="/" />
+<meta property="og:title" content="Redux 1" />
+<meta property="og:description" content="Redux is a predictable state container for JavaScript apps. import { createStore } from &quot;redux&quot;; //an import from the redux library const store = createStore(); // Takes reducer as argument  Store stores the states and reducers handles the communication
+Reducers modifies the state based on action in pure state
+In redux, all application state exists as a single store object
+Spread operator or splat operator copies the contents of one array object into another." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/redux-1/" /><meta property="article:published_time" content="2018-10-01T21:39:04&#43;05:30"/>
+<meta property="article:modified_time" content="2018-10-01T21:39:04&#43;05:30"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Redux 1"/>
+<meta name="twitter:description" content="Redux is a predictable state container for JavaScript apps. import { createStore } from &quot;redux&quot;; //an import from the redux library const store = createStore(); // Takes reducer as argument  Store stores the states and reducers handles the communication
+Reducers modifies the state based on action in pure state
+In redux, all application state exists as a single store object
+Spread operator or splat operator copies the contents of one array object into another."/>
+
+
+
+<meta itemprop="name" content="Redux 1">
+<meta itemprop="description" content="Redux is a predictable state container for JavaScript apps. import { createStore } from &quot;redux&quot;; //an import from the redux library const store = createStore(); // Takes reducer as argument  Store stores the states and reducers handles the communication
+Reducers modifies the state based on action in pure state
+In redux, all application state exists as a single store object
+Spread operator or splat operator copies the contents of one array object into another.">
+
+
+<meta itemprop="datePublished" content="2018-10-01T21:39:04&#43;05:30" />
+<meta itemprop="dateModified" content="2018-10-01T21:39:04&#43;05:30" />
+<meta itemprop="wordCount" content="397">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+<link rel="stylesheet" href="css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: #1D1F21;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: #1D1F21;
+}
+
+blockquote {
+  background: #1D1F21;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: yellow; }
+
+.post .content h1{ color: yellow; }
+.post .content h2{ color: yellow; }
+.post .content h3{ color: yellow; }
+.post .content h4{ color: yellow; }
+.post .content h5{ color: yellow; }
+.post .content h6{ color: yellow; }
+.post .content a:hover { color: yellow; }
+.social-link:hover { color: yellow; }
+.nav-item-title:hover { color: yellow; }
+.tag a:hover { color: yellow; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: yellow; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: yellow;
+}
+.post-list .title { color: yellow; }
+.rmore { color: yellow; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+</style>
+
+
+
+<title>
+
+
+     Redux 1 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Today I learned</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="/about/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">gh</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">twtr</div></a>
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Redux 1 </h1>
+    <div class="content"> 
+
+<h2 id="redux-is-a-predictable-state-container-for-javascript-apps">Redux is a predictable state container for JavaScript apps.</h2>
+
+<pre><code>import { createStore } from &quot;redux&quot;; //an import from the redux library
+const store = createStore();  // Takes reducer as argument
+</code></pre>
+
+<p>Store stores the states and reducers handles the communication</p>
+
+<p>Reducers modifies the state based on action in pure state</p>
+
+<p>In redux, all application state exists as a single store object</p>
+
+<p>Spread operator or splat operator copies the contents of one array object into another.</p>
+
+<h2 id="steps">Steps</h2>
+
+<ul>
+<li><p>Add a constant to the constants file. Something like <code>const BLAH = ‘Blah</code></p></li>
+
+<li><p>Add an action creator to the actions folder. Return an action JavaScript object with a type of the constant you created.</p></li>
+
+<li><p>Add a reducer to the reducers folder that handles this action creator.</p></li>
+</ul>
+
+<hr />
+
+<h2 id="mapdispatchtoprops">mapDispatchToProps</h2>
+
+<p>In a nutshell, your components are supposed to be concerned only with displaying stuff. The only place they are supposed to get information from is their props.</p>
+
+<p>Therefore, a &ldquo;well designed&rdquo; component in the pattern look like this:</p>
+
+<pre><code>class FancyAlerter extends Component {
+    sendAlert = () =&gt; {
+        this.props.sendTheAlert()
+    }
+
+    render() {
+        &lt;div&gt;
+          &lt;h1&gt;Today's Fancy Alert is {this.props.fancyInfo}&lt;/h1&gt;
+          &lt;Button onClick={sendAlert}/&gt;
+        &lt;/div&gt;
+     }
+}
+
+</code></pre>
+
+<p>This component gets the info it displays from props (which came from the redux store via mapStateToProps) and it also gets its action function from its props: sendTheAlert().</p>
+
+<p>That&rsquo;s where mapDispatchToProps comes in: in the corresponding container</p>
+
+<pre><code>// FancyButtonContainer.js
+
+function mapDispatchToProps(dispatch) {
+    return({
+        sendTheAlert: () =&gt; {dispatch(ALERT_ACTION)}
+    })
+}
+
+function mapStateToProps(state} {
+    return({fancyInfo: &quot;Fancy this:&quot; + state.currentFunnyString})
+}
+
+export const FancyButtonContainer = connect(
+    mapStateToProps, mapDispatchToProps)(
+    FancyAlerter
+)
+</code></pre>
+
+<p>Now that it&rsquo;s the container that knows about redux and dispatch and store and state and &hellip; stuff.</p>
+
+<p>The component in the pattern, FancyAlerter, which does the rendering doesn&rsquo;t need to know about any of that stuff: it gets its method to call at onClick of the button, via its props.</p>
+
+<p>And &hellip; mapDispatchToProps was the useful means that redux provides to let the container easily pass that function into the wrapped component on its props.</p>
+
+<p>(Note: you can&rsquo;t use mapStateToProps for the same purpose as mapDispatchToProps for the basic reason that you don&rsquo;t have access to dispatch inside mapStateToProp. So you couldn&rsquo;t use  mapStateToProps to give the wrapped component a method that uses dispatch.</p>
+
+<p>I don&rsquo;t know why they chose to break it into two mapping functions - it might have been tidier to have  mapToProps(state, dispatch, props) IE one function to do both!</p>
+
+<hr />
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+</div>
+
+    <div class="date"> Oct 1, 2018 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "thenair" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2018, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+

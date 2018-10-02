@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/post/redux-1/</loc>
+    <lastmod>2018-10-01T21:39:04+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/databases/</loc>
     <lastmod>2018-08-08T19:59:38+05:30</lastmod>
   </url>
@@ -129,7 +134,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-08-08T19:59:38+05:30</lastmod>
+    <lastmod>2018-10-01T21:39:04+05:30</lastmod>
     <priority>0</priority>
   </url>
   

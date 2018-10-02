@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2018, all rights reserved.</copyright>
-    <lastBuildDate>Wed, 08 Aug 2018 19:59:38 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 01 Oct 2018 21:39:04 +0530</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Redux 1</title>
+      <link>/post/redux-1/</link>
+      <pubDate>Mon, 01 Oct 2018 21:39:04 +0530</pubDate>
+      
+      <guid>/post/redux-1/</guid>
+      <description>Redux is a predictable state container for JavaScript apps. import { createStore } from &amp;quot;redux&amp;quot;; //an import from the redux library const store = createStore(); // Takes reducer as argument  Store stores the states and reducers handles the communication
+Reducers modifies the state based on action in pure state
+In redux, all application state exists as a single store object
+Spread operator or splat operator copies the contents of one array object into another.</description>
+    </item>
     
     <item>
       <title>Databases</title>
