@@ -1,6 +1,12 @@
 ---
 title: "Redux 1"
 date: 2018-10-01T21:39:04+05:30
+tags : [
+    "React",
+    "Redux",
+    "Interview",
+    "Javascript"
+   ]
 ---
 
 ## Redux is a predictable state container for JavaScript apps.
@@ -90,3 +96,5 @@ I don't know why they chose to break it into two mapping functions - it might ha
 
 
 -------
+
+>> Reducers are just pure functions that take the previous state and an action, and return the next state. Remember to return new state objects, instead of mutating the previous state.

@@ -160,5 +160,12 @@ server {
 
 
 }
-
 ```
+
+-----
+
+To install required FPM
+```
+apt-get -y install php7.0-fpm
+```
+Edit it in sites-available by giving the path
