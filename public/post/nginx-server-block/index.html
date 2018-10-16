@@ -35,7 +35,7 @@ The Django application is served by the help of Uwsgi and Nginx courtesy of this
 
 <meta itemprop="datePublished" content="2018-07-11T17:31:55&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-11T17:31:55&#43;05:30" />
-<meta itemprop="wordCount" content="430">
+<meta itemprop="wordCount" content="452">
 
 
 
@@ -334,7 +334,14 @@ server {
 <pre><code>apt-get -y install php7.0-fpm
 </code></pre>
 
-<p>Edit it in sites-available by giving the path</p>
+<h2 id="edit-it-in-sites-available-by-giving-the-path">Edit it in sites-available by giving the path</h2>
+
+<p>For enabling the nginx to use the required routes with the get parameters enabled,add</p>
+
+<pre><code>try_files $uri $uri/ /www/index.php?$args;
+</code></pre>
+
+<p>in the location block</p>
  </div>
     <footer class="post-footer">
 

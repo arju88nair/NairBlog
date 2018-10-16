@@ -169,3 +169,11 @@ To install required FPM
 apt-get -y install php7.0-fpm
 ```
 Edit it in sites-available by giving the path
+-------
+
+For enabling the nginx to use the required routes with the get parameters enabled,add 
+
+```
+try_files $uri $uri/ /www/index.php?$args;
+```
+in the location block
