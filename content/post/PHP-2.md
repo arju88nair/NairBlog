@@ -84,3 +84,34 @@ $foo->stop();
   -  D — Dependency Inversion principle
   > ntities must depend on abstractions not on concretions. It states that the high level module must not depend on the low level module, but they should depend on abstractions.
  
+ --------
+
+
+ ## Generators
+
+ Generators provide an easy way to implement simple iterators without the overhead or complexity of implementing a class that implements the Iterator interface.
+
+ A generator allows you to write code that uses foreach to iterate over a set of data without needing to build an array in memory
+
+ ```
+ function xrange($start, $end, $step = 1) {
+    for ($i = $start; $i <= $end; $i += $step) {
+        yield $i;
+    }
+}
+
+foreach (xrange(1, 1000000) as $num) {
+    echo $num, "\n";
+}
+```
+
+
+ Generators are interruptible functions, where the yield statements constitute the interruption points.
+
+ In above example, if you call xrange(1, 1000000) no code in the xrange() function is actually run. Instead PHP just returns an instance of the Generator class which implements the Iterator interface:
+
+
+ The code is only run once you invoke one of the iterator methods on the object. E.g. if you call $range->rewind() the code in the xrange() function will be run until the first occurrence of yield in the control flow. In this case it means that $i = $start and then yield $i are run. Whatever was passed to the yield statement can then be fetched using $range->current()
+ 
+
+To continue executing the code in the generator you need to call the $range->next() method. This will again resume the generator until a yield statement is hit. Thus, using a succession of ->next() and ->current() calls, you can get all values from the generator, until at some point no yield is hit anymore.

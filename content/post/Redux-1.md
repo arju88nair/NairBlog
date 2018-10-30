@@ -98,3 +98,12 @@ I don't know why they chose to break it into two mapping functions - it might ha
 -------
 
 >> Reducers are just pure functions that take the previous state and an action, and return the next state. Remember to return new state objects, instead of mutating the previous state.
+
+-------
+
+
+# Thunk
+
+Redux Thunk is a middleware that lets you call action creators that return a function instead of an action object.
+
+That function receives the store’s dispatch method, which is then used to dispatch regular synchronous actions inside the body of the function once the asynchronous operations have completed.

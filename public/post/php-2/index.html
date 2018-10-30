@@ -7,7 +7,7 @@
 <meta name="description" content="Personal blog." />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.49.2" />
+<meta name="generator" content="Hugo 0.50" />
 
 <link rel="canonical" href="/post/php-2/">
 <base href="/" />
@@ -35,7 +35,7 @@
 
 <meta itemprop="datePublished" content="2018-07-16T13:14:11&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-16T13:14:11&#43;05:30" />
-<meta itemprop="wordCount" content="349">
+<meta itemprop="wordCount" content="596">
 
 
 
@@ -260,6 +260,33 @@ $foo-&gt;stop();
 <li>D — Dependency Inversion principle
 &gt; ntities must depend on abstractions not on concretions. It states that the high level module must not depend on the low level module, but they should depend on abstractions.</li>
 </ul>
+
+<hr />
+
+<p>## Generators</p>
+
+<p>Generators provide an easy way to implement simple iterators without the overhead or complexity of implementing a class that implements the Iterator interface.</p>
+
+<p>A generator allows you to write code that uses foreach to iterate over a set of data without needing to build an array in memory</p>
+
+<pre><code> function xrange($start, $end, $step = 1) {
+    for ($i = $start; $i &lt;= $end; $i += $step) {
+        yield $i;
+    }
+}
+
+foreach (xrange(1, 1000000) as $num) {
+    echo $num, &quot;\n&quot;;
+}
+</code></pre>
+
+<p>Generators are interruptible functions, where the yield statements constitute the interruption points.</p>
+
+<p>In above example, if you call xrange(1, 1000000) no code in the xrange() function is actually run. Instead PHP just returns an instance of the Generator class which implements the Iterator interface:</p>
+
+<p>The code is only run once you invoke one of the iterator methods on the object. E.g. if you call $range-&gt;rewind() the code in the xrange() function will be run until the first occurrence of yield in the control flow. In this case it means that $i = $start and then yield $i are run. Whatever was passed to the yield statement can then be fetched using $range-&gt;current()</p>
+
+<p>To continue executing the code in the generator you need to call the $range-&gt;next() method. This will again resume the generator until a yield statement is hit. Thus, using a succession of -&gt;next() and -&gt;current() calls, you can get all values from the generator, until at some point no yield is hit anymore.</p>
  </div>
     <footer class="post-footer">
 

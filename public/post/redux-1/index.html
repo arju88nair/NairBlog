@@ -7,7 +7,7 @@
 <meta name="description" content="Personal blog." />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.49.2" />
+<meta name="generator" content="Hugo 0.50" />
 
 <link rel="canonical" href="/post/redux-1/">
 <base href="/" />
@@ -38,7 +38,7 @@ Spread operator or splat operator copies the contents of one array object into a
 
 <meta itemprop="datePublished" content="2018-10-01T21:39:04&#43;05:30" />
 <meta itemprop="dateModified" content="2018-10-01T21:39:04&#43;05:30" />
-<meta itemprop="wordCount" content="427">
+<meta itemprop="wordCount" content="476">
 
 
 
@@ -262,6 +262,14 @@ export const FancyButtonContainer = connect(
 <p>Reducers are just pure functions that take the previous state and an action, and return the next state. Remember to return new state objects, instead of mutating the previous state.</p>
 </blockquote>
 </blockquote>
+
+<hr />
+
+<h1 id="thunk">Thunk</h1>
+
+<p>Redux Thunk is a middleware that lets you call action creators that return a function instead of an action object.</p>
+
+<p>That function receives the store’s dispatch method, which is then used to dispatch regular synchronous actions inside the body of the function once the asynchronous operations have completed.</p>
  </div>
     <footer class="post-footer">
 
