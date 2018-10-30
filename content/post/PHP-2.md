@@ -112,6 +112,30 @@ foreach (xrange(1, 1000000) as $num) {
 
 
  The code is only run once you invoke one of the iterator methods on the object. E.g. if you call $range->rewind() the code in the xrange() function will be run until the first occurrence of yield in the control flow. In this case it means that $i = $start and then yield $i are run. Whatever was passed to the yield statement can then be fetched using $range->current()
- 
+
 
 To continue executing the code in the generator you need to call the $range->next() method. This will again resume the generator until a yield statement is hit. Thus, using a succession of ->next() and ->current() calls, you can get all values from the generator, until at some point no yield is hit anymore.
+
+--------------
+
+## Coroutines
+
+Coroutines add to the above functionality is the ability to send values back to the generator. This turns the one-way communication from the generator to the caller into a two-way channel between the two.
+
+Values are passed into the coroutine by calling its ->send() method instead of ->next(). 
+
+```
+function logger($fileName) {
+    $fileHandle = fopen($fileName, 'a');
+    while (true) {
+        fwrite($fileHandle, yield . "\n");
+    }
+}
+
+$logger = logger(__DIR__ . '/log');
+$logger->send('Foo');
+$logger->send('Bar');
+
+```
+
+Here yield isn’t used as a statement here, but as an expression, i.e. it has a return value. The return value of yield is whatever was passed to ->send(). 
