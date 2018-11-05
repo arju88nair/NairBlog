@@ -139,3 +139,71 @@ $logger->send('Bar');
 ```
 
 Here yield isn’t used as a statement here, but as an expression, i.e. it has a return value. The return value of yield is whatever was passed to ->send(). 
+
+---------
+## Closures
+A closure is an anonymous function that can access variables imported from the outside scope without using any global variables.
+
+A Lambda is an anonymous function that can be assigned to a variable or passed to another function as an argument.
+
+```
+// Anonymous function  
+ // assigned to variable  
+ $greeting = function () {  
+ return "Hello world";  
+ }
+
+// Call function  
+ echo $greeting();  
+ // Returns "Hello world"   
+```
+ Closures are more or less Lambdas.
+
+ ```
+ // Create a user  
+$user = "Philip";
+
+// Create a Closure  
+$greeting = function() use ($user) {  
+echo "Hello $user";  
+};
+
+// Greet the user  
+$greeting(); // Returns "Hello Philip" 
+```
+ Closure is able to access the $user variable. because it was declared in the use clause of the Closure function definition.
+
+ If you were to alter the $user variable within the Closure, it would not effect the original variable. To update the original variable, we can append an ampersand. An ampersand before a variable means this is a reference and so the original variable is also updated.
+
+
+ ```
+ // Set counter  
+$i = 0;  
+// Increase counter within the scope  
+// of the function  
+$closure = function () use ($i){ $i++; };  
+// Run the function  
+$closure();  
+// The global count hasn’t changed  
+echo $i; // Returns 0
+
+// Reset count  
+$i = 0;  
+// Increase counter within the scope  
+// of the function but pass it as a reference  
+$closure = function () use (&$i){ $i++; };  
+// Run the function  
+$closure();  
+// The global count has increased  
+echo $i; // Returns 1  
+```
+
+
+Real life scenarios
+
+```
+Route::get(‘user/(:any)’, function($name){  
+return "Hello " . $name;  
+});  
+
+```

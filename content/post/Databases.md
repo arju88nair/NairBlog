@@ -61,3 +61,6 @@ DML – Data Manipulation Language
 Row-level locks are always implicit, solidDB sets the locks when necessary. You cannot lock or unlock row-level locks manually.
 
 - Table-level locks can be thought of as metadata locks; they prevent concurrent users from making schema changes (DDL operations) simultaneously or while records within the table are being changed.
+-----
+
+The binary log contains a record of all changes to the databases, both data and structure, as well as how long each statement took to execute. It consists of a set of binary log files and an index

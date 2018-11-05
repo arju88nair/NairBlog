@@ -356,32 +356,6 @@ $(function () {
 ```
 live() implements event delegation. The handler bound to live() is not bound to the anchor element, as it may so appear. Instead live() binds a handler to the root of the DOM. So rather than attaching 100’s of event handlers to all the anchor elements in the ‘container’ div, using live() attaches just one event handler to the root document, along with the associated selector (in our case #container a) and event information.
 
---------
-
-## Async 
-
-```
-function resolveAfter2Seconds() {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve('resolved');
-    }, 2000);
-  });
-}
-
-async function asyncCall() {
-  console.log('calling');
-  var result = await resolveAfter2Seconds();
-  console.log(result);
-  // expected output: "resolved"
-}
-
-asyncCall();
-
-```
-
-Returns an AsyncFunction object. An asynchronous function is a function which operates asynchronously via the event loop, using an implicit Promise to return its result
-
 
 ---------------
 
@@ -389,3 +363,6 @@ Class Inheritance: A class is like a blueprint — a description of the obje
 
 Prototypal Inheritance: A prototype is a working object instance. Objects inherit directly from other objects.
 Class objects have a property called `prototype`, which is also an object.
+
+-----------
+
