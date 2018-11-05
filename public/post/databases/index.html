@@ -10,7 +10,6 @@
 <meta name="generator" content="Hugo 0.50" />
 
 <link rel="canonical" href="/post/databases/">
-<base href="/" />
 <meta property="og:title" content="Databases" />
 <meta property="og:description" content="Relational databases like MySQL, PostgreSQL and SQLite3 represent and store data in tables and rows.
  They&rsquo;re based on a branch of algebraic set theory known as relational algebra.
@@ -41,14 +40,14 @@
 
 <meta itemprop="datePublished" content="2018-08-08T19:59:38&#43;05:30" />
 <meta itemprop="dateModified" content="2018-08-08T19:59:38&#43;05:30" />
-<meta itemprop="wordCount" content="408">
+<meta itemprop="wordCount" content="446">
 
 
 
 <meta itemprop="keywords" content="Databases,SQL," />
 
 
-<link rel="stylesheet" href="css/layout.css" />
+<link rel="stylesheet" href="/css/layout.css" />
 <style type="text/css">
 body {
   background-color: #101010;
@@ -232,8 +231,10 @@ DML – Data Manipulation Language</p></li>
 <li><p>Row-level locks are placed on single records (rows) that the statements in a transaction define. The locks are placed as soon as any piece of the row is accessed.
 Row-level locks are always implicit, solidDB sets the locks when necessary. You cannot lock or unlock row-level locks manually.</p></li>
 
-<li><p>Table-level locks can be thought of as metadata locks; they prevent concurrent users from making schema changes (DDL operations) simultaneously or while records within the table are being changed.</p></li>
+<li><h2 id="table-level-locks-can-be-thought-of-as-metadata-locks-they-prevent-concurrent-users-from-making-schema-changes-ddl-operations-simultaneously-or-while-records-within-the-table-are-being-changed">Table-level locks can be thought of as metadata locks; they prevent concurrent users from making schema changes (DDL operations) simultaneously or while records within the table are being changed.</h2></li>
 </ul>
+
+<p>The binary log contains a record of all changes to the databases, both data and structure, as well as how long each statement took to execute. It consists of a set of binary log files and an index</p>
  </div>
     <footer class="post-footer">
 

@@ -10,7 +10,6 @@
 <meta name="generator" content="Hugo 0.50" />
 
 <link rel="canonical" href="/post/javascript/">
-<base href="/" />
 <meta property="og:title" content="Javascript" />
 <meta property="og:description" content="Callback functions They are derived from a programming paradigm known as functional programmings
 A callback function, also known as a higher-order function, is a function that is passed to another function Eg:
@@ -38,14 +37,14 @@ A pure function is a function which: Given the same inputs, always returns the s
 
 <meta itemprop="datePublished" content="2018-07-22T13:50:50&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-22T13:50:50&#43;05:30" />
-<meta itemprop="wordCount" content="1193">
+<meta itemprop="wordCount" content="1134">
 
 
 
 <meta itemprop="keywords" content="Javascript,Interview," />
 
 
-<link rel="stylesheet" href="css/layout.css" />
+<link rel="stylesheet" href="/css/layout.css" />
 <style type="text/css">
 body {
   background-color: #101010;
@@ -529,35 +528,12 @@ Attach an event handler function for one or more events to the selected elements
 
 <hr />
 
-<h2 id="async">Async</h2>
-
-<pre><code>function resolveAfter2Seconds() {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
-      resolve('resolved');
-    }, 2000);
-  });
-}
-
-async function asyncCall() {
-  console.log('calling');
-  var result = await resolveAfter2Seconds();
-  console.log(result);
-  // expected output: &quot;resolved&quot;
-}
-
-asyncCall();
-
-</code></pre>
-
-<p>Returns an AsyncFunction object. An asynchronous function is a function which operates asynchronously via the event loop, using an implicit Promise to return its result</p>
-
-<hr />
-
 <p>Class Inheritance: A class is like a blueprint — a description of the object to be created. Classes inherit from classes can create subclass relationships</p>
 
 <p>Prototypal Inheritance: A prototype is a working object instance. Objects inherit directly from other objects.
 Class objects have a property called <code>prototype</code>, which is also an object.</p>
+
+<hr />
  </div>
     <footer class="post-footer">
 

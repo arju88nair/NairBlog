@@ -10,7 +10,6 @@
 <meta name="generator" content="Hugo 0.50" />
 
 <link rel="canonical" href="/post/php-2/">
-<base href="/" />
 <meta property="og:title" content="PHP Part 2" />
 <meta property="og:description" content="Error Control Operators  @ - Suppresses errors
  extract()  It converts array keys into variable names and array values into variable value.
@@ -35,14 +34,14 @@
 
 <meta itemprop="datePublished" content="2018-07-16T13:14:11&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-16T13:14:11&#43;05:30" />
-<meta itemprop="wordCount" content="596">
+<meta itemprop="wordCount" content="964">
 
 
 
 <meta itemprop="keywords" content="PHP,OOP,Interview," />
 
 
-<link rel="stylesheet" href="css/layout.css" />
+<link rel="stylesheet" href="/css/layout.css" />
 <style type="text/css">
 body {
   background-color: #101010;
@@ -287,6 +286,95 @@ foreach (xrange(1, 1000000) as $num) {
 <p>The code is only run once you invoke one of the iterator methods on the object. E.g. if you call $range-&gt;rewind() the code in the xrange() function will be run until the first occurrence of yield in the control flow. In this case it means that $i = $start and then yield $i are run. Whatever was passed to the yield statement can then be fetched using $range-&gt;current()</p>
 
 <p>To continue executing the code in the generator you need to call the $range-&gt;next() method. This will again resume the generator until a yield statement is hit. Thus, using a succession of -&gt;next() and -&gt;current() calls, you can get all values from the generator, until at some point no yield is hit anymore.</p>
+
+<hr />
+
+<h2 id="coroutines">Coroutines</h2>
+
+<p>Coroutines add to the above functionality is the ability to send values back to the generator. This turns the one-way communication from the generator to the caller into a two-way channel between the two.</p>
+
+<p>Values are passed into the coroutine by calling its -&gt;send() method instead of -&gt;next().</p>
+
+<pre><code>function logger($fileName) {
+    $fileHandle = fopen($fileName, 'a');
+    while (true) {
+        fwrite($fileHandle, yield . &quot;\n&quot;);
+    }
+}
+
+$logger = logger(__DIR__ . '/log');
+$logger-&gt;send('Foo');
+$logger-&gt;send('Bar');
+
+</code></pre>
+
+<p>Here yield isn’t used as a statement here, but as an expression, i.e. it has a return value. The return value of yield is whatever was passed to -&gt;send().</p>
+
+<hr />
+
+<h2 id="closures">Closures</h2>
+
+<p>A closure is an anonymous function that can access variables imported from the outside scope without using any global variables.</p>
+
+<p>A Lambda is an anonymous function that can be assigned to a variable or passed to another function as an argument.</p>
+
+<pre><code>// Anonymous function  
+ // assigned to variable  
+ $greeting = function () {  
+ return &quot;Hello world&quot;;  
+ }
+
+// Call function  
+ echo $greeting();  
+ // Returns &quot;Hello world&quot;   
+</code></pre>
+
+<p>Closures are more or less Lambdas.</p>
+
+<pre><code> // Create a user  
+$user = &quot;Philip&quot;;
+
+// Create a Closure  
+$greeting = function() use ($user) {  
+echo &quot;Hello $user&quot;;  
+};
+
+// Greet the user  
+$greeting(); // Returns &quot;Hello Philip&quot; 
+</code></pre>
+
+<p>Closure is able to access the $user variable. because it was declared in the use clause of the Closure function definition.</p>
+
+<p>If you were to alter the $user variable within the Closure, it would not effect the original variable. To update the original variable, we can append an ampersand. An ampersand before a variable means this is a reference and so the original variable is also updated.</p>
+
+<pre><code> // Set counter  
+$i = 0;  
+// Increase counter within the scope  
+// of the function  
+$closure = function () use ($i){ $i++; };  
+// Run the function  
+$closure();  
+// The global count hasn’t changed  
+echo $i; // Returns 0
+
+// Reset count  
+$i = 0;  
+// Increase counter within the scope  
+// of the function but pass it as a reference  
+$closure = function () use (&amp;$i){ $i++; };  
+// Run the function  
+$closure();  
+// The global count has increased  
+echo $i; // Returns 1  
+</code></pre>
+
+<p>Real life scenarios</p>
+
+<pre><code>Route::get(‘user/(:any)’, function($name){  
+return &quot;Hello &quot; . $name;  
+});  
+
+</code></pre>
  </div>
     <footer class="post-footer">
 
