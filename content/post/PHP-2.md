@@ -198,6 +198,21 @@ $closure();
 echo $i; // Returns 1  
 ```
 
+```
+// Set a multiplier  
+ $multiplier = 3;
+
+// Create a list of numbers  
+ $numbers = array(1,2,3,4);
+
+// Use array_walk to iterate  
+ // through the list and multiply  
+ array_walk($numbers, function($number) use($multiplier){  
+ echo $number * $multiplier;  
+ });
+
+ ```
+
 
 Real life scenarios
 
@@ -207,3 +222,40 @@ return "Hello " . $name;
 });  
 
 ```
+
+## __construct
+
+```
+class Entity {
+
+protected $meta;
+
+public function __construct(array $meta)  
+{  
+$this->meta = $meta;  
+}
+
+}
+
+class Tweet extends Entity {
+
+protected $id;  
+protected $text;
+
+public function __construct($id, $text, array $meta)  
+{  
+$this->id = $id;  
+$this->text = $text;
+
+parent::__construct($meta);  
+}
+
+}  
+```
+
+------
+
+## Namespace
+One library’s PHP code might use the same class name as another. When both libraries are used in the same namespace, they collide and cause trouble.Two files with the same name may co-exist in separate directories. Likewise, two PHP classes with the same name may co-exist in separate PHP namespaces. 
+
+It allows you to use the same function or class name in different parts of the same program without causing a name collision.

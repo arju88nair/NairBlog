@@ -34,7 +34,7 @@
 
 <meta itemprop="datePublished" content="2018-07-16T13:14:11&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-16T13:14:11&#43;05:30" />
-<meta itemprop="wordCount" content="964">
+<meta itemprop="wordCount" content="1114">
 
 
 
@@ -368,6 +368,20 @@ $closure();
 echo $i; // Returns 1  
 </code></pre>
 
+<pre><code>// Set a multiplier  
+ $multiplier = 3;
+
+// Create a list of numbers  
+ $numbers = array(1,2,3,4);
+
+// Use array_walk to iterate  
+ // through the list and multiply  
+ array_walk($numbers, function($number) use($multiplier){  
+ echo $number * $multiplier;  
+ });
+
+</code></pre>
+
 <p>Real life scenarios</p>
 
 <pre><code>Route::get(‘user/(:any)’, function($name){  
@@ -375,6 +389,43 @@ return &quot;Hello &quot; . $name;
 });  
 
 </code></pre>
+
+<h2 id="construct">__construct</h2>
+
+<pre><code>class Entity {
+
+protected $meta;
+
+public function __construct(array $meta)  
+{  
+$this-&gt;meta = $meta;  
+}
+
+}
+
+class Tweet extends Entity {
+
+protected $id;  
+protected $text;
+
+public function __construct($id, $text, array $meta)  
+{  
+$this-&gt;id = $id;  
+$this-&gt;text = $text;
+
+parent::__construct($meta);  
+}
+
+}  
+</code></pre>
+
+<hr />
+
+<h2 id="namespace">Namespace</h2>
+
+<p>One library’s PHP code might use the same class name as another. When both libraries are used in the same namespace, they collide and cause trouble.Two files with the same name may co-exist in separate directories. Likewise, two PHP classes with the same name may co-exist in separate PHP namespaces.</p>
+
+<p>It allows you to use the same function or class name in different parts of the same program without causing a name collision.</p>
  </div>
     <footer class="post-footer">
 
