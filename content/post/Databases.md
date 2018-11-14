@@ -64,3 +64,18 @@ Row-level locks are always implicit, solidDB sets the locks when necessary. You 
 -----
 
 The binary log contains a record of all changes to the databases, both data and structure, as well as how long each statement took to execute. It consists of a set of binary log files and an index
+
+----
+Replication works like this.
+
+The master writes all transactions into its binary log.
+The slave reads the transactions from masters binary log and writes them to its relay log.
+Only after that the slave executes the statements from its relay log.
+binlog-do-db makes the master write only statements for the specified DB into its binary log.
+
+replicate-do-db makes the slave just read statements from the relay log, that are for the specified DB.
+
+replicate-do-db has no effect on the master,since there is no relay log to read from.
+
+The LOCK TABLES part is there, so that the data is consistent. It prevents that the data on the master is modified while backing up the data is still in process.
+
