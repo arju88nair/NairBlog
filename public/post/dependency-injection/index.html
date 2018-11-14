@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.51" />
+
+<link rel="canonical" href="/post/dependency-injection/">
+<meta property="og:title" content="Dependency Injection" />
+<meta property="og:description" content="Dependency injection is a technique whereby one object supplies the dependencies of another object
+class Profile { public function deactivateProfile(Setting $setting) { $setting-&gt;isActive = false; } }  Advantages  Decoupling Their purpose is isolated and can easily be swapped out by other components later. This way your code will be cleaner and decoupled.
+ Reusable code Another advantage of dependency injection is that your code will be more reusable since there are no direct dependencies on other entities (objects or classes) in your code." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/dependency-injection/" /><meta property="article:published_time" content="2018-11-14T12:47:21&#43;05:30"/>
+<meta property="article:modified_time" content="2018-11-14T12:47:21&#43;05:30"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dependency Injection"/>
+<meta name="twitter:description" content="Dependency injection is a technique whereby one object supplies the dependencies of another object
+class Profile { public function deactivateProfile(Setting $setting) { $setting-&gt;isActive = false; } }  Advantages  Decoupling Their purpose is isolated and can easily be swapped out by other components later. This way your code will be cleaner and decoupled.
+ Reusable code Another advantage of dependency injection is that your code will be more reusable since there are no direct dependencies on other entities (objects or classes) in your code."/>
+
+
+
+<meta itemprop="name" content="Dependency Injection">
+<meta itemprop="description" content="Dependency injection is a technique whereby one object supplies the dependencies of another object
+class Profile { public function deactivateProfile(Setting $setting) { $setting-&gt;isActive = false; } }  Advantages  Decoupling Their purpose is isolated and can easily be swapped out by other components later. This way your code will be cleaner and decoupled.
+ Reusable code Another advantage of dependency injection is that your code will be more reusable since there are no direct dependencies on other entities (objects or classes) in your code.">
+
+
+<meta itemprop="datePublished" content="2018-11-14T12:47:21&#43;05:30" />
+<meta itemprop="dateModified" content="2018-11-14T12:47:21&#43;05:30" />
+<meta itemprop="wordCount" content="555">
+
+
+
+<meta itemprop="keywords" content="PHP,PHP7,Interview," />
+
+
+<link rel="stylesheet" href="/css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: #1D1F21;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: #1D1F21;
+}
+
+blockquote {
+  background: #1D1F21;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: yellow; }
+
+.post .content h1{ color: yellow; }
+.post .content h2{ color: yellow; }
+.post .content h3{ color: yellow; }
+.post .content h4{ color: yellow; }
+.post .content h5{ color: yellow; }
+.post .content h6{ color: yellow; }
+.post .content a:hover { color: yellow; }
+.social-link:hover { color: yellow; }
+.nav-item-title:hover { color: yellow; }
+.tag a:hover { color: yellow; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: yellow; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: yellow;
+}
+.post-list .title { color: yellow; }
+.rmore { color: yellow; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+</style>
+
+
+
+<title>
+
+
+     Dependency Injection 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Today I learned</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="/about/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">gh</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">twtr</div></a>
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Dependency Injection </h1>
+    <div class="content"> 
+
+<p>Dependency injection is a technique whereby one object supplies the dependencies of another object</p>
+
+<pre><code>class Profile {
+    public function deactivateProfile(Setting $setting)
+    {
+        $setting-&gt;isActive = false;
+    }
+}
+
+</code></pre>
+
+<h1 id="advantages">Advantages</h1>
+
+<ul>
+<li><p>Decoupling
+Their purpose is isolated and can easily be swapped out by other components later. This way your code will be cleaner and decoupled.</p></li>
+
+<li><p>Reusable code
+Another advantage of dependency injection is that your code will be more reusable since there are no direct dependencies on other entities (objects or classes) in your code.</p></li>
+
+<li><p>Testable code</p></li>
+</ul>
+
+<hr />
+
+<p>Classic PHP code</p>
+
+<h2 id="here-is-how-a-code-not-using-di-will-roughly-work">Here is how a code not using DI will roughly work:</h2>
+
+<p>Application needs Foo (e.g. a controller), so:
+- Application creates Foo
+- Application calls Foo
+    - Foo needs Bar (e.g. a service), so:
+    - Foo creates Bar
+    - Foo calls Bar
+        - Bar needs Bim (a service, a repository, …), so:<br />
+        - Bar creates Bim
+        - Bar does something</p>
+
+<h2 id="using-dependency-injection">Using dependency injection</h2>
+
+<ul>
+<li>Application needs Foo, which needs Bar, which needs Bim, so:</li>
+<li>Application creates Bim</li>
+<li>Application creates Bar and gives it Bim</li>
+<li>Application creates Foo and gives it Bar</li>
+<li>Application calls Foo
+
+<ul>
+<li>Foo calls Bar</li>
+<li>Bar does something
+<br /></li>
+</ul></li>
+</ul>
+
+<p>This is the pattern of Inversion of Control. The control of the dependencies is inverted from one being called to the one calling.</p>
+
+<p>The main advantage: the one at the top of the caller chain is always you. You can control all dependencies and have complete control over how your application works. You can replace a dependency by another (one you made for example).</p>
+
+<p>For example what if Library X uses Logger Y and you want to make it use your logger Z? With dependency injection, you don&rsquo;t have to change the code of Library X.</p>
+
+<p>Using a container #
+Now how does a code using PHP-DI works:</p>
+
+<p>Application needs Foo so:
+Application gets Foo from the Container, so:
+Container creates Bim
+Container creates Bar and gives it Bim
+Container creates Foo and gives it Bar
+Application calls Foo
+Foo calls Bar
+Bar does something
+In short, the container takes away all the work of creating and injecting dependencies.</p>
+
+<p>Understanding with an example #
+This is a real life example comparing a classic implementation (using new or singletons) VS using dependency injection.</p>
+
+<hr />
+
+<pre><code>class User 
+{
+    private $database = null;
+
+    public function __construct() {
+        $this-&gt;database = new database('host', 'user', 'pass', 'dbname');
+    }
+
+    public function getUsers() {
+        return $this-&gt;database-&gt;getAll('users');
+    }
+}
+
+$user = new User();
+$user-&gt;getUsers();
+</code></pre>
+
+<p>This code again has these problems:</p>
+
+<ul>
+<li><p>The class User has implicit dependency on the specific database.This defeats Dependency inversion principle</p></li>
+
+<li><p>If we wanted to change database credentials, we need to edit the User class</p></li>
+
+<li><p>What if we need to change the DB?</p></li>
+
+<li><p>The User class does not necessarily need to know about database connection, it should be confined to its own functionality only.This defeats the Single responsibility principle.</p></li>
+
+<li><p>It would become harder to write unit tests for the User class because we are instantiating the database class inside its constructor</p></li>
+</ul>
+
+<h2 id="enter-di">Enter DI</h2>
+
+<pre><code>class User 
+{
+    private $database = null;
+
+    public function __construct(Database $database) {
+        $this-&gt;database = $database;
+    }
+
+    public function getUsers() {
+        return $this-&gt;database-&gt;getAll('users');
+    }
+}
+
+$database = new Database('host', 'user', 'pass', 'dbname');
+$user = new User($database);
+$user-&gt;getUsers();
+
+</code></pre>
+
+<h2 id="ioc-inversion-of-control">IoC (Inversion of Control)</h2>
+
+<p>is all about relationship between higher level classes and detail classes. Higher level classes shouldn&rsquo;t depend on detail classes, but rather the contrary.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/php">#PHP</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/php7">#PHP7</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/interview">#Interview</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Nov 14, 2018 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "thenair" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2018, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+

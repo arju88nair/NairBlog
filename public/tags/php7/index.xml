@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Php7 on Today I learned</title>
+    <link>/tags/php7/</link>
+    <description>Recent content in Php7 on Today I learned</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2018, all rights reserved.</copyright>
+    <lastBuildDate>Wed, 14 Nov 2018 12:47:21 +0530</lastBuildDate>
+    
+	<atom:link href="/tags/php7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dependency Injection</title>
+      <link>/post/dependency-injection/</link>
+      <pubDate>Wed, 14 Nov 2018 12:47:21 +0530</pubDate>
+      
+      <guid>/post/dependency-injection/</guid>
+      <description>Dependency injection is a technique whereby one object supplies the dependencies of another object
+class Profile { public function deactivateProfile(Setting $setting) { $setting-&amp;gt;isActive = false; } }  Advantages  Decoupling Their purpose is isolated and can easily be swapped out by other components later. This way your code will be cleaner and decoupled.
+ Reusable code Another advantage of dependency injection is that your code will be more reusable since there are no direct dependencies on other entities (objects or classes) in your code.</description>
+    </item>
+    
+  </channel>
+</rss>

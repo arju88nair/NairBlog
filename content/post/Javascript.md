@@ -357,6 +357,21 @@ $(function () {
 live() implements event delegation. The handler bound to live() is not bound to the anchor element, as it may so appear. Instead live() binds a handler to the root of the DOM. So rather than attaching 100’s of event handlers to all the anchor elements in the ‘container’ div, using live() attaches just one event handler to the root document, along with the associated selector (in our case #container a) and event information.
 
 
+```
+$('#click li').click(function() {
+    $(this).parent().append($('<li>List item</li>'));
+});
+    
+    
+$('#on').on('click', 'li', function() {
+    $(this).parent().append($('<li>List item</li>'));
+});
+
+``` 
+
+Here, the newly created li s won't have the click listener for the click method
+
+
 ---------------
 
 Class Inheritance: A class is like a blueprint — a description of the object to be created. Classes inherit from classes can create subclass relationships

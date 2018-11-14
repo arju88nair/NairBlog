@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2018, all rights reserved.</copyright>
-    <lastBuildDate>Mon, 01 Oct 2018 21:39:04 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 14 Nov 2018 12:47:21 +0530</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dependency Injection</title>
+      <link>/post/dependency-injection/</link>
+      <pubDate>Wed, 14 Nov 2018 12:47:21 +0530</pubDate>
+      
+      <guid>/post/dependency-injection/</guid>
+      <description>Dependency injection is a technique whereby one object supplies the dependencies of another object
+class Profile { public function deactivateProfile(Setting $setting) { $setting-&amp;gt;isActive = false; } }  Advantages  Decoupling Their purpose is isolated and can easily be swapped out by other components later. This way your code will be cleaner and decoupled.
+ Reusable code Another advantage of dependency injection is that your code will be more reusable since there are no direct dependencies on other entities (objects or classes) in your code.</description>
+    </item>
     
     <item>
       <title>Redux 1</title>

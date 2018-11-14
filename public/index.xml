@@ -24,6 +24,17 @@ You can reach me at :</description>
     </item>
     
     <item>
+      <title>Dependency Injection</title>
+      <link>/post/dependency-injection/</link>
+      <pubDate>Wed, 14 Nov 2018 12:47:21 +0530</pubDate>
+      
+      <guid>/post/dependency-injection/</guid>
+      <description>Dependency injection is a technique whereby one object supplies the dependencies of another object
+class Profile { public function deactivateProfile(Setting $setting) { $setting-&amp;gt;isActive = false; } }  Advantages  Decoupling Their purpose is isolated and can easily be swapped out by other components later. This way your code will be cleaner and decoupled.
+ Reusable code Another advantage of dependency injection is that your code will be more reusable since there are no direct dependencies on other entities (objects or classes) in your code.</description>
+    </item>
+    
+    <item>
       <title>Redux 1</title>
       <link>/post/redux-1/</link>
       <pubDate>Mon, 01 Oct 2018 21:39:04 +0530</pubDate>

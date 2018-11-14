@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/post/dependency-injection/</loc>
+    <lastmod>2018-11-14T12:47:21+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/redux-1/</loc>
     <lastmod>2018-10-01T21:39:04+05:30</lastmod>
   </url>
@@ -86,7 +91,7 @@
   
   <url>
     <loc>/tags/interview/</loc>
-    <lastmod>2018-10-01T21:39:04+05:30</lastmod>
+    <lastmod>2018-11-14T12:47:21+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -128,13 +133,19 @@
   
   <url>
     <loc>/tags/php/</loc>
-    <lastmod>2018-07-20T18:08:33+05:30</lastmod>
+    <lastmod>2018-11-14T12:47:21+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/php7/</loc>
+    <lastmod>2018-11-14T12:47:21+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-10-01T21:39:04+05:30</lastmod>
+    <lastmod>2018-11-14T12:47:21+05:30</lastmod>
     <priority>0</priority>
   </url>
   

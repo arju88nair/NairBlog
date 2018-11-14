@@ -37,7 +37,7 @@ A pure function is a function which: Given the same inputs, always returns the s
 
 <meta itemprop="datePublished" content="2018-07-22T13:50:50&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-22T13:50:50&#43;05:30" />
-<meta itemprop="wordCount" content="1134">
+<meta itemprop="wordCount" content="1162">
 
 
 
@@ -525,6 +525,19 @@ Attach an event handler function for one or more events to the selected elements
 </code></pre>
 
 <p>live() implements event delegation. The handler bound to live() is not bound to the anchor element, as it may so appear. Instead live() binds a handler to the root of the DOM. So rather than attaching 100’s of event handlers to all the anchor elements in the ‘container’ div, using live() attaches just one event handler to the root document, along with the associated selector (in our case #container a) and event information.</p>
+
+<pre><code>$('#click li').click(function() {
+    $(this).parent().append($('&lt;li&gt;List item&lt;/li&gt;'));
+});
+    
+    
+$('#on').on('click', 'li', function() {
+    $(this).parent().append($('&lt;li&gt;List item&lt;/li&gt;'));
+});
+
+</code></pre>
+
+<p>Here, the newly created li s won&rsquo;t have the click listener for the click method</p>
 
 <hr />
 
