@@ -2,9 +2,10 @@
 title: "Promises"
 date: 2018-11-02T11:14:30+05:30
 draft: false
-tags:[
-  "Javascript"
-]
+tags : [
+    "Javascript",
+    "Interview",
+   ]
 ---
 
 # Promises

@@ -162,6 +162,41 @@ th {
     <article class="post-preview">
 
   <header>
+    <h2 class="title"> <a href='/post/javascript-2/'> Map Reduce and Filter</a> </h2>
+    <div class="meta">
+      Nov 15, 2018 - 3 minutes
+    </div>
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/javascript">#Javascript</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/interview">#Interview</a>
+      </div>
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    Map Reduce and Filter .map() To modify an array or it&rsquo;s objects
+map receives a callback as an argument. That callback is then given the current value of the iteration, the index of the iteration and the original array from which map was called
+const arr = [1,2,3,4,5]; const newArray = arr.map(i =&gt; i*10); // return a new array with all value as multiple of 10;  var officers = [ { id: 20, name: 'Captain Piett' }, { id: 24, name: 'General Veers' }, { id: 56, name: 'Admiral Ozzel' }, { id: 88, name: 'Commander Jerjerrod' } ]; var officersIds = officers.
+    <a href='/post/javascript-2/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
+    <article class="post-preview">
+
+  <header>
     <h2 class="title"> <a href='/post/dependency-injection/'> Dependency Injection</a> </h2>
     <div class="meta">
       Nov 14, 2018 - 3 minutes
@@ -201,76 +236,30 @@ class Profile { public function deactivateProfile(Setting $setting) { $setting-&
     <article class="post-preview">
 
   <header>
-    <h2 class="title"> <a href='/post/redux-1/'> Redux 1</a> </h2>
+    <h2 class="title"> <a href='/post/promises/'> Promises</a> </h2>
     <div class="meta">
-      Oct 1, 2018 - 3 minutes
+      Nov 2, 2018 - 1 minutes
     </div>
     
 <div class="tags">
     
       <div class="tag">
-        <a href="/tags/react">#React</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/redux">#Redux</a>
+        <a href="/tags/javascript">#Javascript</a>
       </div>
     
       <div class="tag">
         <a href="/tags/interview">#Interview</a>
       </div>
     
-      <div class="tag">
-        <a href="/tags/javascript">#Javascript</a>
-      </div>
-    
 </div>
 
   </header>
 
   <div class="summary">
-    Redux is a predictable state container for JavaScript apps. import { createStore } from &quot;redux&quot;; //an import from the redux library const store = createStore(); // Takes reducer as argument  Store stores the states and reducers handles the communication
-Reducers modifies the state based on action in pure state
-In redux, all application state exists as a single store object
-Spread operator or splat operator copies the contents of one array object into another.
-    <a href='/post/redux-1/' class="rmore">Read more ...</a>
-  </div>
-
-  <div class="rmore">
-  </div>
-
-</article>
-
-
-    <article class="post-preview">
-
-  <header>
-    <h2 class="title"> <a href='/post/databases/'> Databases</a> </h2>
-    <div class="meta">
-      Aug 8, 2018 - 3 minutes
-    </div>
-    
-<div class="tags">
-    
-      <div class="tag">
-        <a href="/tags/databases">#Databases</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/sql">#SQL</a>
-      </div>
-    
-</div>
-
-  </header>
-
-  <div class="summary">
-    Relational databases like MySQL, PostgreSQL and SQLite3 represent and store data in tables and rows.
- They&rsquo;re based on a branch of algebraic set theory known as relational algebra.
- Mongo query targets of data are technically represented as BSON (binary JASON).
- Relational databases use Structured Querying Language (SQL), making them a good choice for applications that involve the management of several transactions.
- ACID - Atomicity (each transaction be &ldquo;all or nothing&rdquo;), Consistency (any transaction will bring the database from one valid state to another), Isoloation (concurrent execution of transactions results in a system state that would be obtained if transactions were executed sequentially), Durability (once a transaction has been committed, it will remain so)
-    <a href='/post/databases/' class="rmore">Read more ...</a>
+    Promises Promises - “a proxy for a value that will eventually become available”.
+Async The async function declaration defines an asynchronous function, which returns an AsyncFunction object.
+function resolveAfter2Seconds() { return new Promise(resolve =&gt; { setTimeout(() =&gt; { resolve('resolved'); }, 2000); }); } async function asyncCall() { console.log('calling'); var result = await resolveAfter2Seconds(); console.log(result); // expected output: 'resolved' } asyncCall();  An async function can contain an await expression that pauses the execution of the async function and waits for the passed Promise&rsquo;s resolution, and then resumes the async function&rsquo;s execution and returns the resolved value.
+    <a href='/post/promises/' class="rmore">Read more ...</a>
   </div>
 
   <div class="rmore">
