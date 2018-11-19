@@ -37,7 +37,7 @@ A pure function is a function which: Given the same inputs, always returns the s
 
 <meta itemprop="datePublished" content="2018-07-22T13:50:50&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-22T13:50:50&#43;05:30" />
-<meta itemprop="wordCount" content="1162">
+<meta itemprop="wordCount" content="1204">
 
 
 
@@ -547,6 +547,19 @@ $('#on').on('click', 'li', function() {
 Class objects have a property called <code>prototype</code>, which is also an object.</p>
 
 <hr />
+
+<h2 id="template-literals">Template Literals</h2>
+
+<p>New syntax to create strings:</p>
+
+<pre><code>const aString = `A string`
+const var = 'test'
+const string = `something ${var}` //something test
+</code></pre>
+
+<pre><code>const string = `something ${1 + 2 + 3}`
+const string2 = `something ${foo() ? 'x' : 'y' }`
+</code></pre>
  </div>
     <footer class="post-footer">
 

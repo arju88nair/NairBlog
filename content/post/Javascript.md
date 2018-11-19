@@ -381,3 +381,15 @@ Class objects have a property called `prototype`, which is also an object.
 
 -----------
 
+## Template Literals
+New syntax to create strings:
+```
+const aString = `A string`
+const var = 'test'
+const string = `something ${var}` //something test
+```
+
+```
+const string = `something ${1 + 2 + 3}`
+const string2 = `something ${foo() ? 'x' : 'y' }`
+```

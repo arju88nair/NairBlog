@@ -2,8 +2,8 @@ baseurl = "/"
 title = "Today I learned"
 copyright = "Copyright (c) 2018, all rights reserved."
 languageCode = "en-US"
-canonifyurls = true
 enableRobotsTXT = true
+canonifyURLs = true
 paginate = 3
 theme = "hugo-dusk"
 
