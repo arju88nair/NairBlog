@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/post/linux/</loc>
+    <lastmod>2018-11-19T20:19:34+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/javascript-2/</loc>
     <lastmod>2018-11-15T21:24:18+05:30</lastmod>
   </url>
@@ -125,7 +130,7 @@
   
   <url>
     <loc>/tags/linux/</loc>
-    <lastmod>2018-07-11T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-19T20:19:34+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -155,7 +160,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-11-15T21:24:18+05:30</lastmod>
+    <lastmod>2018-11-19T20:19:34+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -204,6 +209,12 @@
   <url>
     <loc>/tags/</loc>
     <lastmod>2018-08-08T19:59:38+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/til/</loc>
+    <lastmod>2018-11-19T20:19:34+05:30</lastmod>
     <priority>0</priority>
   </url>
   

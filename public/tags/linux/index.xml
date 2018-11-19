@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2018, all rights reserved.</copyright>
-    <lastBuildDate>Wed, 11 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Nov 2018 20:19:34 +0530</lastBuildDate>
     
 	<atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux</title>
+      <link>/post/linux/</link>
+      <pubDate>Mon, 19 Nov 2018 20:19:34 +0530</pubDate>
+      
+      <guid>/post/linux/</guid>
+      <description>Terminal = text input/output environment Console = physical terminal Shell = command line interpreter  hostname - Display hostname of the system
+who - List of all the users currently logged in as a user.
+w - Display current system status, time, duration, list of users currently logged in on system and other user information.
+last - Who recently used the system.
+lastb - Shows all bad login attempts into the system.</description>
+    </item>
     
     <item>
       <title>Tidbits</title>
