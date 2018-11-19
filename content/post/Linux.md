@@ -40,6 +40,23 @@ View the last several lines of a file:`tail myFirstFile`
 
 `ls -shR ` To list with size and recursively for folders
 
+`history` will show the command history
+
+`history | grep <key-word>` will show all the commands in history having keyword <key-word> 
+
+`alias install='sudo apt-get -y install'`
+
+
+`locate pem | grep mykey` 
+
+`du -sh *` - In current directory
+
+`du -sh .[!.]* *` - Current directory
+
+
+`du -sch *`  - Total
+
+`df -h` - Disk space
 
 -----
 
@@ -60,3 +77,4 @@ So the whole command is
 
 ---
 
+`/etc/os-release` -  Details about the release
