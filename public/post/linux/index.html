@@ -11,36 +11,36 @@
 
 <link rel="canonical" href="/post/linux/">
 <meta property="og:title" content="Linux" />
-<meta property="og:description" content="Terminal = text input/output environment Console = physical terminal Shell = command line interpreter  hostname - Display hostname of the system
+<meta property="og:description" content="Most of the notes are from LinuxNotesForProfessionals
+ Terminal = text input/output environment Console = physical terminal Shell = command line interpreter  hostname - Display hostname of the system
 who - List of all the users currently logged in as a user.
 w - Display current system status, time, duration, list of users currently logged in on system and other user information.
-last - Who recently used the system.
-lastb - Shows all bad login attempts into the system." />
+last - Who recently used the system." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/linux/" /><meta property="article:published_time" content="2018-11-19T20:19:34&#43;05:30"/>
 <meta property="article:modified_time" content="2018-11-19T20:19:34&#43;05:30"/>
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Linux"/>
-<meta name="twitter:description" content="Terminal = text input/output environment Console = physical terminal Shell = command line interpreter  hostname - Display hostname of the system
+<meta name="twitter:description" content="Most of the notes are from LinuxNotesForProfessionals
+ Terminal = text input/output environment Console = physical terminal Shell = command line interpreter  hostname - Display hostname of the system
 who - List of all the users currently logged in as a user.
 w - Display current system status, time, duration, list of users currently logged in on system and other user information.
-last - Who recently used the system.
-lastb - Shows all bad login attempts into the system."/>
+last - Who recently used the system."/>
 
 
 
 <meta itemprop="name" content="Linux">
-<meta itemprop="description" content="Terminal = text input/output environment Console = physical terminal Shell = command line interpreter  hostname - Display hostname of the system
+<meta itemprop="description" content="Most of the notes are from LinuxNotesForProfessionals
+ Terminal = text input/output environment Console = physical terminal Shell = command line interpreter  hostname - Display hostname of the system
 who - List of all the users currently logged in as a user.
 w - Display current system status, time, duration, list of users currently logged in on system and other user information.
-last - Who recently used the system.
-lastb - Shows all bad login attempts into the system.">
+last - Who recently used the system.">
 
 
 <meta itemprop="datePublished" content="2018-11-19T20:19:34&#43;05:30" />
 <meta itemprop="dateModified" content="2018-11-19T20:19:34&#43;05:30" />
-<meta itemprop="wordCount" content="295">
+<meta itemprop="wordCount" content="650">
 
 
 
@@ -176,7 +176,11 @@ th {
 
 <article class="post">
     <h1 class="title"> Linux </h1>
-    <div class="content"> <ul>
+    <div class="content"> 
+
+<p><code>Most of the notes are from LinuxNotesForProfessionals</code></p>
+
+<ul>
 <li>Terminal = text input/output environment</li>
 <li>Console = physical terminal</li>
 <li>Shell = command line interpreter</li>
@@ -226,6 +230,89 @@ th {
 
 <p><code>df -h</code> - Disk space</p>
 
+<p><code>free</code> - Ram usage</p>
+
+<p><code>iostat -kx 2</code> - General information about your disk operations in real time</p>
+
+<p><code>netstat -ntlp</code> # open TCP sockets</p>
+
+<p><code>netstat -nulp</code> # open UDP sockets</p>
+
+<p><code>netstat -nxlp</code> # open Unix sockets</p>
+
+<p><code>sudo iftop</code> -  network traffic in real</p>
+
+<h2 id="time">time</h2>
+
+<p>| Services</p>
+
+<p><code>systemctl</code> -Running services</p>
+
+<p><code>service --status-all</code> - Running services</p>
+
+<p><code>systemctl get-default</code> To find the default target for your system</p>
+
+<p><code>systemctl set-default &lt;target-name&gt;</code> To set the default target for your system</p>
+
+<p><code>journalctl -f -t sshd</code> - Logs for a particular service</p>
+
+<hr />
+
+<p><code>passwd</code> - Changing password</p>
+
+<p><code>useradd username</code></p>
+
+<p><code>userdel -r username</code> -Delete as root</p>
+
+<p><code>groups</code> - Listing groups the current user is in</p>
+
+<hr />
+
+<p>| Tee
+<code>tee</code> - read from standard input and write to standard output and files.</p>
+
+<p>The following command writes the output only to the file and not to the screen.</p>
+
+<p><code>ls &gt; file</code></p>
+
+<p>The following command (with the help of tee command) writes the output both to the screen (stdout) and to the
+file.</p>
+
+<p><code>ls | tee file</code></p>
+
+<p>To store the output of a command in a file and redirect the same output to another
+command.</p>
+
+<p>This will write current crontab entries to a file crontab-backup.txt and pass the crontab
+entries to sed command, which will do the substituion. After the substitution, it will be added as a new cron job.</p>
+
+<p><code>crontab -l | tee crontab-backup.txt | sed 's/old/new/' | crontab –</code></p>
+
+<ul>
+<li><code>SED</code> is a powerful text stream editor. Can do insertion, deletion, search and replace(substitution).</li>
+<li><code>SED</code> command in unix supports regular expression which allows it perform complex pattern matching.</li>
+</ul>
+
+<p><code>sed 's/old/new/'</code>  - Replaces old with new</p>
+
+<p><code>sed 's/unix/linux/2' blah.txt</code> - Replace nth</p>
+
+<p><code>sed 's/unix/linux/g' blah.txt</code> - Replace all</p>
+
+<p><code>sed 's/unix/linux/3g' blah.txt</code> - Replace from nth to all</p>
+
+<hr />
+
+<p><code>ssh -p port user@server-address</code></p>
+
+<p><code>scp rocky@arena51.net:/home/rocky/game/data.txt ./</code> - Copy remote file to you current working directory</p>
+
+<p><code>scp mars@universe.org:/beacon/light/bitmap.conf jupiter@universe.org:/beacon/night/</code> - Copy file from one remote location to another remote location</p>
+
+<p><code>scp foobar.md user@remotehost.com:/remote/dest</code> - Copy local file to remote dir</p>
+
+<p><code>scp -i my_key.pem foobar.md user@remotehost.com:/remote/dest</code> - Key files can be used (just like ssh)</p>
+
 <hr />
 
 <p><code>drwxrwxrwx</code>  d is for directory  and - for rest. The next three rwx are the permissions the user has over the file, the next three are the permissions the
@@ -246,6 +333,10 @@ Other r-x = 4+0+1 = 5
 <hr />
 
 <p><code>/etc/os-release</code> -  Details about the release</p>
+
+<hr />
+
+<p><code>/etc/resolv.conf</code> contains a list of DNS servers for domain name resolution</p>
  </div>
     <footer class="post-footer">
 

@@ -7,6 +7,9 @@ tags : [
     'TIL'
 ]
 ---
+`Most of the notes are from LinuxNotesForProfessionals`
+
+
 
 - Terminal = text input/output environment
 - Console = physical terminal
@@ -58,6 +61,102 @@ View the last several lines of a file:`tail myFirstFile`
 
 `df -h` - Disk space
 
+`free` - Ram usage
+
+` iostat -kx 2 ` - General information about your disk operations in real time
+
+`netstat -ntlp` # open TCP sockets
+
+`netstat -nulp` # open UDP sockets
+
+`netstat -nxlp` # open Unix sockets
+
+
+`sudo iftop ` -  network traffic in real 
+time
+----
+| Services
+
+`systemctl` -Running services
+
+`service --status-all` - Running services
+
+`systemctl get-default` To find the default target for your system
+
+`systemctl set-default <target-name>` To set the default target for your system
+
+`journalctl -f -t sshd` - Logs for a particular service
+
+
+----
+
+`passwd` - Changing password
+
+`useradd username`
+
+`userdel -r username` -Delete as root
+
+
+`groups` - Listing groups the current user is in
+
+
+-----
+
+| Tee
+`tee` - read from standard input and write to standard output and files.
+
+The following command writes the output only to the file and not to the screen.
+
+`ls > file`
+
+The following command (with the help of tee command) writes the output both to the screen (stdout) and to the
+file.
+
+` ls | tee file`
+
+
+To store the output of a command in a file and redirect the same output to another
+command.
+
+This will write current crontab entries to a file crontab-backup.txt and pass the crontab
+entries to sed command, which will do the substituion. After the substitution, it will be added as a new cron job.
+
+ `crontab -l | tee crontab-backup.txt | sed 's/old/new/' | crontab –`
+
+
+- `SED` is a powerful text stream editor. Can do insertion, deletion, search and replace(substitution).
+- `SED` command in unix supports regular expression which allows it perform complex pattern matching.
+
+`sed 's/old/new/'`  - Replaces old with new
+
+`sed 's/unix/linux/2' blah.txt` - Replace nth
+
+`sed 's/unix/linux/g' blah.txt` - Replace all
+
+`sed 's/unix/linux/3g' blah.txt` - Replace from nth to all
+
+---
+
+`ssh -p port user@server-address`
+
+
+
+`scp rocky@arena51.net:/home/rocky/game/data.txt ./ ` - Copy remote file to you current working directory
+
+`scp mars@universe.org:/beacon/light/bitmap.conf jupiter@universe.org:/beacon/night/` - Copy file from one remote location to another remote location
+
+
+`scp foobar.md user@remotehost.com:/remote/dest` - Copy local file to remote dir
+
+` scp -i my_key.pem foobar.md user@remotehost.com:/remote/dest` - Key files can be used (just like ssh)
+
+
+
+
+
+
+
+
 -----
 
 `drwxrwxrwx`  d is for directory  and - for rest. The next three rwx are the permissions the user has over the file, the next three are the permissions the
@@ -78,3 +177,9 @@ So the whole command is
 ---
 
 `/etc/os-release` -  Details about the release
+
+--- 
+
+
+
+`/etc/resolv.conf` contains a list of DNS servers for domain name resolution
