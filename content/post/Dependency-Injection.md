@@ -136,3 +136,54 @@ $user->getUsers();
 
 ## IoC (Inversion of Control) 
  is all about relationship between higher level classes and detail classes. Higher level classes shouldn't depend on detail classes, but rather the contrary.
+
+----
+
+## For Laravel
+ Tool for managing class dependencies and performing dependency injection.
+
+ ```
+ <?php
+
+namespace App\Http\Controllers;
+
+use App\User;
+use App\Repositories\UserRepository;
+use App\Http\Controllers\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * The user repository implementation.
+     *
+     * @var UserRepository
+     */
+    protected $users;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @param  UserRepository  $users
+     * @return void
+     */
+    public function __construct(UserRepository $users)
+    {
+        $this->users = $users;
+    }
+
+    /**
+     * Show the profile for the given user.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function show($id)
+    {
+        $user = $this->users->find($id);
+
+        return view('user.profile', ['user' => $user]);
+    }
+}
+```
+
+Here, the `UserController` needs to retrieve users from a data source. So, we will inject a service that is able to retrieve users. In this context, our `UserRepository` most likely uses Eloquent to retrieve user information from the database. However, since the repository is injected, we are able to easily swap it out with another implementation. We are also able to easily "mock", or create a dummy implementation of the `UserRepository` when testing our application.

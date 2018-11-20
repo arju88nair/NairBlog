@@ -34,7 +34,7 @@ class Profile { public function deactivateProfile(Setting $setting) { $setting-&
 
 <meta itemprop="datePublished" content="2018-11-14T12:47:21&#43;05:30" />
 <meta itemprop="dateModified" content="2018-11-14T12:47:21&#43;05:30" />
-<meta itemprop="wordCount" content="555">
+<meta itemprop="wordCount" content="725">
 
 
 
@@ -306,6 +306,57 @@ $user-&gt;getUsers();
 <h2 id="ioc-inversion-of-control">IoC (Inversion of Control)</h2>
 
 <p>is all about relationship between higher level classes and detail classes. Higher level classes shouldn&rsquo;t depend on detail classes, but rather the contrary.</p>
+
+<hr />
+
+<h2 id="for-laravel">For Laravel</h2>
+
+<p>Tool for managing class dependencies and performing dependency injection.</p>
+
+<pre><code> &lt;?php
+
+namespace App\Http\Controllers;
+
+use App\User;
+use App\Repositories\UserRepository;
+use App\Http\Controllers\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * The user repository implementation.
+     *
+     * @var UserRepository
+     */
+    protected $users;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @param  UserRepository  $users
+     * @return void
+     */
+    public function __construct(UserRepository $users)
+    {
+        $this-&gt;users = $users;
+    }
+
+    /**
+     * Show the profile for the given user.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function show($id)
+    {
+        $user = $this-&gt;users-&gt;find($id);
+
+        return view('user.profile', ['user' =&gt; $user]);
+    }
+}
+</code></pre>
+
+<p>Here, the <code>UserController</code> needs to retrieve users from a data source. So, we will inject a service that is able to retrieve users. In this context, our <code>UserRepository</code> most likely uses Eloquent to retrieve user information from the database. However, since the repository is injected, we are able to easily swap it out with another implementation. We are also able to easily &ldquo;mock&rdquo;, or create a dummy implementation of the <code>UserRepository</code> when testing our application.</p>
  </div>
     <footer class="post-footer">
 
