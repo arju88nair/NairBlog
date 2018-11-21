@@ -69,3 +69,7 @@ done
 -  Make sure that the code got enough comments and documentation
 - Make sure that there aren't unwanted variables and which can be turned to globals
 - Function static or non-static
+
+## CSS background shadow for user images
+
+`box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.5)`

@@ -183,3 +183,7 @@ So the whole command is
 
 
 `/etc/resolv.conf` contains a list of DNS servers for domain name resolution
+
+---
+
+`:w !sudo tee %` -  Sudo vim after opening
