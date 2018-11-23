@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2018, all rights reserved.</copyright>
-    <lastBuildDate>Wed, 08 Aug 2018 19:59:38 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 23 Nov 2018 22:13:24 +0530</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Basics</title>
+      <link>/tags/basics/</link>
+      <pubDate>Fri, 23 Nov 2018 22:13:24 +0530</pubDate>
+      
+      <guid>/tags/basics/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Databases</title>
@@ -33,7 +42,7 @@
     <item>
       <title>Interview</title>
       <link>/tags/interview/</link>
-      <pubDate>Thu, 15 Nov 2018 21:24:18 +0530</pubDate>
+      <pubDate>Fri, 23 Nov 2018 22:13:24 +0530</pubDate>
       
       <guid>/tags/interview/</guid>
       <description></description>

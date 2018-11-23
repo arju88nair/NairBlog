@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2018, all rights reserved.</copyright>
-    <lastBuildDate>Thu, 15 Nov 2018 21:24:18 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 23 Nov 2018 22:13:24 +0530</lastBuildDate>
     
 	<atom:link href="/tags/interview/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Algoriths Data_Structures</title>
+      <link>/post/algoriths-data_structures/</link>
+      <pubDate>Fri, 23 Nov 2018 22:13:24 +0530</pubDate>
+      
+      <guid>/post/algoriths-data_structures/</guid>
+      <description>Algorithms + Data structures = Programming
+Algorithms -1</description>
+    </item>
     
     <item>
       <title>Map Reduce and Filter</title>

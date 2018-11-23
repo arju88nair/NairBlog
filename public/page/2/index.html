@@ -15,7 +15,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2018-11-02T11:14:30&#43;05:30"/>
+<meta property="og:updated_time" content="2018-11-14T12:47:21&#43;05:30"/>
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Today I learned"/>
@@ -162,6 +162,45 @@ th {
     <article class="post-preview">
 
   <header>
+    <h2 class="title"> <a href='/post/dependency-injection/'> Dependency Injection</a> </h2>
+    <div class="meta">
+      Nov 14, 2018 - 4 minutes
+    </div>
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/php">#PHP</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/php7">#PHP7</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/interview">#Interview</a>
+      </div>
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    Dependency injection is a technique whereby one object supplies the dependencies of another object
+class Profile { public function deactivateProfile(Setting $setting) { $setting-&gt;isActive = false; } }  Advantages  Decoupling Their purpose is isolated and can easily be swapped out by other components later. This way your code will be cleaner and decoupled.
+ Reusable code Another advantage of dependency injection is that your code will be more reusable since there are no direct dependencies on other entities (objects or classes) in your code.
+    <a href='/post/dependency-injection/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
+    <article class="post-preview">
+
+  <header>
     <h2 class="title"> <a href='/post/promises/'> Promises</a> </h2>
     <div class="meta">
       Nov 2, 2018 - 1 minutes
@@ -230,43 +269,6 @@ Reducers modifies the state based on action in pure state
 In redux, all application state exists as a single store object
 Spread operator or splat operator copies the contents of one array object into another.
     <a href='/post/redux-1/' class="rmore">Read more ...</a>
-  </div>
-
-  <div class="rmore">
-  </div>
-
-</article>
-
-
-    <article class="post-preview">
-
-  <header>
-    <h2 class="title"> <a href='/post/databases/'> Databases</a> </h2>
-    <div class="meta">
-      Aug 8, 2018 - 3 minutes
-    </div>
-    
-<div class="tags">
-    
-      <div class="tag">
-        <a href="/tags/databases">#Databases</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/sql">#SQL</a>
-      </div>
-    
-</div>
-
-  </header>
-
-  <div class="summary">
-    Relational databases like MySQL, PostgreSQL and SQLite3 represent and store data in tables and rows.
- They&rsquo;re based on a branch of algebraic set theory known as relational algebra.
- Mongo query targets of data are technically represented as BSON (binary JASON).
- Relational databases use Structured Querying Language (SQL), making them a good choice for applications that involve the management of several transactions.
- ACID - Atomicity (each transaction be &ldquo;all or nothing&rdquo;), Consistency (any transaction will bring the database from one valid state to another), Isoloation (concurrent execution of transactions results in a system state that would be obtained if transactions were executed sequentially), Durability (once a transaction has been committed, it will remain so)
-    <a href='/post/databases/' class="rmore">Read more ...</a>
   </div>
 
   <div class="rmore">

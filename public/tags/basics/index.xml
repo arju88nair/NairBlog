@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Basics on Today I learned</title>
+    <link>/tags/basics/</link>
+    <description>Recent content in Basics on Today I learned</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2018, all rights reserved.</copyright>
+    <lastBuildDate>Fri, 23 Nov 2018 22:13:24 +0530</lastBuildDate>
+    
+	<atom:link href="/tags/basics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Algoriths Data_Structures</title>
+      <link>/post/algoriths-data_structures/</link>
+      <pubDate>Fri, 23 Nov 2018 22:13:24 +0530</pubDate>
+      
+      <guid>/post/algoriths-data_structures/</guid>
+      <description>Algorithms + Data structures = Programming
+Algorithms -1</description>
+    </item>
+    
+  </channel>
+</rss>
