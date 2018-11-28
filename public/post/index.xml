@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2018, all rights reserved.</copyright>
-    <lastBuildDate>Fri, 23 Nov 2018 22:13:24 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 28 Nov 2018 21:42:31 +0530</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MysqlNotes</title>
+      <link>/post/mysqlnotes/</link>
+      <pubDate>Wed, 28 Nov 2018 21:42:31 +0530</pubDate>
+      
+      <guid>/post/mysqlnotes/</guid>
+      <description>CREATE DATABASE mydb;
+use mydb
+CREATE TABLE mytable ( id int unsigned NOT NULL auto_increment, username varchar(100) NOT NULL, email varchar(100) NOT NULL, PRIMARY KEY (id) ); CREATE T  SHOW databases;
+SHOW tables;
+DESCRIBE databaseName.tableName; - Show all the fields of a table
+Users and Roles CREATE USER &#39;user&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39; - Localhost for where the user can connect from and can only connect on the local machine where the database is hosted.</description>
+    </item>
     
     <item>
       <title>Algoriths Data_Structures</title>

@@ -42,7 +42,7 @@
     <item>
       <title>Interview</title>
       <link>/tags/interview/</link>
-      <pubDate>Fri, 23 Nov 2018 22:13:24 +0530</pubDate>
+      <pubDate>Wed, 28 Nov 2018 21:42:31 +0530</pubDate>
       
       <guid>/tags/interview/</guid>
       <description></description>
@@ -72,6 +72,15 @@
       <pubDate>Mon, 19 Nov 2018 20:19:34 +0530</pubDate>
       
       <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mysql</title>
+      <link>/tags/mysql/</link>
+      <pubDate>Wed, 28 Nov 2018 21:42:31 +0530</pubDate>
+      
+      <guid>/tags/mysql/</guid>
       <description></description>
     </item>
     
@@ -159,7 +168,7 @@
     <item>
       <title>Sql</title>
       <link>/tags/sql/</link>
-      <pubDate>Wed, 08 Aug 2018 19:59:38 +0530</pubDate>
+      <pubDate>Wed, 28 Nov 2018 21:42:31 +0530</pubDate>
       
       <guid>/tags/sql/</guid>
       <description></description>

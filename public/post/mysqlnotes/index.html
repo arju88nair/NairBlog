@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.51" />
+
+<link rel="canonical" href="/post/mysqlnotes/">
+<meta property="og:title" content="MysqlNotes" />
+<meta property="og:description" content="CREATE DATABASE mydb;
+use mydb
+CREATE TABLE mytable ( id int unsigned NOT NULL auto_increment, username varchar(100) NOT NULL, email varchar(100) NOT NULL, PRIMARY KEY (id) ); CREATE T  SHOW databases;
+SHOW tables;
+DESCRIBE databaseName.tableName; - Show all the fields of a table
+Users and Roles CREATE USER &#39;user&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39; - Localhost for where the user can connect from and can only connect on the local machine where the database is hosted." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/mysqlnotes/" /><meta property="article:published_time" content="2018-11-28T21:42:31&#43;05:30"/>
+<meta property="article:modified_time" content="2018-11-28T21:42:31&#43;05:30"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MysqlNotes"/>
+<meta name="twitter:description" content="CREATE DATABASE mydb;
+use mydb
+CREATE TABLE mytable ( id int unsigned NOT NULL auto_increment, username varchar(100) NOT NULL, email varchar(100) NOT NULL, PRIMARY KEY (id) ); CREATE T  SHOW databases;
+SHOW tables;
+DESCRIBE databaseName.tableName; - Show all the fields of a table
+Users and Roles CREATE USER &#39;user&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39; - Localhost for where the user can connect from and can only connect on the local machine where the database is hosted."/>
+
+
+
+<meta itemprop="name" content="MysqlNotes">
+<meta itemprop="description" content="CREATE DATABASE mydb;
+use mydb
+CREATE TABLE mytable ( id int unsigned NOT NULL auto_increment, username varchar(100) NOT NULL, email varchar(100) NOT NULL, PRIMARY KEY (id) ); CREATE T  SHOW databases;
+SHOW tables;
+DESCRIBE databaseName.tableName; - Show all the fields of a table
+Users and Roles CREATE USER &#39;user&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39; - Localhost for where the user can connect from and can only connect on the local machine where the database is hosted.">
+
+
+<meta itemprop="datePublished" content="2018-11-28T21:42:31&#43;05:30" />
+<meta itemprop="dateModified" content="2018-11-28T21:42:31&#43;05:30" />
+<meta itemprop="wordCount" content="128">
+
+
+
+<meta itemprop="keywords" content="Mysql,Interview,Sql," />
+
+
+<link rel="stylesheet" href="/css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: #1D1F21;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: #1D1F21;
+}
+
+blockquote {
+  background: #1D1F21;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: yellow; }
+
+.post .content h1{ color: yellow; }
+.post .content h2{ color: yellow; }
+.post .content h3{ color: yellow; }
+.post .content h4{ color: yellow; }
+.post .content h5{ color: yellow; }
+.post .content h6{ color: yellow; }
+.post .content a:hover { color: yellow; }
+.social-link:hover { color: yellow; }
+.nav-item-title:hover { color: yellow; }
+.tag a:hover { color: yellow; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: yellow; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: yellow;
+}
+.post-list .title { color: yellow; }
+.rmore { color: yellow; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+</style>
+
+
+
+<title>
+
+
+     MysqlNotes 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Today I learned</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="/about/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">gh</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">twtr</div></a>
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> MysqlNotes </h1>
+    <div class="content"> 
+
+<p><code>CREATE DATABASE mydb;</code></p>
+
+<p><code>use mydb</code></p>
+
+<pre><code>CREATE TABLE mytable
+(
+id
+int unsigned NOT NULL auto_increment,
+username
+varchar(100) NOT NULL,
+email
+varchar(100) NOT NULL,
+PRIMARY KEY
+(id)
+);
+CREATE T  
+</code></pre>
+
+<p><code>SHOW databases;</code></p>
+
+<p><code>SHOW tables;</code></p>
+
+<p><code>DESCRIBE databaseName.tableName;</code> - Show all the fields of a table</p>
+
+<hr />
+
+<h2 id="users-and-roles">Users and Roles</h2>
+
+<p><code>CREATE USER 'user'@'localhost' IDENTIFIED BY 'password'</code> -  Localhost for where the user can connect from and  can only connect on the local machine where the database is hosted.</p>
+
+<p><code>CREATE USER 'user'@'%' IDENTIFIED BY 'some_password';</code> - From anywhere</p>
+
+<p><code>GRANT SELECT, INSERT, UPDATE ON databaseName.* TO 'userName'@'localhost';</code> - Grant common, basic privileges to the user for all tables of the specified database:</p>
+
+<p><code>GRANT ALL ON *.* TO 'userName'@'localhost' WITH GRANT OPTION;</code> - Grant all privileges to the user for all tables on all databases.(<em>.</em>)</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/mysql">#Mysql</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/interview">#Interview</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/sql">#Sql</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Nov 28, 2018 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "thenair" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2018, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+
