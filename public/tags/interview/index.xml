@@ -38,10 +38,10 @@ Algorithms -1</description>
     
     <item>
       <title>Map Reduce and Filter</title>
-      <link>/post/javascript-2/</link>
+      <link>/post/mapreducefilter/</link>
       <pubDate>Thu, 15 Nov 2018 21:24:18 +0530</pubDate>
       
-      <guid>/post/javascript-2/</guid>
+      <guid>/post/mapreducefilter/</guid>
       <description>Map Reduce and Filter .map() To modify an array or it&amp;rsquo;s objects
 map receives a callback as an argument. That callback is then given the current value of the iteration, the index of the iteration and the original array from which map was called
 const arr = [1,2,3,4,5]; const newArray = arr.map(i =&amp;gt; i*10); // return a new array with all value as multiple of 10;  var officers = [ { id: 20, name: &#39;Captain Piett&#39; }, { id: 24, name: &#39;General Veers&#39; }, { id: 56, name: &#39;Admiral Ozzel&#39; }, { id: 88, name: &#39;Commander Jerjerrod&#39; } ]; var officersIds = officers.</description>

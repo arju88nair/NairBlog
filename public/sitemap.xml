@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/post/javascript-ii/</loc>
+    <lastmod>2018-11-30T21:49:43+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/mysqlnotes/</loc>
     <lastmod>2018-11-28T21:42:31+05:30</lastmod>
   </url>
@@ -23,7 +28,7 @@
   </url>
   
   <url>
-    <loc>/post/javascript-2/</loc>
+    <loc>/post/mapreducefilter/</loc>
     <lastmod>2018-11-15T21:24:18+05:30</lastmod>
   </url>
   
@@ -128,7 +133,7 @@
   
   <url>
     <loc>/tags/javascript/</loc>
-    <lastmod>2018-11-15T21:24:18+05:30</lastmod>
+    <lastmod>2018-11-30T21:49:43+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -182,7 +187,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-11-28T21:42:31+05:30</lastmod>
+    <lastmod>2018-11-30T21:49:43+05:30</lastmod>
     <priority>0</priority>
   </url>
   
