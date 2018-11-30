@@ -1,9 +1,11 @@
 ---
-title: "Javascript II"
+title: "Promises and Generators"
 date: 2018-11-30T21:49:43+05:30
 draft: false
 tags : [
-"Javascript"
+"Javascript",
+"Interview",
+"ES6"
 ]
 ---
 
@@ -11,6 +13,9 @@ tags : [
 > A proxy for a value not necessarily known when the promise is created.
 
 > An asynchronous function is a function which operates asynchronously via the event loop, using an implicit Promise to return its result.
+
+> then() consumes a Promise while await waits for a promise to be resolved
+
 
 Once a promise has been called, it will start in pending state. This means that the caller function continues the execution, while it waits for the promise to do its own processing, and give the caller function some feedback.
 
@@ -75,10 +80,67 @@ fetch('/todos.json')
 An `async` function can contain an `await` expression that pauses the execution of the `async` function and waits for the passed Promise's resolution, and then resumes the `async` function's execution and returns the resolved value. The `await` keyword is only valid inside `async` functions.
 
 
+```
+function scaryClown() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('🤡');
+    }, 2000);
+  });
+}
 
+async function msg() {
+  const msg = await scaryClown();
+  console.log('Message:', msg);
+}
+
+msg(); // Message: 🤡 <-- after 2 seconds
+```
+
+Multiple Promises
+
+```
+function who() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('🤡');
+    }, 5000);
+  });
+}
+
+function what() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('lurks');
+    }, 300);
+  });
+}
+
+function where() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('in the shadows');
+    }, 500);
+  });
+}
+
+async function msg() {
+  const a = await who();
+  const b = await what();
+  const c = await where();
+
+  //   const [a, b, c] = await Promise.all([who(), what(), where()]);
+
+
+  console.log(`${ a } ${ b } ${ c }`);
+}
+
+msg();
+```
 
 -----
 
+`Promise.all` returns an array with the resolved values once all the passed-in promises have resolved.
 
 # Generators
 

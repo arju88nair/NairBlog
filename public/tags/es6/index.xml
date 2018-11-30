@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Es6 on Today I learned</title>
+    <link>/tags/es6/</link>
+    <description>Recent content in Es6 on Today I learned</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2018, all rights reserved.</copyright>
+    <lastBuildDate>Fri, 30 Nov 2018 21:49:43 +0530</lastBuildDate>
+    
+	<atom:link href="/tags/es6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Promises and Generators</title>
+      <link>/post/promises-generators/</link>
+      <pubDate>Fri, 30 Nov 2018 21:49:43 +0530</pubDate>
+      
+      <guid>/post/promises-generators/</guid>
+      <description>Promises  A proxy for a value not necessarily known when the promise is created.
+An asynchronous function is a function which operates asynchronously via the event loop, using an implicit Promise to return its result.
+then() consumes a Promise while await waits for a promise to be resolved
+ Once a promise has been called, it will start in pending state. This means that the caller function continues the execution, while it waits for the promise to do its own processing, and give the caller function some feedback.</description>
+    </item>
+    
+  </channel>
+</rss>
