@@ -43,7 +43,7 @@ Users and Roles CREATE USER &#39;user&#39;@&#39;localhost&#39; IDENTIFIED BY &#3
 
 <meta itemprop="datePublished" content="2018-11-28T21:42:31&#43;05:30" />
 <meta itemprop="dateModified" content="2018-11-28T21:42:31&#43;05:30" />
-<meta itemprop="wordCount" content="128">
+<meta itemprop="wordCount" content="355">
 
 
 
@@ -216,6 +216,53 @@ CREATE T
 <p><code>GRANT SELECT, INSERT, UPDATE ON databaseName.* TO 'userName'@'localhost';</code> - Grant common, basic privileges to the user for all tables of the specified database:</p>
 
 <p><code>GRANT ALL ON *.* TO 'userName'@'localhost' WITH GRANT OPTION;</code> - Grant all privileges to the user for all tables on all databases.(<em>.</em>)</p>
+
+<hr />
+
+<h2 id="varchar-255">Varchar(255)</h2>
+
+<p>Why should avoid using 255</p>
+
+<ul>
+<li>When a complex SELECT needs to create temporary table (for a subquery, UNION , GROUP BY , etc), the
+preferred choice is to use the MEMORY engine, which puts the data in RAM. But VARCHARs are turned into CHAR
+in the process. This makes VARCHAR(255) CHARACTER SET utf8mb4 take 1020 bytes. That can lead to needing
+to spill to disk, which is slower.</li>
+<li>In certain situations, InnoDB will look at the potential size of the columns in a table and decide that it will be
+too big, aborting a CREATE TABLE
+&mdash;</li>
+</ul>
+
+<p><code>SELECT stack.* FROM stack JOIN Overflow ON stack.id = Overflow.id;</code> - To select all columns in one table on joins</p>
+
+<pre><code>//  TO select using IF Else
+SELECT st.name,
+st.percentage,
+CASE WHEN st.percentage &gt;= 35 THEN 'Pass' ELSE 'Fail' END AS `Remark`
+FROM student AS st ;
+</code></pre>
+
+<p>or</p>
+
+<pre><code>SELECT st.name,
+st.percentage,
+IF(st.percentage &gt;= 35, 'Pass', 'Fail') AS `Remark`
+FROM student AS st ;
+</code></pre>
+
+<pre><code>SELECT * FROM stack WHERE id BETWEEN 2 and 5;
+</code></pre>
+
+<pre><code>SELECT * FROM stack WHERE id NOT BETWEEN 2 and 5;
+</code></pre>
+
+<p><code>SELECT username FROM users WHERE users LIKE 'admin_';</code> -&gt; admin1 - matches a single character</p>
+
+<p><code>SELECT * FROM users ORDER BY id ASC LIMIT 2, 3</code> - &gt; From 2nd row and 3 columns</p>
+
+<hr />
+
+<p>Backticks are mainly used to prevent an error called &ldquo;MySQL reserved word&rdquo;</p>
  </div>
     <footer class="post-footer">
 
