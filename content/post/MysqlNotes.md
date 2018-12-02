@@ -95,3 +95,20 @@ SELECT * FROM stack WHERE id NOT BETWEEN 2 and 5;
 ---
 
 Backticks are mainly used to prevent an error called "MySQL reserved word"
+
+---
+
+## Variables 
+
+`SET @var_string = 'my_var';`
+
+`Select @var := '123';` - > Setting the result of select query
+
+```
+SET @start_date = '2015-07-20';
+
+#this gets the year month value to use as the partition names
+
+SET @start_yearmonth = (SELECT EXTRACT(YEAR_MONTH FROM @start_date));
+
+```

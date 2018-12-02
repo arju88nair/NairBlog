@@ -43,7 +43,7 @@ Users and Roles CREATE USER &#39;user&#39;@&#39;localhost&#39; IDENTIFIED BY &#3
 
 <meta itemprop="datePublished" content="2018-11-28T21:42:31&#43;05:30" />
 <meta itemprop="dateModified" content="2018-11-28T21:42:31&#43;05:30" />
-<meta itemprop="wordCount" content="355">
+<meta itemprop="wordCount" content="395">
 
 
 
@@ -263,6 +263,22 @@ FROM student AS st ;
 <hr />
 
 <p>Backticks are mainly used to prevent an error called &ldquo;MySQL reserved word&rdquo;</p>
+
+<hr />
+
+<h2 id="variables">Variables</h2>
+
+<p><code>SET @var_string = 'my_var';</code></p>
+
+<p><code>Select @var := '123';</code> - &gt; Setting the result of select query</p>
+
+<pre><code>SET @start_date = '2015-07-20';
+
+#this gets the year month value to use as the partition names
+
+SET @start_yearmonth = (SELECT EXTRACT(YEAR_MONTH FROM @start_date));
+
+</code></pre>
  </div>
     <footer class="post-footer">
 
