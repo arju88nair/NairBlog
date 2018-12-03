@@ -156,7 +156,10 @@ A pure function is a function which: Given the same inputs, always returns the s
       
       <guid>/post/laravel/</guid>
       <description>LifeCycle
- Index.php loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application from bootstrap/app.php script. HTTP / Console Kernels Next, the incoming request is sent to either the HTTP kernel or the console kernel, depending on the type of request that is entering the application. These two kernels serve as the central location that all requests flow through. The HTTP kernel extends the Illuminate\Foundation\Http\Kernel class, which defines an array of bootstrappers that will be run before the request is executed.</description>
+ &amp;ldquo;bootstrapped&amp;rdquo;? In general, means registering things, including registering service container bindings, event listeners, middleware, and even routes.
+ index.php
+ Loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application from bootstrap/app.php script. The first action taken by Laravel itself is to create an instance of the application  HTTP / Console Kernels
+ The incoming request is sent to either the HTTP kernel or the console kernel, depending on the type of request that is entering the application</description>
     </item>
     
     <item>
