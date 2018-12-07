@@ -73,3 +73,13 @@ done
 ## CSS background shadow for user images
 
 `box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.5)`
+
+
+----
+
+ The use of floated elements for layout is getting more and more discouraged with the use of better alternatives.
+
+`display: inline-block - Better`
+`Flexbox` - Best (but limited browser support
+
+`Clearfix`- Automatically [clear](https://i.stack.imgur.com/gYRqS.jpg) its child elements
