@@ -1,7 +1,11 @@
 ---
 title: "Javascript II"
 date: 2018-12-10T14:44:59+05:30
-draft: true
+draft: false
+tags : [
+    "Javascript",
+    "Interview",
+   ]
 ---
 
 # [Array methods](https://dev.to/frugencefidel/10-javascript-array-methods-you-should-know-4lk3)

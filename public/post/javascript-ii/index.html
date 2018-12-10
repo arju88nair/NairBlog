@@ -11,34 +11,34 @@
 
 <link rel="canonical" href="/post/javascript-ii/">
 <meta property="og:title" content="Javascript II" />
-<meta property="og:description" content="Promises  A proxy for a value not necessarily known when the promise is created.
-An asynchronous function is a function which operates asynchronously via the event loop, using an implicit Promise to return its result.
- Once a promise has been called, it will start in pending state. This means that the caller function continues the execution, while it waits for the promise to do its own processing, and give the caller function some feedback." />
+<meta property="og:description" content="Array methods forEach()  const arr = [1, 2, 3, 4, 5, 6]; arr.forEach(item =&gt; { console.log(item); // output: 1 2 3 4 5 6 });  ## includes()
+This method check if array includes the item passed in the method.
+ const arr = [1, 2, 3, 4, 5, 6]; arr.includes(2); // output: true arr.includes(7); // output: false  filter() This method create new array with only elements passed condition inside the provided function." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/javascript-ii/" /><meta property="article:published_time" content="2018-11-30T21:49:43&#43;05:30"/>
-<meta property="article:modified_time" content="2018-11-30T21:49:43&#43;05:30"/>
+<meta property="og:url" content="/post/javascript-ii/" /><meta property="article:published_time" content="2018-12-10T14:44:59&#43;05:30"/>
+<meta property="article:modified_time" content="2018-12-10T14:44:59&#43;05:30"/>
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Javascript II"/>
-<meta name="twitter:description" content="Promises  A proxy for a value not necessarily known when the promise is created.
-An asynchronous function is a function which operates asynchronously via the event loop, using an implicit Promise to return its result.
- Once a promise has been called, it will start in pending state. This means that the caller function continues the execution, while it waits for the promise to do its own processing, and give the caller function some feedback."/>
+<meta name="twitter:description" content="Array methods forEach()  const arr = [1, 2, 3, 4, 5, 6]; arr.forEach(item =&gt; { console.log(item); // output: 1 2 3 4 5 6 });  ## includes()
+This method check if array includes the item passed in the method.
+ const arr = [1, 2, 3, 4, 5, 6]; arr.includes(2); // output: true arr.includes(7); // output: false  filter() This method create new array with only elements passed condition inside the provided function."/>
 
 
 
 <meta itemprop="name" content="Javascript II">
-<meta itemprop="description" content="Promises  A proxy for a value not necessarily known when the promise is created.
-An asynchronous function is a function which operates asynchronously via the event loop, using an implicit Promise to return its result.
- Once a promise has been called, it will start in pending state. This means that the caller function continues the execution, while it waits for the promise to do its own processing, and give the caller function some feedback.">
+<meta itemprop="description" content="Array methods forEach()  const arr = [1, 2, 3, 4, 5, 6]; arr.forEach(item =&gt; { console.log(item); // output: 1 2 3 4 5 6 });  ## includes()
+This method check if array includes the item passed in the method.
+ const arr = [1, 2, 3, 4, 5, 6]; arr.includes(2); // output: true arr.includes(7); // output: false  filter() This method create new array with only elements passed condition inside the provided function.">
 
 
-<meta itemprop="datePublished" content="2018-11-30T21:49:43&#43;05:30" />
-<meta itemprop="dateModified" content="2018-11-30T21:49:43&#43;05:30" />
-<meta itemprop="wordCount" content="339">
+<meta itemprop="datePublished" content="2018-12-10T14:44:59&#43;05:30" />
+<meta itemprop="dateModified" content="2018-12-10T14:44:59&#43;05:30" />
+<meta itemprop="wordCount" content="541">
 
 
 
-<meta itemprop="keywords" content="Javascript," />
+<meta itemprop="keywords" content="Javascript,Interview," />
 
 
 <link rel="stylesheet" href="/css/layout.css" />
@@ -172,100 +172,157 @@ th {
     <h1 class="title"> Javascript II </h1>
     <div class="content"> 
 
-<h1 id="promises">Promises</h1>
+<h1 id="array-methods-https-dev-to-frugencefidel-10-javascript-array-methods-you-should-know-4lk3"><a href="https://dev.to/frugencefidel/10-javascript-array-methods-you-should-know-4lk3">Array methods</a></h1>
 
-<blockquote>
-<p>A proxy for a value not necessarily known when the promise is created.</p>
+<h2 id="foreach">forEach()</h2>
 
-<p>An asynchronous function is a function which operates asynchronously via the event loop, using an implicit Promise to return its result.</p>
-</blockquote>
+<pre><code>  const arr = [1, 2, 3, 4, 5, 6];
 
-<p>Once a promise has been called, it will start in pending state. This means that the caller function continues the execution, while it waits for the promise to do its own processing, and give the caller function some feedback.</p>
-
-<p>The function waits for it to either return the promise in a resolved state, or in a rejected state</p>
-
-<pre><code>let done = true
-
-const isItDoneYet = new Promise(
-  (resolve, reject) =&gt; {
-    if (done) {
-      const workDone = 'Here is the thing I built'
-      resolve(workDone)
-    } else {
-      const why = 'Still working on something else'
-      reject(why)
-    }
-  }
-)
-
-
-// To consume
-
-const checkIfItsDone = () =&gt; {
-  isItDoneYet
-    .then((ok) =&gt; {
-      console.log(ok)
-    })
-    .catch((err) =&gt; {
-      console.error(err)
-    })
-}
+  arr.forEach(item =&gt; {
+    console.log(item); // output: 1 2 3 4 5 6
+  });
 
 </code></pre>
-
-<h2 id="chaining-promises">Chaining promises</h2>
-
-<pre><code>const status = (response) =&gt; {
-  if (response.status &gt;= 200 &amp;&amp; response.status &lt; 300) {
-    return Promise.resolve(response)
-  }
-  return Promise.reject(new Error(response.statusText))
-}
-
-const json = (response) =&gt; response.json()
-
-fetch('/todos.json')
-  .then(status)
-  .then(json)
-  .then((data) =&gt; { console.log('Request succeeded with JSON response', data) })
-  .catch((error) =&gt; { console.log('Request failed', error) })
-</code></pre>
-
-<ul>
-<li><code>Fetch()</code> is called.</li>
-<li>If resolved, calls <code>status()</code> (checking HTTPcode and all), else the <code>catch</code>.</li>
-<li>Then <code>data()</code></li>
-</ul>
 
 <hr />
 
-<h1 id="async-await">Async Await</h1>
+<p>## includes()</p>
 
-<p>An <code>async</code> function can contain an <code>await</code> expression that pauses the execution of the <code>async</code> function and waits for the passed Promise&rsquo;s resolution, and then resumes the <code>async</code> function&rsquo;s execution and returns the resolved value. The <code>await</code> keyword is only valid inside <code>async</code> functions.</p>
+<p>This method check if array includes the item passed in the method.</p>
 
-<hr />
+<pre><code>  const arr = [1, 2, 3, 4, 5, 6];
 
-<h1 id="generators">Generators</h1>
-
-<p>Special kind of function with the ability to pause itself, and resume later,
-allowing other code to run in the meantime.</p>
-
-<p>Declare a generator function which returns generator objects g that can then be iterated using any of <code>Array.from(g), [...g], or for value of g loops</code>.</p>
-
-<pre><code>
-function* generator () {
-  yield 'f'
-  yield 'o'
-  yield 'o'
-}
-
-// * - Generators
+  arr.includes(2); // output: true
+  arr.includes(7); // output: false
 
 </code></pre>
 
-<p>When a generator contains <code>yield</code>
-keyword, the execution is halted.</p>
- </div>
+<hr />
+
+<h2 id="filter">filter()</h2>
+
+<p>This method create new array with only elements passed condition inside the provided function.</p>
+
+<pre><code>  const arr = [1, 2, 3, 4, 5, 6];
+
+  // item(s) greater than 3
+  const filtered = arr.filter(num =&gt; num &gt; 3);
+  console.log(filtered); // output: [4, 5, 6]
+
+  console.log(arr); // output: [1, 2, 3, 4, 5, 6]
+  
+</code></pre>
+
+<hr />
+
+<p>##  map()</p>
+
+<p>This method create new array by calling the provided function in every element.</p>
+
+<pre><code>  const arr = [1, 2, 3, 4, 5, 6];
+
+  // add one to every element
+  const oneAdded = arr.map(num =&gt; num + 1);
+  console.log(oneAdded); // output [2, 3, 4, 5, 6, 7]
+
+  console.log(arr); // output: [1, 2, 3, 4, 5, 6] 
+  
+</code></pre>
+
+<hr />
+
+<h2 id="reduce">reduce()</h2>
+
+<p>The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value - MDN</p>
+
+<pre><code>  const arr = [1, 2, 3, 4, 5, 6];
+
+  const sum = arr.reduce((total, value) =&gt; total + value, 0);
+  console.log(sum); // 21
+
+
+</code></pre>
+
+<hr />
+
+<h2 id="some">some()</h2>
+
+<p>This method check if at least one of array&rsquo;s item passed the condition. If passed, it return &lsquo;true&rsquo; otherwise &lsquo;false&rsquo;.</p>
+
+<pre><code>  const arr = [1, 2, 3, 4, 5, 6];
+
+  // at least one element is greater than 4?
+  const largeNum = arr.some(num =&gt; num &gt; 4);
+  console.log(largeNum); // output: true
+
+  // at least one element is less than or equal to 0?
+  const smallNum = arr.some(num =&gt; num &lt;= 0);
+  console.log(smallNum); // output: false  
+
+</code></pre>
+
+<hr />
+
+<h2 id="every">every()</h2>
+
+<p>This method check if all array&rsquo;s item passed the condition. If passed, it return &lsquo;true&rsquo; otherwise &lsquo;false&rsquo;.</p>
+
+<pre><code>  const arr = [1, 2, 3, 4, 5, 6];
+
+  // all elements are greater than 4
+  const greaterFour = arr.every(num =&gt; num &gt; 4);
+  console.log(greaterFour); // output: false
+
+  // all elements are less than 10
+  const lessTen = arr.every(num =&gt; num &lt; 10);
+  console.log(lessTen); // output: true
+
+</code></pre>
+
+<hr />
+
+<p>## sort()</p>
+
+<p>This method used to arrange/sort array&rsquo;s item either ascending or descending order.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-const arr = [1, 2, 3, 4, 5, 6];" data-lang="const arr = [1, 2, 3, 4, 5, 6];">  const alpha = [&#39;e&#39;, &#39;a&#39;, &#39;c&#39;, &#39;u&#39;, &#39;y&#39;];
+
+  // sort in descending order
+  descOrder = arr.sort((a, b) =&gt; a &gt; b ? -1 : 1);
+  console.log(descOrder); // output: [6, 5, 4, 3, 2, 1]
+
+  // sort in ascending order
+  ascOrder = alpha.sort((a, b) =&gt; a &gt; b ? 1 : -1);
+  console.log(ascOrder); // output: [&#39;a&#39;, &#39;c&#39;, &#39;e&#39;, &#39;u&#39;, &#39;y&#39;]</code></pre></div>
+<hr />
+
+<h2 id="array-from">Array.from()</h2>
+
+<p>This change all thing that are array-like or iterable into true array especially when working with DOM, so that you can use other array methods like reduce, map, filter and so on.</p>
+
+<pre><code>  const name = 'frugence';
+  const nameArray = Array.from(name);
+
+  console.log(name); // output: frugence
+  console.log(nameArray); // output: ['f', 'r', 'u', 'g', 'e', 'n', 'c', 'e']
+working with DOM
+
+  // I assume that you have created unorder list of items in our html file.
+
+  const lis = document.querySelectorAll('li');
+  const lisArray = Array.from(document.querySelectorAll('li'));
+
+  // is true array?
+  console.log(Array.isArray(lis)); // output: false
+  console.log(Array.isArray(lisArray));  // output: true
+</code></pre>
+
+<hr />
+
+<h2 id="array-of">Array.of()</h2>
+
+<p>This create array from every arguments passed into it.</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-const nums = Array.of(1, 2, 3, 4, 5, 6);" data-lang="const nums = Array.of(1, 2, 3, 4, 5, 6);">  console.log(nums); // output: [1, 2, 3, 4, 5, 6]
+  </code></pre></div> </div>
     <footer class="post-footer">
 
   <div class="post-footer-data">
@@ -276,9 +333,13 @@ keyword, the execution is halted.</p>
         <a href="/tags/javascript">#Javascript</a>
       </div>
     
+      <div class="tag">
+        <a href="/tags/interview">#Interview</a>
+      </div>
+    
 </div>
 
-    <div class="date"> Nov 30, 2018 </div>
+    <div class="date"> Dec 10, 2018 </div>
   </div>
 
 </footer>

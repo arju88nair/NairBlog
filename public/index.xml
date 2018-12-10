@@ -24,6 +24,17 @@ You can reach me at :</description>
     </item>
     
     <item>
+      <title>Javascript II</title>
+      <link>/post/javascript-ii/</link>
+      <pubDate>Mon, 10 Dec 2018 14:44:59 +0530</pubDate>
+      
+      <guid>/post/javascript-ii/</guid>
+      <description>Array methods forEach()  const arr = [1, 2, 3, 4, 5, 6]; arr.forEach(item =&amp;gt; { console.log(item); // output: 1 2 3 4 5 6 });  ## includes()
+This method check if array includes the item passed in the method.
+ const arr = [1, 2, 3, 4, 5, 6]; arr.includes(2); // output: true arr.includes(7); // output: false  filter() This method create new array with only elements passed condition inside the provided function.</description>
+    </item>
+    
+    <item>
       <title>Promises and Generators</title>
       <link>/post/promises-generators/</link>
       <pubDate>Fri, 30 Nov 2018 21:49:43 +0530</pubDate>
