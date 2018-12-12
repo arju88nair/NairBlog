@@ -28,7 +28,7 @@
 
 <meta itemprop="datePublished" content="2018-07-11T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-07-11T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="488">
+<meta itemprop="wordCount" content="581">
 
 
 
@@ -271,6 +271,18 @@ done
 
 <li><p>Use the URL record if you want the name to redirect (change address) instead of resolving to a destination.</p></li>
 </ul>
+
+<hr />
+
+<h1 id="php-fpm">PHP fpm</h1>
+
+<p>Running your application using a combination of a nginx web-server and a php-fpm server.</p>
+
+<p>Nginx serves the static files and forwards specific requests to php-fpm while php-fpm executes the PHP code.</p>
+
+<p>When a request comes through, php-fpm initiates a PHP child process and the request details are provided as part of the process state (_GET, _POST, and _SERVER, etc).</p>
+
+<p>The state can’t change during the execution of the PHP script so the only way to get a new set of input data is to destroy the process and start over again.</p>
  </div>
     <footer class="post-footer">
 

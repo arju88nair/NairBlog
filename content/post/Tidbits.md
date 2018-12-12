@@ -113,3 +113,14 @@ What to use?
 - Use an ALIAS record if you are trying to alias the root domain (apex zone) or if you need other records for the same name
 
 - Use the URL record if you want the name to redirect (change address) instead of resolving to a destination.
+
+---
+
+# PHP fpm
+Running your application using a combination of a nginx web-server and a php-fpm server.
+
+ Nginx serves the static files and forwards specific requests to php-fpm while php-fpm executes the PHP code. 
+
+ When a request comes through, php-fpm initiates a PHP child process and the request details are provided as part of the process state (_GET, _POST, and _SERVER, etc). 
+ 
+ The state can’t change during the execution of the PHP script so the only way to get a new set of input data is to destroy the process and start over again.
