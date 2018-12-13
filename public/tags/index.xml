@@ -51,7 +51,7 @@
     <item>
       <title>Interview</title>
       <link>/tags/interview/</link>
-      <pubDate>Mon, 10 Dec 2018 14:44:59 +0530</pubDate>
+      <pubDate>Thu, 13 Dec 2018 22:04:51 +0530</pubDate>
       
       <guid>/tags/interview/</guid>
       <description></description>
@@ -60,7 +60,7 @@
     <item>
       <title>Javascript</title>
       <link>/tags/javascript/</link>
-      <pubDate>Mon, 10 Dec 2018 14:44:59 +0530</pubDate>
+      <pubDate>Thu, 13 Dec 2018 22:04:51 +0530</pubDate>
       
       <guid>/tags/javascript/</guid>
       <description></description>
@@ -159,9 +159,18 @@
     <item>
       <title>React</title>
       <link>/tags/react/</link>
-      <pubDate>Mon, 01 Oct 2018 21:39:04 +0530</pubDate>
+      <pubDate>Thu, 13 Dec 2018 22:04:51 +0530</pubDate>
       
       <guid>/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React Hooks</title>
+      <link>/tags/react-hooks/</link>
+      <pubDate>Thu, 13 Dec 2018 22:04:51 +0530</pubDate>
+      
+      <guid>/tags/react-hooks/</guid>
       <description></description>
     </item>
     

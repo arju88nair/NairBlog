@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.52" />
+
+<link rel="canonical" href="/post/react-js/">
+<meta property="og:title" content="React Hooks" />
+<meta property="og:description" content="React Hooks Lets you use state and other React features without writing a class.
+ import { useState } from &#39;react&#39;; function Example() { // Declare a new state variable, which we&#39;ll call &quot;count&quot; const [count, setCount] = useState(0); return ( &lt;div&gt; &lt;p&gt;You clicked {count} times&lt;/p&gt; &lt;button onClick={() =&gt; setCount(count &#43; 1)}&gt; Click me &lt;/button&gt; &lt;/div&gt; ); }  In React class components, side-effects were mostly introduced in lifecycle methods (e." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/react-js/" /><meta property="article:published_time" content="2018-12-13T22:04:51&#43;05:30"/>
+<meta property="article:modified_time" content="2018-12-13T22:04:51&#43;05:30"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="React Hooks"/>
+<meta name="twitter:description" content="React Hooks Lets you use state and other React features without writing a class.
+ import { useState } from &#39;react&#39;; function Example() { // Declare a new state variable, which we&#39;ll call &quot;count&quot; const [count, setCount] = useState(0); return ( &lt;div&gt; &lt;p&gt;You clicked {count} times&lt;/p&gt; &lt;button onClick={() =&gt; setCount(count &#43; 1)}&gt; Click me &lt;/button&gt; &lt;/div&gt; ); }  In React class components, side-effects were mostly introduced in lifecycle methods (e."/>
+
+
+
+<meta itemprop="name" content="React Hooks">
+<meta itemprop="description" content="React Hooks Lets you use state and other React features without writing a class.
+ import { useState } from &#39;react&#39;; function Example() { // Declare a new state variable, which we&#39;ll call &quot;count&quot; const [count, setCount] = useState(0); return ( &lt;div&gt; &lt;p&gt;You clicked {count} times&lt;/p&gt; &lt;button onClick={() =&gt; setCount(count &#43; 1)}&gt; Click me &lt;/button&gt; &lt;/div&gt; ); }  In React class components, side-effects were mostly introduced in lifecycle methods (e.">
+
+
+<meta itemprop="datePublished" content="2018-12-13T22:04:51&#43;05:30" />
+<meta itemprop="dateModified" content="2018-12-13T22:04:51&#43;05:30" />
+<meta itemprop="wordCount" content="311">
+
+
+
+<meta itemprop="keywords" content="React Hooks,React ,Interview,Javascript," />
+
+
+<link rel="stylesheet" href="/css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: #1D1F21;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: #1D1F21;
+}
+
+blockquote {
+  background: #1D1F21;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: yellow; }
+
+.post .content h1{ color: yellow; }
+.post .content h2{ color: yellow; }
+.post .content h3{ color: yellow; }
+.post .content h4{ color: yellow; }
+.post .content h5{ color: yellow; }
+.post .content h6{ color: yellow; }
+.post .content a:hover { color: yellow; }
+.social-link:hover { color: yellow; }
+.nav-item-title:hover { color: yellow; }
+.tag a:hover { color: yellow; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: yellow; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: yellow;
+}
+.post-list .title { color: yellow; }
+.rmore { color: yellow; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+</style>
+
+
+
+<title>
+
+
+     React Hooks 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Today I learned</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="/about/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">gh</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">twtr</div></a>
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> React Hooks </h1>
+    <div class="content"> 
+
+<h1 id="react-hooks">React Hooks</h1>
+
+<p><code>Lets you use state and other React features without writing a class.</code></p>
+
+<pre><code>
+import { useState } from 'react';
+
+function Example() {
+  // Declare a new state variable, which we'll call &quot;count&quot;
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;You clicked {count} times&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        Click me
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+</code></pre>
+
+<p>In React class components, side-effects were mostly introduced in lifecycle methods (e.g. componentDidMount, componentDidUpdate, componentWillUnmount). A side-effect could be fetching data in React or interacting with the Browser API.</p>
+
+<pre><code>// side-effects in a React class component
+class MyComponent extends Component {
+  // setup phase
+  componentDidMount() {
+    // add listener for feature 1
+    // add listener for feature 2
+  }
+
+  // clean up phase
+  componentWillUnmount() {
+    // remove listener for feature 1
+    // remove listener for feature 2
+  }
+
+  ...
+}
+
+// side-effects in React function component with React Hooks
+function MyComponent() {
+  useEffect(() =&gt; {
+    // add listener for feature 1 (setup)
+    // return function to remove listener for feature 1 (clean up)
+  });
+
+  useEffect(() =&gt; {
+    // add listener for feature 2 (setup)
+    // return function to remove listener for feature 2 (clean up)
+  });
+
+  ...
+}
+
+
+</code></pre>
+
+<h2 id="refactoring-comparison">Refactoring comparison</h2>
+
+<pre><code>import React from 'react';
+
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      count: 0,
+    };
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;p&gt;You clicked {this.state.count} times&lt;/p&gt;
+        &lt;button
+          onClick={() =&gt;
+            this.setState({ count: this.state.count + 1 })
+          }
+        &gt;
+          Click me
+        &lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default Counter;
+
+</code></pre>
+
+<p>Only if you didn’t need state or lifecycle methods, React functional stateless components could be used.</p>
+
+<pre><code>import React, { useState } from 'react';
+
+// how to use the state hook in a React function component
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;You clicked {count} times&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        Click me
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default Counter;
+
+</code></pre>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/react-hooks">#React Hooks</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/react">#React </a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/interview">#Interview</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/javascript">#Javascript</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Dec 13, 2018 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "thenair" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2018, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+
