@@ -14,12 +14,23 @@
     
     <item>
       <title>React Hooks</title>
+      <link>/post/react-hooks/</link>
+      <pubDate>Thu, 13 Dec 2018 22:04:51 +0530</pubDate>
+      
+      <guid>/post/react-hooks/</guid>
+      <description>React Hooks Lets you use state and other React features without writing a class.
+ import { useState } from &#39;react&#39;; function Example() { // Declare a new state variable, which we&#39;ll call &amp;quot;count&amp;quot; const [count, setCount] = useState(0); return ( &amp;lt;div&amp;gt; &amp;lt;p&amp;gt;You clicked {count} times&amp;lt;/p&amp;gt; &amp;lt;button onClick={() =&amp;gt; setCount(count + 1)}&amp;gt; Click me &amp;lt;/button&amp;gt; &amp;lt;/div&amp;gt; ); }  In React class components, side-effects were mostly introduced in lifecycle methods (e.</description>
+    </item>
+    
+    <item>
+      <title>React Hooks</title>
       <link>/post/react-js/</link>
       <pubDate>Thu, 13 Dec 2018 22:04:51 +0530</pubDate>
       
       <guid>/post/react-js/</guid>
-      <description>React Hooks Lets you use state and other React features without writing a class.
- import { useState } from &#39;react&#39;; function Example() { // Declare a new state variable, which we&#39;ll call &amp;quot;count&amp;quot; const [count, setCount] = useState(0); return ( &amp;lt;div&amp;gt; &amp;lt;p&amp;gt;You clicked {count} times&amp;lt;/p&amp;gt; &amp;lt;button onClick={() =&amp;gt; setCount(count + 1)}&amp;gt; Click me &amp;lt;/button&amp;gt; &amp;lt;/div&amp;gt; ); }  In React class components, side-effects were mostly introduced in lifecycle methods (e.</description>
+      <description> Basics Components splits the UI into independent, reusable pieces, and think about each piece in isolation.
+ function Welcome(props) { return &amp;lt;h1&amp;gt;Hello, {props.name}&amp;lt;/h1&amp;gt;; } // OR class Welcome extends React.Component { render() { return &amp;lt;h1&amp;gt;Hello, {this.props.name}&amp;lt;/h1&amp;gt;; } }  Rendering
+function Welcome(props) { return &amp;lt;h1&amp;gt;Hello, {props.name}&amp;lt;/h1&amp;gt;; } const element = &amp;lt;Welcome name=&amp;quot;Sara&amp;quot; /&amp;gt;; ReactDOM.render( element, document.getElementById(&#39;root&#39;) );  </description>
     </item>
     
     <item>
