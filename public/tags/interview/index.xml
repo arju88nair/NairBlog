@@ -28,9 +28,9 @@
       <pubDate>Thu, 13 Dec 2018 22:04:51 +0530</pubDate>
       
       <guid>/post/react-js/</guid>
-      <description> Basics Components splits the UI into independent, reusable pieces, and think about each piece in isolation.
+      <description>Basics Components splits the UI into independent, reusable pieces, and think about each piece in isolation.
  function Welcome(props) { return &amp;lt;h1&amp;gt;Hello, {props.name}&amp;lt;/h1&amp;gt;; } // OR class Welcome extends React.Component { render() { return &amp;lt;h1&amp;gt;Hello, {this.props.name}&amp;lt;/h1&amp;gt;; } }  Rendering
-function Welcome(props) { return &amp;lt;h1&amp;gt;Hello, {props.name}&amp;lt;/h1&amp;gt;; } const element = &amp;lt;Welcome name=&amp;quot;Sara&amp;quot; /&amp;gt;; ReactDOM.render( element, document.getElementById(&#39;root&#39;) );  </description>
+function Welcome(props) { return &amp;lt;h1&amp;gt;Hello, {props.name}&amp;lt;/h1&amp;gt;; } const element = &amp;lt;Welcome name=&amp;quot;Sara&amp;quot; /&amp;gt;; ReactDOM.render( element, document.getElementById(&#39;root&#39;) );  componentDidMount() Invoked immediately after a component is mounted (inserted into the tree).</description>
     </item>
     
     <item>

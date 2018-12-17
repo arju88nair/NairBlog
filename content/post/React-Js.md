@@ -48,3 +48,42 @@ ReactDOM.render(
 
 
 -------
+## componentDidMount()
+
+Invoked immediately after a component is mounted (inserted into the tree). 
+
+This method is a good place to set up any subscriptions. If you do that, don’t forget to unsubscribe in componentWillUnmount().
+
+
+You may call setState() immediately in componentDidMount(). It will trigger an extra rendering, but it will happen before the browser updates the screen. This guarantees that even though the render() will be called twice in this case, the user won’t see the intermediate state. 
+
+
+---
+## componentDidUpdate()
+
+
+An opportunity to operate on the DOM when the component has been updated. 
+
+To do network requests as long as you compare the `current props to previous props` 
+
+
+```
+
+componentDidUpdate(prevProps) {
+  // Typical usage (don't forget to compare props):
+  if (this.props.userID !== prevProps.userID) {
+    this.fetchData(this.props.userID);
+  }
+}
+
+```
+
+
+You may call setState() immediately in componentDidUpdate() but note that it must be wrapped in a condition , or you’ll cause an `infinite loop.`
+
+
+
+---
+## componentWillUnmount() 
+
+Is invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests

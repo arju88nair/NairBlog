@@ -11,30 +11,30 @@
 
 <link rel="canonical" href="/post/react-js/">
 <meta property="og:title" content="React Hooks" />
-<meta property="og:description" content=" Basics Components splits the UI into independent, reusable pieces, and think about each piece in isolation.
+<meta property="og:description" content="Basics Components splits the UI into independent, reusable pieces, and think about each piece in isolation.
  function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } // OR class Welcome extends React.Component { render() { return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;; } }  Rendering
-function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } const element = &lt;Welcome name=&quot;Sara&quot; /&gt;; ReactDOM.render( element, document.getElementById(&#39;root&#39;) );  " />
+function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } const element = &lt;Welcome name=&quot;Sara&quot; /&gt;; ReactDOM.render( element, document.getElementById(&#39;root&#39;) );  componentDidMount() Invoked immediately after a component is mounted (inserted into the tree)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/react-js/" /><meta property="article:published_time" content="2018-12-13T22:04:51&#43;05:30"/>
 <meta property="article:modified_time" content="2018-12-13T22:04:51&#43;05:30"/>
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="React Hooks"/>
-<meta name="twitter:description" content=" Basics Components splits the UI into independent, reusable pieces, and think about each piece in isolation.
+<meta name="twitter:description" content="Basics Components splits the UI into independent, reusable pieces, and think about each piece in isolation.
  function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } // OR class Welcome extends React.Component { render() { return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;; } }  Rendering
-function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } const element = &lt;Welcome name=&quot;Sara&quot; /&gt;; ReactDOM.render( element, document.getElementById(&#39;root&#39;) );  "/>
+function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } const element = &lt;Welcome name=&quot;Sara&quot; /&gt;; ReactDOM.render( element, document.getElementById(&#39;root&#39;) );  componentDidMount() Invoked immediately after a component is mounted (inserted into the tree)."/>
 
 
 
 <meta itemprop="name" content="React Hooks">
-<meta itemprop="description" content=" Basics Components splits the UI into independent, reusable pieces, and think about each piece in isolation.
+<meta itemprop="description" content="Basics Components splits the UI into independent, reusable pieces, and think about each piece in isolation.
  function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } // OR class Welcome extends React.Component { render() { return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;; } }  Rendering
-function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } const element = &lt;Welcome name=&quot;Sara&quot; /&gt;; ReactDOM.render( element, document.getElementById(&#39;root&#39;) );  ">
+function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } const element = &lt;Welcome name=&quot;Sara&quot; /&gt;; ReactDOM.render( element, document.getElementById(&#39;root&#39;) );  componentDidMount() Invoked immediately after a component is mounted (inserted into the tree).">
 
 
 <meta itemprop="datePublished" content="2018-12-13T22:04:51&#43;05:30" />
 <meta itemprop="dateModified" content="2018-12-13T22:04:51&#43;05:30" />
-<meta itemprop="wordCount" content="55">
+<meta itemprop="wordCount" content="228">
 
 
 
@@ -208,6 +208,40 @@ ReactDOM.render(
 </code></pre>
 
 <hr />
+
+<h2 id="componentdidmount">componentDidMount()</h2>
+
+<p>Invoked immediately after a component is mounted (inserted into the tree).</p>
+
+<p>This method is a good place to set up any subscriptions. If you do that, don’t forget to unsubscribe in componentWillUnmount().</p>
+
+<p>You may call setState() immediately in componentDidMount(). It will trigger an extra rendering, but it will happen before the browser updates the screen. This guarantees that even though the render() will be called twice in this case, the user won’t see the intermediate state.</p>
+
+<hr />
+
+<h2 id="componentdidupdate">componentDidUpdate()</h2>
+
+<p>An opportunity to operate on the DOM when the component has been updated.</p>
+
+<p>To do network requests as long as you compare the <code>current props to previous props</code></p>
+
+<pre><code>
+componentDidUpdate(prevProps) {
+  // Typical usage (don't forget to compare props):
+  if (this.props.userID !== prevProps.userID) {
+    this.fetchData(this.props.userID);
+  }
+}
+
+</code></pre>
+
+<p>You may call setState() immediately in componentDidUpdate() but note that it must be wrapped in a condition , or you’ll cause an <code>infinite loop.</code></p>
+
+<hr />
+
+<h2 id="componentwillunmount">componentWillUnmount()</h2>
+
+<p>Is invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests</p>
  </div>
     <footer class="post-footer">
 
