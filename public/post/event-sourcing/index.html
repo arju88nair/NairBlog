@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.52" />
+
+<link rel="canonical" href="/post/event-sourcing/">
+<meta property="og:title" content="Event Sourcing" />
+<meta property="og:description" content="References 1, 2
+Instead of focussing on current state, you focus on the changes that have occurred over time.
+ Thinking of application state as a frames in a video, we could &ldquo;scrub&rdquo; through different states of the application.
+Every time something happens that is relevant, you just record what it was, then you tie to it, any extra details that are really necessary to understand what happened. Then later you can turn those events into state, by running one after another to see how they stack up." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/event-sourcing/" /><meta property="article:published_time" content="2018-12-18T09:42:13&#43;05:30"/>
+<meta property="article:modified_time" content="2018-12-18T09:42:13&#43;05:30"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Event Sourcing"/>
+<meta name="twitter:description" content="References 1, 2
+Instead of focussing on current state, you focus on the changes that have occurred over time.
+ Thinking of application state as a frames in a video, we could &ldquo;scrub&rdquo; through different states of the application.
+Every time something happens that is relevant, you just record what it was, then you tie to it, any extra details that are really necessary to understand what happened. Then later you can turn those events into state, by running one after another to see how they stack up."/>
+
+
+
+<meta itemprop="name" content="Event Sourcing">
+<meta itemprop="description" content="References 1, 2
+Instead of focussing on current state, you focus on the changes that have occurred over time.
+ Thinking of application state as a frames in a video, we could &ldquo;scrub&rdquo; through different states of the application.
+Every time something happens that is relevant, you just record what it was, then you tie to it, any extra details that are really necessary to understand what happened. Then later you can turn those events into state, by running one after another to see how they stack up.">
+
+
+<meta itemprop="datePublished" content="2018-12-18T09:42:13&#43;05:30" />
+<meta itemprop="dateModified" content="2018-12-18T09:42:13&#43;05:30" />
+<meta itemprop="wordCount" content="354">
+
+
+
+<meta itemprop="keywords" content="Event Sourcing,Tidbits," />
+
+
+<link rel="stylesheet" href="/css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: #1D1F21;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: #1D1F21;
+}
+
+blockquote {
+  background: #1D1F21;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: yellow; }
+
+.post .content h1{ color: yellow; }
+.post .content h2{ color: yellow; }
+.post .content h3{ color: yellow; }
+.post .content h4{ color: yellow; }
+.post .content h5{ color: yellow; }
+.post .content h6{ color: yellow; }
+.post .content a:hover { color: yellow; }
+.social-link:hover { color: yellow; }
+.nav-item-title:hover { color: yellow; }
+.tag a:hover { color: yellow; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: yellow; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: yellow;
+}
+.post-list .title { color: yellow; }
+.rmore { color: yellow; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+</style>
+
+
+
+<title>
+
+
+     Event Sourcing 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Today I learned</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="/about/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">gh</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">twtr</div></a>
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Event Sourcing </h1>
+    <div class="content"> 
+
+<blockquote>
+<p>References
+<a href="https://dev.to/barryosull/event-sourcing-what-it-is-and-why-its-awesome">1</a>, <a href="https://www.phproundtable.com/episode/event-sourcing-in-php">2</a></p>
+
+<p>Instead of focussing on current state, you focus on the changes that have occurred over time.</p>
+</blockquote>
+
+<p>Thinking of application state as a frames in a video, we could &ldquo;scrub&rdquo; through different states of the application.</p>
+
+<p>Every time something happens that is relevant, you just record what it was, then you tie to it, any extra details that are really necessary to understand what happened. Then later you can turn those events into state, by running one after another to see how they stack up.</p>
+
+<p>So basically it&rsquo;s recording what happened, then generating state from those records.</p>
+
+<hr />
+
+<p>Example using Shopping cart</p>
+
+<p>Event
+1. Shopping Cart Created
+2. Item Added to Cart
+3. Item Added to Cart
+4. Item Removed from Cart
+5. Shopping Cart Checked-Out</p>
+
+<h3 id="enforcing-rules">Enforcing rules</h3>
+
+<p>Checking if the cart contains the item</p>
+
+<p>Check that an &ldquo;Item Added to Cart&rdquo; event has happened for that item, then you know the item is in the cart and that it can be removed.</p>
+
+<p>So, replay a subset of the events to get the answer you need. Called projecting the events, and the end result is a &ldquo;projection&rdquo;.</p>
+
+<hr />
+
+<p>CRUD are not a suitable candidate for ES. Data mining , where you are looking to see behavior over time to influence marketing. Legal requirements.</p>
+
+<p>Event Sourcing will have an id (usually UUID) and a field to indicate which order the events happened.
+ Often  Meta data as well. The Action is the first class citizen and the Data is the second class citizen.</p>
+
+<p>For a huge amount of data -&gt; Snapshot, a recent event which will be used to trace
+after it</p>
+
+<hr />
+
+<h3 id="cqrs-command-query-responsibility-segregation">CQRS - Command Query Responsibility Segregation</h3>
+
+<blockquote>
+<p>Plumbing for Event Sourcing.</p>
+</blockquote>
+
+<p>Is to have separate models for different purposes</p>
+
+<p>You generally start with a simple Command object, that then gets passed on to a Command Bus, that then figures out the CommandHandler, that then figures out which Object you actually want to change and passes the data from the Command to the actual Object. The actual Object is the one that is going to contain the data or raise the proper events.</p>
+
+<hr />
+
+<p><a href="https://eventstore.org">Event sourcing DB</a></p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/event-sourcing">#Event Sourcing</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/tidbits">#Tidbits</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Dec 18, 2018 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "thenair" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2018, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+

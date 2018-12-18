@@ -24,6 +24,18 @@ You can reach me at :</description>
     </item>
     
     <item>
+      <title>Event Sourcing</title>
+      <link>/post/event-sourcing/</link>
+      <pubDate>Tue, 18 Dec 2018 09:42:13 +0530</pubDate>
+      
+      <guid>/post/event-sourcing/</guid>
+      <description>References 1, 2
+Instead of focussing on current state, you focus on the changes that have occurred over time.
+ Thinking of application state as a frames in a video, we could &amp;ldquo;scrub&amp;rdquo; through different states of the application.
+Every time something happens that is relevant, you just record what it was, then you tie to it, any extra details that are really necessary to understand what happened. Then later you can turn those events into state, by running one after another to see how they stack up.</description>
+    </item>
+    
+    <item>
       <title>React Hooks</title>
       <link>/post/react-hooks/</link>
       <pubDate>Thu, 13 Dec 2018 22:04:51 +0530</pubDate>

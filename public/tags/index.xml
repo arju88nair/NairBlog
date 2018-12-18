@@ -40,6 +40,15 @@
     </item>
     
     <item>
+      <title>Event Sourcing</title>
+      <link>/tags/event-sourcing/</link>
+      <pubDate>Tue, 18 Dec 2018 09:42:13 +0530</pubDate>
+      
+      <guid>/tags/event-sourcing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Hacks</title>
       <link>/tags/hacks/</link>
       <pubDate>Wed, 11 Jul 2018 21:20:13 +0530</pubDate>
@@ -198,6 +207,15 @@
       <pubDate>Wed, 11 Jul 2018 21:20:13 +0530</pubDate>
       
       <guid>/tags/stupid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tidbits</title>
+      <link>/tags/tidbits/</link>
+      <pubDate>Tue, 18 Dec 2018 09:42:13 +0530</pubDate>
+      
+      <guid>/tags/tidbits/</guid>
       <description></description>
     </item>
     
