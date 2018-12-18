@@ -124,3 +124,9 @@ Running your application using a combination of a nginx web-server and a php-fpm
  When a request comes through, php-fpm initiates a PHP child process and the request details are provided as part of the process state (_GET, _POST, and _SERVER, etc). 
  
  The state can’t change during the execution of the PHP script so the only way to get a new set of input data is to destroy the process and start over again.
+
+ ---
+
+ ## Sybil Attach
+
+ > The Sybil attack in computer security is an attack wherein a reputation system(rating system) is subverted by forging identities in peer-to-peer networks
