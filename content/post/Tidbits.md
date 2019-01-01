@@ -131,3 +131,10 @@ Running your application using a combination of a nginx web-server and a php-fpm
 
  > The Sybil attack in computer security is an attack wherein a reputation system(rating system) is subverted by forging identities in peer-to-peer networks
  
+ ---
+
+
+## Memoization
+Is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again
+
+

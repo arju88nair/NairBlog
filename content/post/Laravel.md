@@ -15,7 +15,15 @@ LifeCycle
 
 `index.php`
 
-- Loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application from bootstrap/app.php script. The first action taken by Laravel itself is to create an instance of the application 
+- Loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application(Service Container) from `bootstrap/app.php` script.
+
+ - All the application path gets called
+ - Kernels get registered
+ - Core service providers are called
+
+ The first action taken by Laravel itself is to create an instance of the application 
+
+ `terminate()` -> To perform tasks after the request prepared
 
 `HTTP / Console Kernels`
 
