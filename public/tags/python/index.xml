@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2018, all rights reserved.</copyright>
-    <lastBuildDate>Wed, 11 Jul 2018 17:31:55 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 07 Jan 2019 12:01:26 +0530</lastBuildDate>
     
 	<atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python</title>
+      <link>/post/python/</link>
+      <pubDate>Mon, 07 Jan 2019 12:01:26 +0530</pubDate>
+      
+      <guid>/post/python/</guid>
+      <description>Lists Collection of elements
+[0, 1, 2, 3, 4, 5]
+List Comprehension Allow you to create lists with a for loop with less code.
+ &amp;gt;&amp;gt;&amp;gt; my_list = [] &amp;gt;&amp;gt;&amp;gt; for x in range(10): ... my_list.append(x * 2) ... [0, 2, 4, 6, 8, 10, 12, 14, 16, 18] // LC &amp;gt;&amp;gt;&amp;gt; comp_list = [x * 2 for x in range(10)] [0, 2, 4, 6, 8, 10, 12, 14, 16, 18] --- comp_list = [x ** 2 for x in range(7) if x % 2 == 0]  Combining two lists</description>
+    </item>
     
     <item>
       <title>Nginx Server Block</title>

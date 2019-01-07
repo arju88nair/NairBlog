@@ -7,15 +7,15 @@
 <meta name="description" content="Personal blog." />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.52" />
+<meta name="generator" content="Hugo 0.53" />
 
 <link rel="canonical" href="/post/laravel/">
 <meta property="og:title" content="Laravel" />
 <meta property="og:description" content="LifeCycle
  &ldquo;bootstrapped&rdquo;? In general, means registering things, including registering service container bindings, event listeners, middleware, and even routes.
  index.php
- Loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application from bootstrap/app.php script. The first action taken by Laravel itself is to create an instance of the application  HTTP / Console Kernels
- The incoming request is sent to either the HTTP kernel or the console kernel, depending on the type of request that is entering the application" />
+ Loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application(Service Container) from bootstrap/app.php script.
+ All the application path gets called Kernels get registered Core service providers are called   The first action taken by Laravel itself is to create an instance of the application" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/laravel/" /><meta property="article:published_time" content="2018-07-20T18:08:33&#43;05:30"/>
 <meta property="article:modified_time" content="2018-07-20T18:08:33&#43;05:30"/>
@@ -25,8 +25,8 @@
 <meta name="twitter:description" content="LifeCycle
  &ldquo;bootstrapped&rdquo;? In general, means registering things, including registering service container bindings, event listeners, middleware, and even routes.
  index.php
- Loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application from bootstrap/app.php script. The first action taken by Laravel itself is to create an instance of the application  HTTP / Console Kernels
- The incoming request is sent to either the HTTP kernel or the console kernel, depending on the type of request that is entering the application"/>
+ Loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application(Service Container) from bootstrap/app.php script.
+ All the application path gets called Kernels get registered Core service providers are called   The first action taken by Laravel itself is to create an instance of the application"/>
 
 
 
@@ -34,13 +34,13 @@
 <meta itemprop="description" content="LifeCycle
  &ldquo;bootstrapped&rdquo;? In general, means registering things, including registering service container bindings, event listeners, middleware, and even routes.
  index.php
- Loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application from bootstrap/app.php script. The first action taken by Laravel itself is to create an instance of the application  HTTP / Console Kernels
- The incoming request is sent to either the HTTP kernel or the console kernel, depending on the type of request that is entering the application">
+ Loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application(Service Container) from bootstrap/app.php script.
+ All the application path gets called Kernels get registered Core service providers are called   The first action taken by Laravel itself is to create an instance of the application">
 
 
 <meta itemprop="datePublished" content="2018-07-20T18:08:33&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-20T18:08:33&#43;05:30" />
-<meta itemprop="wordCount" content="515">
+<meta itemprop="wordCount" content="539">
 
 
 
@@ -187,8 +187,18 @@ th {
 <p><code>index.php</code></p>
 
 <ul>
-<li>Loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application from bootstrap/app.php script. The first action taken by Laravel itself is to create an instance of the application</li>
+<li><p>Loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application(Service Container) from <code>bootstrap/app.php</code> script.</p>
+
+<ul>
+<li>All the application path gets called</li>
+<li>Kernels get registered</li>
+<li>Core service providers are called</li>
+</ul></li>
 </ul>
+
+<p>The first action taken by Laravel itself is to create an instance of the application</p>
+
+<p><code>terminate()</code> -&gt; To perform tasks after the request prepared</p>
 
 <p><code>HTTP / Console Kernels</code></p>
 

@@ -32,8 +32,8 @@ class Profile { public function deactivateProfile(Setting $setting) { $setting-&
       <description>LifeCycle
  &amp;ldquo;bootstrapped&amp;rdquo;? In general, means registering things, including registering service container bindings, event listeners, middleware, and even routes.
  index.php
- Loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application from bootstrap/app.php script. The first action taken by Laravel itself is to create an instance of the application  HTTP / Console Kernels
- The incoming request is sent to either the HTTP kernel or the console kernel, depending on the type of request that is entering the application</description>
+ Loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application(Service Container) from bootstrap/app.php script.
+ All the application path gets called Kernels get registered Core service providers are called   The first action taken by Laravel itself is to create an instance of the application</description>
     </item>
     
     <item>

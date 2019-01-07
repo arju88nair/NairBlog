@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.53" />
+
+<link rel="canonical" href="/post/python/">
+<meta property="og:title" content="Python" />
+<meta property="og:description" content="Lists Collection of elements
+[0, 1, 2, 3, 4, 5]
+List Comprehension Allow you to create lists with a for loop with less code.
+ &gt;&gt;&gt; my_list = [] &gt;&gt;&gt; for x in range(10): ... my_list.append(x * 2) ... [0, 2, 4, 6, 8, 10, 12, 14, 16, 18] // LC &gt;&gt;&gt; comp_list = [x * 2 for x in range(10)] [0, 2, 4, 6, 8, 10, 12, 14, 16, 18] --- comp_list = [x ** 2 for x in range(7) if x % 2 == 0]  Combining two lists" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/python/" /><meta property="article:published_time" content="2019-01-07T12:01:26&#43;05:30"/>
+<meta property="article:modified_time" content="2019-01-07T12:01:26&#43;05:30"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python"/>
+<meta name="twitter:description" content="Lists Collection of elements
+[0, 1, 2, 3, 4, 5]
+List Comprehension Allow you to create lists with a for loop with less code.
+ &gt;&gt;&gt; my_list = [] &gt;&gt;&gt; for x in range(10): ... my_list.append(x * 2) ... [0, 2, 4, 6, 8, 10, 12, 14, 16, 18] // LC &gt;&gt;&gt; comp_list = [x * 2 for x in range(10)] [0, 2, 4, 6, 8, 10, 12, 14, 16, 18] --- comp_list = [x ** 2 for x in range(7) if x % 2 == 0]  Combining two lists"/>
+
+
+
+<meta itemprop="name" content="Python">
+<meta itemprop="description" content="Lists Collection of elements
+[0, 1, 2, 3, 4, 5]
+List Comprehension Allow you to create lists with a for loop with less code.
+ &gt;&gt;&gt; my_list = [] &gt;&gt;&gt; for x in range(10): ... my_list.append(x * 2) ... [0, 2, 4, 6, 8, 10, 12, 14, 16, 18] // LC &gt;&gt;&gt; comp_list = [x * 2 for x in range(10)] [0, 2, 4, 6, 8, 10, 12, 14, 16, 18] --- comp_list = [x ** 2 for x in range(7) if x % 2 == 0]  Combining two lists">
+
+
+<meta itemprop="datePublished" content="2019-01-07T12:01:26&#43;05:30" />
+<meta itemprop="dateModified" content="2019-01-07T12:01:26&#43;05:30" />
+<meta itemprop="wordCount" content="435">
+
+
+
+<meta itemprop="keywords" content="Python," />
+
+
+<link rel="stylesheet" href="/css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: #1D1F21;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: #1D1F21;
+}
+
+blockquote {
+  background: #1D1F21;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: yellow; }
+
+.post .content h1{ color: yellow; }
+.post .content h2{ color: yellow; }
+.post .content h3{ color: yellow; }
+.post .content h4{ color: yellow; }
+.post .content h5{ color: yellow; }
+.post .content h6{ color: yellow; }
+.post .content a:hover { color: yellow; }
+.social-link:hover { color: yellow; }
+.nav-item-title:hover { color: yellow; }
+.tag a:hover { color: yellow; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: yellow; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: yellow;
+}
+.post-list .title { color: yellow; }
+.rmore { color: yellow; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+</style>
+
+
+
+<title>
+
+
+     Python 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Today I learned</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="/about/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">gh</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">twtr</div></a>
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Python </h1>
+    <div class="content"> 
+
+<h2 id="lists">Lists</h2>
+
+<p>Collection of elements</p>
+
+<p>[0, 1, 2, 3, 4, 5]</p>
+
+<hr />
+
+<h2 id="list-comprehension">List Comprehension</h2>
+
+<p>Allow you to create lists with a for loop with less code.</p>
+
+<pre><code>
+&gt;&gt;&gt; my_list = []
+&gt;&gt;&gt; for x in range(10):
+...     my_list.append(x * 2)
+... 
+[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+
+// LC
+
+&gt;&gt;&gt; comp_list = [x * 2 for x in range(10)] 
+[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+
+
+---
+comp_list = [x ** 2 for x in range(7) if x % 2 == 0]
+
+</code></pre>
+
+<p>Combining two lists</p>
+
+<pre><code>&gt;&gt;&gt; nums = [1, 2, 3, 4, 5]
+&gt;&gt;&gt; letters = ['A', 'B', 'C', 'D', 'E']
+&gt;&gt;&gt; nums_letters = [[n, l] for n in nums for l in letters]
+#the comprehensions list combines two simple lists in a complex list of lists.
+&gt;&gt;&gt; print(nums_letters)
+&gt;&gt;&gt; print(nums_letters)
+[[1, 'A'], [1, 'B'], [1, 'C'], [1, 'D'], [1, 'E'], [2, 'A'], [2, 'B'], [2, 'C'], [2, 'D'], [2, 'E'], [3, 'A'], [3, 'B'], [3, 'C'], [3, 'D'], [3, 'E'], [4, 'A'], [4, 'B'], [4, 'C'], [4, 'D'], [4, 'E'], [5, 'A'], [5, 'B'], [5, 'C'], [5, 'D'], [5, 'E']]
+&gt;&gt;&gt;
+
+</code></pre>
+
+<h2 id="iterators">Iterators</h2>
+
+<p>Iterable is a “sequence” of data, you can iterate over using a loop.</p>
+
+<pre><code>&gt;&gt;&gt; hasattr(str, '__iter__')
+True  
+&gt;&gt;&gt; hasattr(bool, '__iter__')
+False
+</code></pre>
+
+<ul>
+<li><code>iterr()</code> method is called on the object to converts it to an iterator object.</li>
+<li><code>next()</code> method is called on the iterator object to get the next element of the sequence.</li>
+<li><code>StopIteration</code> exception is raised when there are no elements left to call.</li>
+</ul>
+
+<h2 id="generators">Generators</h2>
+
+<ul>
+<li>Convenient way to use Iterators</li>
+<li>Evaluating the elements on demand</li>
+<li>When you call a normal function with a return statement the function is terminated whenever it encounters a return statement.</li>
+<li>In a function with a yield statement the state of the function is “saved” from the last call and can be picked up the next time you call a generator function.</li>
+</ul>
+
+<h1 id="difference-between-lc-and-ge">Difference between LC and GE</h1>
+
+<pre><code>&gt;&gt;&gt; list_comp = [x ** 2 for x in range(10) if x % 2 == 0]
+&gt;&gt;&gt; gen_exp = (x ** 2 for x in range(10) if x % 2 == 0)
+&gt;&gt;&gt; print(list_comp)
+[0, 4, 16, 36, 64]
+&gt;&gt;&gt; print(gen_exp)
+&lt;generator object &lt;genexpr&gt; at 0x7f600131c410&gt;
+
+</code></pre>
+
+<p><code>The generator yields one item at a time — thus it is more memory efficient than a list.</code></p>
+
+<ul>
+<li>List comprehensions are better when you want to iterate over something multiple times</li>
+
+<li><p>If you want to store and use the generated results -&gt; LC</p></li>
+
+<li><p>A List Comprehension, just like the plain range function, executes immediately and returns a list.</p></li>
+
+<li><p>A Generator Expression, just like xrange returns and object that can be iterated over.</p></li>
+</ul>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/python">#Python</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Jan 7, 2019 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "thenair" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2018, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+

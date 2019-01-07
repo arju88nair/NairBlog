@@ -24,6 +24,18 @@ You can reach me at :</description>
     </item>
     
     <item>
+      <title>Python</title>
+      <link>/post/python/</link>
+      <pubDate>Mon, 07 Jan 2019 12:01:26 +0530</pubDate>
+      
+      <guid>/post/python/</guid>
+      <description>Lists Collection of elements
+[0, 1, 2, 3, 4, 5]
+List Comprehension Allow you to create lists with a for loop with less code.
+ &amp;gt;&amp;gt;&amp;gt; my_list = [] &amp;gt;&amp;gt;&amp;gt; for x in range(10): ... my_list.append(x * 2) ... [0, 2, 4, 6, 8, 10, 12, 14, 16, 18] // LC &amp;gt;&amp;gt;&amp;gt; comp_list = [x * 2 for x in range(10)] [0, 2, 4, 6, 8, 10, 12, 14, 16, 18] --- comp_list = [x ** 2 for x in range(7) if x % 2 == 0]  Combining two lists</description>
+    </item>
+    
+    <item>
       <title>Event Sourcing</title>
       <link>/post/event-sourcing/</link>
       <pubDate>Tue, 18 Dec 2018 09:42:13 +0530</pubDate>
@@ -178,7 +190,7 @@ Spread operator or splat operator copies the contents of one array object into a
       <pubDate>Sun, 22 Jul 2018 13:51:09 +0530</pubDate>
       
       <guid>/post/programms/</guid>
-      <description>Factorial &amp;lt;?php $number = 6; /*number to get factorial */ $fact = 1; for($k=1;$k&amp;lt;=$number;++$k) { $fact = $fact*$k; } echo &amp;quot;Factorial of $number is &amp;quot;.$fact; ?&amp;gt;  Fibonacci &amp;lt;?PHP $first = 0; $second = 1; echo $first.&#39;&amp;amp;nbsp;,&#39;; echo $second.&#39;&amp;amp;nbsp;,&#39;; for($limit=0;$limit&amp;lt;10;$limit++) { $third = $first+$second; echo $third.&#39;&amp;amp;nbsp;,&#39;;; $first = $second; $second = $third; } ?&amp;gt;  Amstrong &amp;lt;?php $number = $_POST[ &#39;number&#39; ]; // get the number entered by user $temp = $number; $sum = 0; while($temp !</description>
+      <description>Factorial &amp;lt;?php $number = 6; /*number to get factorial */ $fact = 1; for($k=1;$k&amp;lt;=$number;++$k) { $fact = $fact*$k; } echo &amp;quot;Factorial of $number is &amp;quot;.$fact; ?&amp;gt;  Factorial (Recursion)  function factorial($number) { if ($number &amp;lt; 2) { return 1; } else { return ($number * factorial($number-1)); } }  Fibonacci &amp;lt;?PHP $first = 0; $second = 1; echo $first.&#39;&amp;amp;nbsp;,&#39;; echo $second.&#39;&amp;amp;nbsp;,&#39;; for($limit=0;$limit&amp;lt;10;$limit++) { $third = $first+$second; echo $third.&#39;&amp;amp;nbsp;,&#39;;; $first = $second; $second = $third; } ?</description>
     </item>
     
     <item>
@@ -202,8 +214,8 @@ A pure function is a function which: Given the same inputs, always returns the s
       <description>LifeCycle
  &amp;ldquo;bootstrapped&amp;rdquo;? In general, means registering things, including registering service container bindings, event listeners, middleware, and even routes.
  index.php
- Loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application from bootstrap/app.php script. The first action taken by Laravel itself is to create an instance of the application  HTTP / Console Kernels
- The incoming request is sent to either the HTTP kernel or the console kernel, depending on the type of request that is entering the application</description>
+ Loads the Composer generated autoloader definition, and then retrieves an instance of the Laravel application(Service Container) from bootstrap/app.php script.
+ All the application path gets called Kernels get registered Core service providers are called   The first action taken by Laravel itself is to create an instance of the application</description>
     </item>
     
     <item>
