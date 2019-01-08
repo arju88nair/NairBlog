@@ -93,3 +93,12 @@ False
 - A List Comprehension, just like the plain range function, executes immediately and returns a list.
 
 - A Generator Expression, just like xrange returns and object that can be iterated over.
+
+----
+
+## Virtual environments
+Isolated Python environments for Python libraries
+
+- `virtualenv` - 
+It works by installing a bunch of files in a directory (eg: env/), and then modifying the PATH environment variable to prefix it with a custom bin directory (eg: env/bin/). An exact copy of the python or python3 binary is placed in this directory, but Python is programmed to look for libraries relative to its path first, in the environment directory. 
+`pyenv` and many others
