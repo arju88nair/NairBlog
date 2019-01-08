@@ -190,7 +190,7 @@ Spread operator or splat operator copies the contents of one array object into a
       <pubDate>Sun, 22 Jul 2018 13:51:09 +0530</pubDate>
       
       <guid>/post/programms/</guid>
-      <description>Factorial &amp;lt;?php $number = 6; /*number to get factorial */ $fact = 1; for($k=1;$k&amp;lt;=$number;++$k) { $fact = $fact*$k; } echo &amp;quot;Factorial of $number is &amp;quot;.$fact; ?&amp;gt;  Factorial (Recursion)  function factorial($number) { if ($number &amp;lt; 2) { return 1; } else { return ($number * factorial($number-1)); } }  Fibonacci &amp;lt;?PHP $first = 0; $second = 1; echo $first.&#39;&amp;amp;nbsp;,&#39;; echo $second.&#39;&amp;amp;nbsp;,&#39;; for($limit=0;$limit&amp;lt;10;$limit++) { $third = $first+$second; echo $third.&#39;&amp;amp;nbsp;,&#39;;; $first = $second; $second = $third; } ?</description>
+      <description>Factorial &amp;lt;?php $number = 6; /*number to get factorial */ $fact = 1; for($k=1;$k&amp;lt;=$number;++$k) { $fact = $fact*$k; } echo &amp;quot;Factorial of $number is &amp;quot;.$fact; ?&amp;gt;  Factorial (Recursion)  function factorial($number) { if ($number &amp;lt; 2) { return 1; } else { return ($number * factorial($number-1)); } }  Fibonacci a, b = 1, 1 total = 0 while a &amp;lt;= 10: a, b = b, a+b # the real formula for Fibonacci sequence print(a)  Amstrong &amp;lt;?</description>
     </item>
     
     <item>

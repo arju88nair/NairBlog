@@ -42,38 +42,12 @@ function factorial($number) {
 ## Fibonacci
 
 ```
-<?PHP 
-
-   $first = 0;
-   $second = 1;
-   echo $first.'&nbsp;,';
-   echo $second.'&nbsp;,';
-  
-
-  for($limit=0;$limit<10;$limit++)
-   {
-     $third = $first+$second;
-     echo $third.'&nbsp;,';;
-     $first = $second;
-     $second = $third;
-    
-   }
-
-?>
-```
----
-
-
-## Fibonacci sum
-
-```
 a, b = 1, 1
 total = 0
-while a <= 4000000:
-    if a % 2 == 0:
-        total += a
+while a <= 10:
     a, b = b, a+b  # the real formula for Fibonacci sequence
-print (total)
+    print(a)
+
 
 ```
 
