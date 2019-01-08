@@ -138,3 +138,34 @@ Running your application using a combination of a nginx web-server and a php-fpm
 Is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again
 
 
+## Composer
+- `composer.json` file to look out what dependencies needs to be installed
+- Write the `composer.lock` with the information of the project (installed dependencies)
+
+- If your project P depends on library A and A depends on B v1.3.***, then if A contains a lock file saying someone ran "composer update" resulting in B v1.3.2 being installed, then installing A in your project P might still install 1.3.3, as the composer.json (not .lock!) defined the dependency to be on 1.3.*.
+- Lock files always contain exact version numbers
+
+
+If you want to keep all co-workers in the same versions as you...
+
+- Commit your composer.lock to GIT (or vcs you have)
+- Ask others to get the that version of composer.lock file
+- Always use composer install to get the correct dependencies
+
+If you want to Upgrade the system dependencies to new versions
+
+- Check the composer.json file for version specs.
+Do a composer update
+- This will change the composer.lock file with newest versions
+- Commit it to the GIT (or vcs)
+- Ask others to get it and composer install'
+
+`composer install` - 
+To add dependencies you need to add it manually to the composer.json file.
+
+`composer update` - To add or remove dependencies you need to add it manually to the composer.json file
+
+- The composer.lock file will be ignored
+composer.json file dependencies will be installed and updated (if a dependency is not installed it will be downloaded)
+
+`composer require` - composer.json file will be modified automatically and the new dependency will be added
