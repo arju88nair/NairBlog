@@ -28,7 +28,7 @@
 
 <meta itemprop="datePublished" content="2018-07-22T13:51:09&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-22T13:51:09&#43;05:30" />
-<meta itemprop="wordCount" content="268">
+<meta itemprop="wordCount" content="309">
 
 
 
@@ -331,6 +331,30 @@ primeno(100);
         
         }
         
+</code></pre>
+
+<hr />
+
+<h2 id="largest-product-of-palindrome">Largest product of palindrome</h2>
+
+<pre><code>// The largest palindrome made from the product of two 3-digit numbers.
+ 
+import math
+def isPal(x):
+    x=str(x)
+    t=x[::-1]
+    if(x==t):
+        return True
+    else:
+        return False
+max=0
+for i in range(999,99,-1):
+    for j in range(999,99,-1):
+        if(isPal(i*j)):
+            if((i*j)&gt;max):
+                max=(i*j)
+print(max)
+
 </code></pre>
  </div>
     <footer class="post-footer">
