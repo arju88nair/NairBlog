@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.53" />
+
+<link rel="canonical" href="/post/text-summarization/">
+<meta property="og:title" content="Text Summarization" />
+<meta property="og:description" content="Source
+The process for summarization a paragraph
+ So, keep working. Keep striving. Never give up. Fall down seven times, get up eight. Ease is a greater threat to progress than hardship. Ease is a greater threat to progress than hardship. So, keep moving, keep growing, keep learning. See you at work.
+ Paragraph to sentences So, keep working Keep striving Never give up Fall down seven times, get up eight Ease is a greater threat to progress than hardship Ease is a greater threat to progress than hardship So, keep moving, keep growing, keep learning See you at work  Text Preprocessing Removing special characters,stop words and numbers" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/text-summarization/" /><meta property="article:published_time" content="2019-01-14T12:35:39&#43;05:30"/>
+<meta property="article:modified_time" content="2019-01-14T12:35:39&#43;05:30"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Text Summarization"/>
+<meta name="twitter:description" content="Source
+The process for summarization a paragraph
+ So, keep working. Keep striving. Never give up. Fall down seven times, get up eight. Ease is a greater threat to progress than hardship. Ease is a greater threat to progress than hardship. So, keep moving, keep growing, keep learning. See you at work.
+ Paragraph to sentences So, keep working Keep striving Never give up Fall down seven times, get up eight Ease is a greater threat to progress than hardship Ease is a greater threat to progress than hardship So, keep moving, keep growing, keep learning See you at work  Text Preprocessing Removing special characters,stop words and numbers"/>
+
+
+
+<meta itemprop="name" content="Text Summarization">
+<meta itemprop="description" content="Source
+The process for summarization a paragraph
+ So, keep working. Keep striving. Never give up. Fall down seven times, get up eight. Ease is a greater threat to progress than hardship. Ease is a greater threat to progress than hardship. So, keep moving, keep growing, keep learning. See you at work.
+ Paragraph to sentences So, keep working Keep striving Never give up Fall down seven times, get up eight Ease is a greater threat to progress than hardship Ease is a greater threat to progress than hardship So, keep moving, keep growing, keep learning See you at work  Text Preprocessing Removing special characters,stop words and numbers">
+
+
+<meta itemprop="datePublished" content="2019-01-14T12:35:39&#43;05:30" />
+<meta itemprop="dateModified" content="2019-01-14T12:35:39&#43;05:30" />
+<meta itemprop="wordCount" content="396">
+
+
+
+<meta itemprop="keywords" content="random," />
+
+
+<link rel="stylesheet" href="/css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: #1D1F21;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: #1D1F21;
+}
+
+blockquote {
+  background: #1D1F21;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: yellow; }
+
+.post .content h1{ color: yellow; }
+.post .content h2{ color: yellow; }
+.post .content h3{ color: yellow; }
+.post .content h4{ color: yellow; }
+.post .content h5{ color: yellow; }
+.post .content h6{ color: yellow; }
+.post .content a:hover { color: yellow; }
+.social-link:hover { color: yellow; }
+.nav-item-title:hover { color: yellow; }
+.tag a:hover { color: yellow; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: yellow; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: yellow;
+}
+.post-list .title { color: yellow; }
+.rmore { color: yellow; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+</style>
+
+
+
+<title>
+
+
+     Text Summarization 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Today I learned</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="/about/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">gh</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">twtr</div></a>
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Text Summarization </h1>
+    <div class="content"> 
+
+<p><a href="https://stackabuse.com/text-summarization-with-nltk-in-python/">Source</a></p>
+
+<p>The process for summarization a paragraph</p>
+
+<blockquote>
+<p>So, keep working. Keep striving. Never give up. Fall down seven times, get up eight. Ease is a greater threat to progress than hardship. Ease is a greater threat to progress than hardship. So, keep moving, keep growing, keep learning. See you at work.</p>
+</blockquote>
+
+<h2 id="paragraph-to-sentences">Paragraph to sentences</h2>
+
+<pre><code>So, keep working
+Keep striving
+Never give up
+Fall down seven times, get up eight
+Ease is a greater threat to progress than hardship
+Ease is a greater threat to progress than hardship
+So, keep moving, keep growing, keep learning
+See you at work
+
+</code></pre>
+
+<h2 id="text-preprocessing">Text Preprocessing</h2>
+
+<p>Removing special characters,stop words and numbers</p>
+
+<pre><code>keep working
+keep striving
+never give
+fall seven time get eight
+ease greater threat progress hardship
+ease greater threat progress hardship
+keep moving keep growing keep learning
+see work
+</code></pre>
+
+<h2 id="tokenizing-the-sentences">Tokenizing the Sentences</h2>
+
+<pre><code>['keep',
+ 'working',
+ 'keep',
+ 'striving',
+ 'never',
+ 'give',
+ 'fall',
+ 'seven',
+ 'time',
+ 'get',
+ 'eight',
+ 'ease',
+ 'greater',
+ 'threat',
+ 'progress',
+ 'hardship',
+ 'ease',
+ 'greater',
+ 'threat',
+ 'progress',
+ 'hardship',
+ 'keep',
+ 'moving',
+ 'keep',
+ 'growing',
+ 'keep',
+ 'learning',
+ 'see',
+ 'work']
+
+</code></pre>
+
+<p>## Weighted Frequency of Occurrence</p>
+
+<p>Each word by dividing its frequency by the frequency of the most occurring word.</p>
+
+<pre><code>
+Word	Frequency	Weighted Frequency
+ease	    2	            0.40
+eight	    1	            0.20
+fall	    1	            0.20
+get	        1	            0.20
+give	    1	            0.20
+greater	    2	            0.40
+growing	    1	            0.20
+hardship	2	            0.40
+keep	    5	            1.00
+learning	1	            0.20
+moving	    1	            0.20
+never	    1	            0.20
+progress	2	            0.40
+see	        1	            0.20
+seven	    1	            0.20
+striving	1	            0.20
+threat	    2	            0.40
+time	    1	            0.20
+work	    1	            0.20
+working	    1	            0.20
+</code></pre>
+
+<h2 id="replace-words-by-weighted-frequency-in-original-sentences">Replace Words by Weighted Frequency in Original Sentences</h2>
+
+<pre><code>Sentence	        Sum of Weighted Frequencies
+So, keep working	1 + 0.20 = 1.20
+Keep striving	    1 + 0.20 = 1.20
+Never give up	    0.20 + 0.20 = 0.40
+Fall down seven 
+times, 
+get up eight	    0.20 + 0.20 + 0.20 + 0.20 +                       0.20 = 1.0
+Ease is a greater
+threat to progress
+than hardship	       0.40 + 0.40 + 0.40 + 0.40                       + 0.40 = 2.0
+Ease is a 
+greater threat
+to progress than 
+hardship	        0.40 + 0.40 + 0.40 + 0.40 +                       0.40 = 2.0
+So, keep moving,
+ keep growing, 
+ keep learning	    1 + 0.20 + 1 + 0.20 + 1 + 0.20 = 3.60
+See you at work	    0.20 + 0.20 = 0.40
+</code></pre>
+
+<h2 id="sort-sentences-in-descending-order-of-sum">Sort Sentences in Descending Order of Sum</h2>
+
+<blockquote>
+<p>So, keep moving, keep growing, keep learning. Ease is a greater threat to progress than hardship.</p>
+</blockquote>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/random">#random</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Jan 14, 2019 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "thenair" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2018, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+

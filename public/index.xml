@@ -24,6 +24,18 @@ You can reach me at :</description>
     </item>
     
     <item>
+      <title>Text Summarization</title>
+      <link>/post/text-summarization/</link>
+      <pubDate>Mon, 14 Jan 2019 12:35:39 +0530</pubDate>
+      
+      <guid>/post/text-summarization/</guid>
+      <description>Source
+The process for summarization a paragraph
+ So, keep working. Keep striving. Never give up. Fall down seven times, get up eight. Ease is a greater threat to progress than hardship. Ease is a greater threat to progress than hardship. So, keep moving, keep growing, keep learning. See you at work.
+ Paragraph to sentences So, keep working Keep striving Never give up Fall down seven times, get up eight Ease is a greater threat to progress than hardship Ease is a greater threat to progress than hardship So, keep moving, keep growing, keep learning See you at work  Text Preprocessing Removing special characters,stop words and numbers</description>
+    </item>
+    
+    <item>
       <title>Python</title>
       <link>/post/python/</link>
       <pubDate>Mon, 07 Jan 2019 12:01:26 +0530</pubDate>

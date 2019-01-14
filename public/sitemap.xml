@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/post/text-summarization/</loc>
+    <lastmod>2019-01-14T12:35:39+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/python/</loc>
     <lastmod>2019-01-07T12:01:26+05:30</lastmod>
   </url>
@@ -219,7 +224,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-01-07T12:01:26+05:30</lastmod>
+    <lastmod>2019-01-14T12:35:39+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -237,7 +242,7 @@
   
   <url>
     <loc>/tags/random/</loc>
-    <lastmod>2018-07-23T11:43:30+05:30</lastmod>
+    <lastmod>2019-01-14T12:35:39+05:30</lastmod>
     <priority>0</priority>
   </url>
   
