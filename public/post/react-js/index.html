@@ -34,7 +34,7 @@ function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } con
 
 <meta itemprop="datePublished" content="2018-12-13T22:04:51&#43;05:30" />
 <meta itemprop="dateModified" content="2018-12-13T22:04:51&#43;05:30" />
-<meta itemprop="wordCount" content="355">
+<meta itemprop="wordCount" content="474">
 
 
 
@@ -320,6 +320,71 @@ ReactDOM.render(
 );
 
 
+</code></pre>
+
+<hr />
+
+<h2 id="event-handling">Event handling</h2>
+
+<p>Binding <code>this</code></p>
+
+<pre><code>class Toggle extends React.Component {
+  ----
+    // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(state =&gt; ({
+      isToggleOn: !state.isToggleOn
+    }));
+  }
+
+  render() {
+    return (
+      &lt;button onClick={this.handleClick}&gt;
+        {this.state.isToggleOn ? 'ON' : 'OFF'}
+      &lt;/button&gt;
+    );
+  }
+}
+----
+);
+</code></pre>
+
+<p>Must bind to access <code>this</code></p>
+
+<p>If not,</p>
+
+<pre><code>// Experimental public class field syntax
+ handleClick = () =&gt; {
+    console.log('this is:', this);
+  }
+
+  render() {
+    return (
+      &lt;button onClick={this.handleClick}&gt;
+        Click me
+      &lt;/button&gt;
+    );
+</code></pre>
+
+<p>OR</p>
+
+<pre><code>class LoggingButton extends React.Component {
+  handleClick() {
+    console.log('this is:', this);
+  }
+
+  render() {
+    // This syntax ensures `this` is bound within handleClick
+    return (
+      &lt;button onClick={(e) =&gt; this.handleClick(e)}&gt;
+        Click me
+      &lt;/button&gt;
+    );
+  }
+}
 </code></pre>
  </div>
     <footer class="post-footer">

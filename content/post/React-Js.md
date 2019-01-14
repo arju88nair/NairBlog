@@ -169,3 +169,71 @@ ReactDOM.render(
 
 
 ```
+
+---
+
+## Event handling
+
+Binding `this`
+
+```
+class Toggle extends React.Component {
+  ----
+    // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(state => ({
+      isToggleOn: !state.isToggleOn
+    }));
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        {this.state.isToggleOn ? 'ON' : 'OFF'}
+      </button>
+    );
+  }
+}
+----
+);
+```
+
+Must bind to access `this`
+
+If not,
+
+```
+// Experimental public class field syntax
+ handleClick = () => {
+    console.log('this is:', this);
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        Click me
+      </button>
+    );
+```
+
+OR
+
+```
+class LoggingButton extends React.Component {
+  handleClick() {
+    console.log('this is:', this);
+  }
+
+  render() {
+    // This syntax ensures `this` is bound within handleClick
+    return (
+      <button onClick={(e) => this.handleClick(e)}>
+        Click me
+      </button>
+    );
+  }
+}
+```
