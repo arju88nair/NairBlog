@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.53" />
+
+<link rel="canonical" href="/post/phpunit/">
+<meta property="og:title" content="PHPUnit" />
+<meta property="og:description" content="Source
+The tests for a class Class go into a class ClassTest.
+ClassTest inherits (most of the time) from PHPUnit\Framework\TestCase.
+The tests are public methods that are named test*.
+Inside the test methods, assertion methods such as assertSame() (see Assertions) are used to assert that an actual value matches an expected value." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/phpunit/" /><meta property="article:published_time" content="2019-01-16T22:33:33&#43;05:30"/>
+<meta property="article:modified_time" content="2019-01-16T22:33:33&#43;05:30"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="PHPUnit"/>
+<meta name="twitter:description" content="Source
+The tests for a class Class go into a class ClassTest.
+ClassTest inherits (most of the time) from PHPUnit\Framework\TestCase.
+The tests are public methods that are named test*.
+Inside the test methods, assertion methods such as assertSame() (see Assertions) are used to assert that an actual value matches an expected value."/>
+
+
+
+<meta itemprop="name" content="PHPUnit">
+<meta itemprop="description" content="Source
+The tests for a class Class go into a class ClassTest.
+ClassTest inherits (most of the time) from PHPUnit\Framework\TestCase.
+The tests are public methods that are named test*.
+Inside the test methods, assertion methods such as assertSame() (see Assertions) are used to assert that an actual value matches an expected value.">
+
+
+<meta itemprop="datePublished" content="2019-01-16T22:33:33&#43;05:30" />
+<meta itemprop="dateModified" content="2019-01-16T22:33:33&#43;05:30" />
+<meta itemprop="wordCount" content="52">
+
+
+
+<meta itemprop="keywords" content="PHP,Interview,Testing," />
+
+
+<link rel="stylesheet" href="/css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: #1D1F21;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: #1D1F21;
+}
+
+blockquote {
+  background: #1D1F21;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: yellow; }
+
+.post .content h1{ color: yellow; }
+.post .content h2{ color: yellow; }
+.post .content h3{ color: yellow; }
+.post .content h4{ color: yellow; }
+.post .content h5{ color: yellow; }
+.post .content h6{ color: yellow; }
+.post .content a:hover { color: yellow; }
+.social-link:hover { color: yellow; }
+.nav-item-title:hover { color: yellow; }
+.tag a:hover { color: yellow; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: yellow; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: yellow;
+}
+.post-list .title { color: yellow; }
+.rmore { color: yellow; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+</style>
+
+
+
+<title>
+
+
+     PHPUnit 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Today I learned</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="/about/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">gh</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">twtr</div></a>
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> PHPUnit </h1>
+    <div class="content"> <p><a href="https://phpunit.readthedocs.io/en/7.4/">Source</a></p>
+
+<p>The tests for a <code>class</code> Class go into a class <code>ClassTest</code>.</p>
+
+<p><code>ClassTest</code> inherits (most of the time) from <code>PHPUnit\Framework\TestCase</code>.</p>
+
+<p>The tests are public methods that are named <code>test*</code>.</p>
+
+<p>Inside the test methods, <code>assertion</code> methods such as <code>assertSame</code>() (see Assertions) are used to assert that an actual value matches an expected value.</p>
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/php">#PHP</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/interview">#Interview</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/testing">#Testing</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Jan 16, 2019 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "thenair" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2018, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+

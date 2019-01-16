@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2018, all rights reserved.</copyright>
-    <lastBuildDate>Wed, 14 Nov 2018 12:47:21 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jan 2019 22:33:33 +0530</lastBuildDate>
     
 	<atom:link href="/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PHPUnit</title>
+      <link>/post/phpunit/</link>
+      <pubDate>Wed, 16 Jan 2019 22:33:33 +0530</pubDate>
+      
+      <guid>/post/phpunit/</guid>
+      <description>Source
+The tests for a class Class go into a class ClassTest.
+ClassTest inherits (most of the time) from PHPUnit\Framework\TestCase.
+The tests are public methods that are named test*.
+Inside the test methods, assertion methods such as assertSame() (see Assertions) are used to assert that an actual value matches an expected value.</description>
+    </item>
     
     <item>
       <title>Dependency Injection</title>
