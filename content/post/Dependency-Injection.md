@@ -187,3 +187,71 @@ class UserController extends Controller
 ```
 
 Here, the `UserController` needs to retrieve users from a data source. So, we will inject a service that is able to retrieve users. In this context, our `UserRepository` most likely uses Eloquent to retrieve user information from the database. However, since the repository is injected, we are able to easily swap it out with another implementation. We are also able to easily "mock", or create a dummy implementation of the `UserRepository` when testing our application.
+
+----
+
+### [Without dependency injection ](http://php-di.org/doc/understanding-di.html)
+
+```
+class GoogleMaps
+{
+    public function getCoordinatesFromAddress($address) {
+        // calls Google Maps webservice
+    }
+}
+class OpenStreetMap
+{
+    public function getCoordinatesFromAddress($address) {
+        // calls OpenStreetMap webservice
+    }
+}
+
+```
+The classic way of doing things is:
+
+```
+class StoreService
+{
+    public function getStoreCoordinates($store) {
+        $geolocationService = new GoogleMaps();
+        // or $geolocationService = GoogleMaps::getInstance() if you use singletons
+
+        return $geolocationService->getCoordinatesFromAddress($store->getAddress());
+    }
+}
+```
+Now we want to use the `OpenStreetMap` instead of `GoogleMaps`, how do we do? We have to change the code of `StoreService`, and all the other classes that use `GoogleMaps`.
+
+Without dependency injection, your classes are tightly coupled to their dependencies.
+
+### With dependency injection #
+The StoreService now uses dependency injection:
+```
+class StoreService {
+    private $geolocationService;
+
+    public function __construct(GeolocationService $geolocationService) {
+        $this->geolocationService = $geolocationService;
+    }
+
+    public function getStoreCoordinates($store) {
+        return $this->geolocationService->getCoordinatesFromAddress($store->getAddress());
+    }
+}
+```
+And the services are defined using an interface:
+
+```
+interface GeolocationService {
+    public function getCoordinatesFromAddress($address);
+}
+
+class GoogleMaps implements GeolocationService { ...
+
+class OpenStreetMap implements GeolocationService { ...
+
+```
+Now, it is for the user of the StoreService to decide which implementation to use. And it can be changed anytime, without having to rewrite the StoreService.
+
+The StoreService is no longer tightly coupled to its dependency.
+
