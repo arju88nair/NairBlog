@@ -48,7 +48,8 @@ DML – Data Manipulation Language
 
 - Normalization is the process of efficiently organizing data in a database. There are two goals of the normalization process: eliminating redundant data (for example, storing the same data in more than one table) and ensuring data dependencies make sense (only storing related data in a table)
 
-#####Benefits :
+###Benefits :
+
 -  Eliminate data redundancy
 - Improve performance
 - Query optimization
@@ -56,9 +57,10 @@ DML – Data Manipulation Language
 - Index improvement
 
 
+---
+- Row-level locks are placed on single records (rows) that the statements in a transaction define. The locks are placed as soon as any piece of the row is accessed.Row-level locks are always implicit, solidDB sets the locks when necessary. You cannot lock or unlock row-level locks manually.
 
-- Row-level locks are placed on single records (rows) that the statements in a transaction define. The locks are placed as soon as any piece of the row is accessed.
-Row-level locks are always implicit, solidDB sets the locks when necessary. You cannot lock or unlock row-level locks manually.
+
 
 - Table-level locks can be thought of as metadata locks; they prevent concurrent users from making schema changes (DDL operations) simultaneously or while records within the table are being changed.
 -----
