@@ -7,6 +7,48 @@ tags : [
     "Interview",
    ]
 ---
+>JavaScript engine is single threaded so the language itself is synchronous and hence blocking in nature
+
+## Event Loops
+
+Provided by the environment where javascript is running which provides capability for asynchronous execution providing non-blocking functionality
+
+
+In general, any function that does networking or uses timers to do things over a period of time will be asynchronous.
+
+If the function takes a callback, you can look at what the callback is used for and usually it will be obvious whether is is asynchronous or not. If the function does not offer a callback, then it has no way of communicating asynchronous results so it is probably synchronous.
+
+
+Using the File System module as an example, this is a synchronous file read:
+```
+const fs = require('fs');
+const data = fs.readFileSync('/file.md'); // blocks here until file is read
+console.log(data);
+// moreWork(); will run after console.log
+
+ ```
+
+And here is an equivalent asynchronous example:
+
+```
+const fs = require('fs');
+fs.readFile('/file.md', (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+// moreWork(); will run before console.log
+```
+
+`Libuv` ->Event loop for NodeJs
+
+
+There is only one thread that executes JavaScript code and this is the thread where the event loop is running. The execution of callbacks is done by the event loop.
+
+Libuv by default creates a thread pool with four threads to offload asynchronous work to. 
+
+The event loop as a process is a set of phases with specific tasks that are processed in a round-robin manner.Not stacks or queues
+
+---
 
 # [Array methods](https://dev.to/frugencefidel/10-javascript-array-methods-you-should-know-4lk3)
 
@@ -165,3 +207,5 @@ This create array from every arguments passed into it.
   console.log(nums); // output: [1, 2, 3, 4, 5, 6]
   
   ```
+
+  ---

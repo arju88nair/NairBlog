@@ -201,3 +201,12 @@ for i in range(999,99,-1):
 print(max)
 
 ```
+
+## Occurrence of sub-string
+
+>`match()` method searches a string for a match against a regular expression, and returns the matches, as an Array object. 
+```
+var temp = "This is a string.";
+var count = (temp.match(/is/g) || []).length;
+console.log(temp.match(/is/g) || []);
+```
