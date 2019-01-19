@@ -202,3 +202,17 @@ cgi.fix_pathinfo = 0
 max_execution_time = 360
 date.timezone = America/Chicago
 ```
+---
+
+## Mongodb pecl
+```
+sudo apt-get install php-pear
+sudo apt-get install php72-dev
+sudo pecl install mongodb
+```
+## Firewall returns Inactive
+
+```
+sudo ufw enable
+sudo ufw default deny
+```
