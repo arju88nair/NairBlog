@@ -177,3 +177,28 @@ For enabling the nginx to use the required routes with the get parameters enable
 try_files $uri $uri/ /www/index.php?$args;
 ```
 in the location block
+
+---
+
+## Install PHP fpm
+```
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get install php7.2-fpm
+
+sudo apt-get install php7.2 php7.2-cli php7.2-common php7.2-json php7.2-opcache php7.2-mysql php7.2-mbstring php7.2-mcrypt php7.2-zip php7.2-fpm
+
+```
+
+> sudo nano /etc/php/7.2/fpm/php.ini
+
+```
+
+file_uploads = On
+allow_url_fopen = On
+memory_limit = 256M
+upload_max_filesize = 100M
+cgi.fix_pathinfo = 0
+max_execution_time = 360
+date.timezone = America/Chicago
+```
