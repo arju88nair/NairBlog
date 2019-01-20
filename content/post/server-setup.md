@@ -117,6 +117,25 @@ server {
 
    
 }
+```
+---
 
 
+## Mongodb
+
+> https://docs.mongodb.com/v3.6/tutorial/install-mongodb-on-ubuntu/ 
+
+### Driver
+
+```
+sudo apt-get install php-pear
+sudo apt-get install php7.2-dev
+sudo pecl install mongodb
+
+```
+
+>/etc/php/7.2/fpm/php.ini -> extension=mongo.so
+
+```
+sudo systemctl restart php7.2-fpm.service 
 ```
