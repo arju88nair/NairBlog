@@ -134,8 +134,9 @@ sudo pecl install mongodb
 
 ```
 
->/etc/php/7.2/fpm/php.ini -> extension=mongo.so
+>/etc/php/7.2/fpm/php.ini -> extension=mongodb.so
 
 ```
 sudo systemctl restart php7.2-fpm.service 
 ```
+
