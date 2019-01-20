@@ -188,3 +188,15 @@ So the whole command is
 ---
 
 `:w !sudo tee %` -  Sudo vim after opening
+
+---
+
+## Adding sudo user
+
+```
+sudo adduser nair
+
+usermod -aG sudo nair
+ 
+su - nair
+```
