@@ -83,4 +83,40 @@ sudo apt-get install  php7.2-cli php7.2-common php7.2-json php7.2-opcache php7.2
         }
 }
 
+// For my portfolio
+
+server {
+   listen [::]:80 ;
+
+    root /var/www/html/Portfolio;
+    index index.php index.html index.htm index.nginx-debian.html;
+
+    server_name thenair.me www.thenair.me;
+
+    location / {
+       # try_files $uri $uri/ =404;
+       #  try_files $uri $uri/ /index.php$is_args$args;
+      allow all;
+
+
+    }
+
+    location ~ \.php$ {
+        #include snippets/fastcgi-php.conf;
+        #fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+ try_files $uri /index.php =404;
+            fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include fastcgi_params;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+   
+}
+
+
 ```
