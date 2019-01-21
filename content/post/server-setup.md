@@ -141,3 +141,152 @@ sudo systemctl restart php7.2-fpm.service
 ```
 
 ---
+
+## [Django Python setup (Python 3)](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04)
+
+Installing Python pip
+```
+sudo apt-get update
+sudo apt-get install python-pip
+```
+
+Installing `virtualenv` and `virtualenvwrapper` globally
+
+```
+sudo -H pip3 install --upgrade pip
+sudo -H pip3 install virtualenv virtualenvwrapper
+
+
+echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" >> ~/.bashrc
+echo "export WORKON_HOME=~/Env" >> ~/.bashrc
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+
+source ~/.bashrc
+
+pip install django
+```
+
+### Install Pymongo
+
+```
+python -m pip install pymongo
+```
+
+### [Install Redis](http://grainier.net/how-to-install-redis-in-ubuntu/)
+After downloading the zip,
+```
+sudo apt-get update
+sudo apt-get install build-essential
+sudo apt-get install tcl8.5
+
+// After navigating to the redis folder
+make 
+make test
+sudo make install
+	
+cd utils
+sudo ./install_server.sh
+sudo service redis_6379 start
+
+
+pip install django-redis-cache
+```
+
+## Installing UWSGI
+> uwsgi --http :8080 --home /home/nair/Env/PCweb --chdir /home/nair/PCweb -w PCweb.wsgi
+
+```
+sudo apt-get install python3-dev
+sudo -H pip3 install uwsgi
+```
+
+### Creating configuration file
+
+```
+sudo mkdir -p /etc/uwsgi/sites
+```
+>/etc/uwsgi/sites/PCweb.ini
+```
+[uwsgi]
+project = PCweb
+uid = nair
+base = /home/%(uid)
+
+chdir = %(base)/%(project)
+home = %(base)/Env/%(project)
+module = %(project).wsgi:application
+
+master = true
+processes = 5
+
+
+socket = /run/uwsgi/%(project).sock
+chown-socket = %(uid):www-data
+chmod-socket = 660
+vacuum = true
+```
+## A systemd Unit File for uWSGI
+
+A systemd unit file to manage the uWSGI emperor process and automatically start uWSGI at boot.
+
+> sudo vim /etc/systemd/system/uwsgi.service
+
+```
+[Unit]
+Description=uWSGI Emperor service
+
+[Service]
+ExecStartPre=/bin/bash -c 'mkdir -p /run/uwsgi; chown ubuntu:www-data /run/uwsgi'
+ExecStart=/usr/local/bin/uwsgi --emperor /etc/uwsgi/sites
+Restart=always
+KillSignal=SIGQUIT
+Type=notify
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
+
+```
+### Server config
+```
+server {
+    listen 80;
+    server_name culminated.thenair.me;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/nair/PCweb;
+    }
+
+    location / {
+        include         uwsgi_params;
+        uwsgi_pass      unix:/run/uwsgi/PCweb.sock;
+    }
+}
+```
+
+Start the service
+```
+sudo systemctl start uwsgi
+sudo systemctl enable nginx
+sudo systemctl enable uwsgi
+```
+---
+
+## Add Certbot for SSL
+
+```
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo add-apt-repository universe
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install python-certbot-nginx 
+
+
+
+sudo certbot --nginx
+
+```
+
+

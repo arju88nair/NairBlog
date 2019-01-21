@@ -31,7 +31,7 @@
 
 <meta itemprop="datePublished" content="2019-01-20T21:20:16&#43;05:30" />
 <meta itemprop="dateModified" content="2019-01-20T21:20:16&#43;05:30" />
-<meta itemprop="wordCount" content="241">
+<meta itemprop="wordCount" content="524">
 
 
 
@@ -299,6 +299,155 @@ sudo pecl install mongodb
 </code></pre>
 
 <hr />
+
+<h2 id="django-python-setup-python-3-https-www-digitalocean-com-community-tutorials-how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04"><a href="https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04">Django Python setup (Python 3)</a></h2>
+
+<p>Installing Python pip</p>
+
+<pre><code>sudo apt-get update
+sudo apt-get install python-pip
+</code></pre>
+
+<p>Installing <code>virtualenv</code> and <code>virtualenvwrapper</code> globally</p>
+
+<pre><code>sudo -H pip3 install --upgrade pip
+sudo -H pip3 install virtualenv virtualenvwrapper
+
+
+echo &quot;export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3&quot; &gt;&gt; ~/.bashrc
+echo &quot;export WORKON_HOME=~/Env&quot; &gt;&gt; ~/.bashrc
+echo &quot;source /usr/local/bin/virtualenvwrapper.sh&quot; &gt;&gt; ~/.bashrc
+
+source ~/.bashrc
+
+pip install django
+</code></pre>
+
+<h3 id="install-pymongo">Install Pymongo</h3>
+
+<pre><code>python -m pip install pymongo
+</code></pre>
+
+<h3 id="install-redis-http-grainier-net-how-to-install-redis-in-ubuntu"><a href="http://grainier.net/how-to-install-redis-in-ubuntu/">Install Redis</a></h3>
+
+<p>After downloading the zip,</p>
+
+<pre><code>sudo apt-get update
+sudo apt-get install build-essential
+sudo apt-get install tcl8.5
+
+// After navigating to the redis folder
+make 
+make test
+sudo make install
+	
+cd utils
+sudo ./install_server.sh
+sudo service redis_6379 start
+
+
+pip install django-redis-cache
+</code></pre>
+
+<h2 id="installing-uwsgi">Installing UWSGI</h2>
+
+<blockquote>
+<p>uwsgi &ndash;http :8080 &ndash;home /home/nair/Env/PCweb &ndash;chdir /home/nair/PCweb -w PCweb.wsgi</p>
+</blockquote>
+
+<pre><code>sudo apt-get install python3-dev
+sudo -H pip3 install uwsgi
+</code></pre>
+
+<h3 id="creating-configuration-file">Creating configuration file</h3>
+
+<pre><code>sudo mkdir -p /etc/uwsgi/sites
+</code></pre>
+
+<blockquote>
+<p>/etc/uwsgi/sites/PCweb.ini</p>
+
+<pre><code>[uwsgi]
+project = PCweb
+uid = nair
+base = /home/%(uid)
+
+chdir = %(base)/%(project)
+home = %(base)/Env/%(project)
+module = %(project).wsgi:application
+
+master = true
+processes = 5
+
+
+socket = /run/uwsgi/%(project).sock
+chown-socket = %(uid):www-data
+chmod-socket = 660
+vacuum = true
+</code></pre>
+
+<h2 id="a-systemd-unit-file-for-uwsgi">A systemd Unit File for uWSGI</h2>
+</blockquote>
+
+<p>A systemd unit file to manage the uWSGI emperor process and automatically start uWSGI at boot.</p>
+
+<blockquote>
+<p>sudo vim /etc/systemd/system/uwsgi.service</p>
+</blockquote>
+
+<pre><code>[Unit]
+Description=uWSGI Emperor service
+
+[Service]
+ExecStartPre=/bin/bash -c 'mkdir -p /run/uwsgi; chown ubuntu:www-data /run/uwsgi'
+ExecStart=/usr/local/bin/uwsgi --emperor /etc/uwsgi/sites
+Restart=always
+KillSignal=SIGQUIT
+Type=notify
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
+
+</code></pre>
+
+<h3 id="server-config">Server config</h3>
+
+<pre><code>server {
+    listen 80;
+    server_name culminated.thenair.me;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/nair/PCweb;
+    }
+
+    location / {
+        include         uwsgi_params;
+        uwsgi_pass      unix:/run/uwsgi/PCweb.sock;
+    }
+}
+</code></pre>
+
+<p>Start the service</p>
+
+<pre><code>sudo systemctl start uwsgi
+sudo systemctl enable nginx
+sudo systemctl enable uwsgi
+</code></pre>
+
+<hr />
+
+<h2 id="add-certbot-for-ssl">Add Certbot for SSL</h2>
+
+<pre><code>sudo apt-get update
+sudo apt-get install software-properties-common
+sudo add-apt-repository universe
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install python-certbot-nginx 
+
+</code></pre>
  </div>
     <footer class="post-footer">
 
