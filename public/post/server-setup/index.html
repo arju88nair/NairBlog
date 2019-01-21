@@ -31,7 +31,7 @@
 
 <meta itemprop="datePublished" content="2019-01-20T21:20:16&#43;05:30" />
 <meta itemprop="dateModified" content="2019-01-20T21:20:16&#43;05:30" />
-<meta itemprop="wordCount" content="524">
+<meta itemprop="wordCount" content="1172">
 
 
 
@@ -447,7 +447,188 @@ sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
 sudo apt-get install python-certbot-nginx 
 
+
+
+sudo certbot --nginx
+
 </code></pre>
+
+<h2 id="site-handling">Site handling</h2>
+
+<pre><code>#!/bin/bash
+
+##
+#  File:
+#    nginx_modsite
+#  Description:
+#    Provides a basic script to automate enabling and disabling websites found
+#    in the default configuration directories:
+#      /etc/nginx/sites-available and /etc/nginx/sites-enabled
+#    For easy access to this script, copy it into the directory:
+#      /usr/local/sbin
+#    Run this script without any arguments or with -h or --help to see a basic
+#    help dialog displaying all options.
+##
+
+# Copyright (C) 2010 Michael Lustfield &lt;mtecknology@ubuntu.com&gt;
+
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED.  IN NO EVENT SHALL AUTHOR OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+# OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+# OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+# SUCH DAMAGE.
+
+##
+# Default Settings
+##
+
+NGINX_CONF_FILE=&quot;$(awk -F= -v RS=' ' '/conf-path/ {print $2}' &lt;&lt;&lt; $(nginx -V 2&gt;&amp;1))&quot;
+NGINX_CONF_DIR=&quot;${NGINX_CONF_FILE%/*}&quot;
+NGINX_SITES_AVAILABLE=&quot;$NGINX_CONF_DIR/sites-available&quot;
+NGINX_SITES_ENABLED=&quot;$NGINX_CONF_DIR/sites-enabled&quot;
+SELECTED_SITE=&quot;$2&quot;
+
+##
+# Script Functions
+##
+
+ngx_enable_site() {
+    [[ ! &quot;$SELECTED_SITE&quot; ]] &amp;&amp;
+        ngx_select_site &quot;not_enabled&quot;
+
+    [[ ! -e &quot;$NGINX_SITES_AVAILABLE/$SELECTED_SITE&quot; ]] &amp;&amp; 
+        ngx_error &quot;Site does not appear to exist.&quot;
+    [[ -e &quot;$NGINX_SITES_ENABLED/$SELECTED_SITE&quot; ]] &amp;&amp;
+        ngx_error &quot;Site appears to already be enabled&quot;
+
+    ln -sf &quot;$NGINX_SITES_AVAILABLE/$SELECTED_SITE&quot; -T &quot;$NGINX_SITES_ENABLED/$SELECTED_SITE&quot;
+    ngx_reload
+}
+
+ngx_disable_site() {
+    [[ ! &quot;$SELECTED_SITE&quot; ]] &amp;&amp;
+        ngx_select_site &quot;is_enabled&quot;
+
+    [[ ! -e &quot;$NGINX_SITES_AVAILABLE/$SELECTED_SITE&quot; ]] &amp;&amp;
+        ngx_error &quot;Site does not appear to be \'available\'. - Not Removing&quot;
+    [[ ! -e &quot;$NGINX_SITES_ENABLED/$SELECTED_SITE&quot; ]] &amp;&amp;
+        ngx_error &quot;Site does not appear to be enabled.&quot;
+
+    rm -f &quot;$NGINX_SITES_ENABLED/$SELECTED_SITE&quot;
+    ngx_reload
+}
+
+ngx_list_site() {
+    echo &quot;Available sites:&quot;
+    ngx_sites &quot;available&quot;
+    echo &quot;Enabled Sites&quot;
+    ngx_sites &quot;enabled&quot;
+}
+
+##
+# Helper Functions
+##
+
+ngx_select_site() {
+    sites_avail=($NGINX_SITES_AVAILABLE/*)
+    sa=&quot;${sites_avail[@]##*/}&quot;
+    sites_en=($NGINX_SITES_ENABLED/*)
+    se=&quot;${sites_en[@]##*/}&quot;
+
+    case &quot;$1&quot; in
+        not_enabled) sites=$(comm -13 &lt;(printf &quot;%s\n&quot; $se) &lt;(printf &quot;%s\n&quot; $sa));;
+        is_enabled) sites=$(comm -12 &lt;(printf &quot;%s\n&quot; $se) &lt;(printf &quot;%s\n&quot; $sa));;
+    esac
+
+    ngx_prompt &quot;$sites&quot;
+}
+
+ngx_prompt() {
+    sites=($1)
+    i=0
+
+    echo &quot;SELECT A WEBSITE:&quot;
+    for site in ${sites[@]}; do
+        echo -e &quot;$i:\t${sites[$i]}&quot;
+        ((i++))
+    done
+
+    read -p &quot;Enter number for website: &quot; i
+    SELECTED_SITE=&quot;${sites[$i]}&quot;
+}
+
+ngx_sites() {
+    case &quot;$1&quot; in
+        available) dir=&quot;$NGINX_SITES_AVAILABLE&quot;;;
+        enabled) dir=&quot;$NGINX_SITES_ENABLED&quot;;;
+    esac
+
+    for file in $dir/*; do
+        echo -e &quot;\t${file#*$dir/}&quot;
+    done
+}
+
+ngx_reload() {
+    read -p &quot;Would you like to reload the Nginx configuration now? (Y/n) &quot; reload
+    [[ &quot;$reload&quot; != &quot;n&quot; &amp;&amp; &quot;$reload&quot; != &quot;N&quot; ]] &amp;&amp; invoke-rc.d nginx reload
+}
+
+ngx_error() {
+    echo -e &quot;${0##*/}: ERROR: $1&quot;
+    [[ &quot;$2&quot; ]] &amp;&amp; ngx_help
+    exit 1
+}
+
+ngx_help() {
+    echo &quot;Usage: ${0##*/} [options]&quot;
+    echo &quot;Options:&quot;
+    echo -e &quot;\t&lt;-e|--enable&gt; &lt;site&gt;\tEnable site&quot;
+    echo -e &quot;\t&lt;-d|--disable&gt; &lt;site&gt;\tDisable site&quot;
+    echo -e &quot;\t&lt;-l|--list&gt;\t\tList sites&quot;
+    echo -e &quot;\t&lt;-h|--help&gt;\t\tDisplay help&quot;
+    echo -e &quot;\n\tIf &lt;site&gt; is left out a selection of options will be presented.&quot;
+    echo -e &quot;\tIt is assumed you are using the default sites-enabled and&quot;
+    echo -e &quot;\tsites-disabled located at $NGINX_CONF_DIR.&quot;
+}
+
+##
+# Core Piece
+##
+
+case &quot;$1&quot; in
+    -e|--enable)    ngx_enable_site;;
+    -d|--disable)   ngx_disable_site;;
+    -l|--list)  ngx_list_site;;
+    -h|--help)  ngx_help;;
+    *)      ngx_error &quot;No Options Selected&quot; 1; ngx_help;;
+esac
+</code></pre>
+
+<p>Make this executable</p>
+
+<pre><code>sudo chmod u+x /usr/bin/nginx_modsite
+</code></pre>
+
+<p>To list all the sites  <code>sudo nginx_modsite -l</code></p>
+
+<p>To enable site &ldquo;test_website&rdquo;  <code>sudo nginx_modsite -e test_website</code></p>
+
+<p>To disable site &ldquo;test_website&rdquo; <code>sudo nginx_modsite -d test_website</code></p>
  </div>
     <footer class="post-footer">
 
