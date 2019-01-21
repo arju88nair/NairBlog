@@ -40,7 +40,7 @@
 
 <meta itemprop="datePublished" content="2018-08-08T19:59:38&#43;05:30" />
 <meta itemprop="dateModified" content="2018-08-08T19:59:38&#43;05:30" />
-<meta itemprop="wordCount" content="565">
+<meta itemprop="wordCount" content="559">
 
 
 
@@ -220,16 +220,20 @@ DML – Data Manipulation Language</p></li>
 <li><p>Normalization is the process of efficiently organizing data in a database. There are two goals of the normalization process: eliminating redundant data (for example, storing the same data in more than one table) and ensuring data dependencies make sense (only storing related data in a table)</p></li>
 </ul>
 
-<p>#####Benefits :
--  Eliminate data redundancy
-- Improve performance
-- Query optimization
-- Faster update due to less number of columns in one table
-- Index improvement</p>
+<p>###Benefits :</p>
 
 <ul>
-<li><p>Row-level locks are placed on single records (rows) that the statements in a transaction define. The locks are placed as soon as any piece of the row is accessed.
-Row-level locks are always implicit, solidDB sets the locks when necessary. You cannot lock or unlock row-level locks manually.</p></li>
+<li>Eliminate data redundancy</li>
+<li>Improve performance</li>
+<li>Query optimization</li>
+<li>Faster update due to less number of columns in one table</li>
+<li>Index improvement</li>
+</ul>
+
+<hr />
+
+<ul>
+<li><p>Row-level locks are placed on single records (rows) that the statements in a transaction define. The locks are placed as soon as any piece of the row is accessed.Row-level locks are always implicit, solidDB sets the locks when necessary. You cannot lock or unlock row-level locks manually.</p></li>
 
 <li><h2 id="table-level-locks-can-be-thought-of-as-metadata-locks-they-prevent-concurrent-users-from-making-schema-changes-ddl-operations-simultaneously-or-while-records-within-the-table-are-being-changed">Table-level locks can be thought of as metadata locks; they prevent concurrent users from making schema changes (DDL operations) simultaneously or while records within the table are being changed.</h2></li>
 </ul>

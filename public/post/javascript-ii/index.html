@@ -11,30 +11,33 @@
 
 <link rel="canonical" href="/post/javascript-ii/">
 <meta property="og:title" content="Javascript II" />
-<meta property="og:description" content="Array methods forEach()  const arr = [1, 2, 3, 4, 5, 6]; arr.forEach(item =&gt; { console.log(item); // output: 1 2 3 4 5 6 });  ## includes()
-This method check if array includes the item passed in the method.
- const arr = [1, 2, 3, 4, 5, 6]; arr.includes(2); // output: true arr.includes(7); // output: false  filter() This method create new array with only elements passed condition inside the provided function." />
+<meta property="og:description" content="JavaScript engine is single threaded so the language itself is synchronous and hence blocking in nature
+ Event Loops Provided by the environment where javascript is running which provides capability for asynchronous execution providing non-blocking functionality
+In general, any function that does networking or uses timers to do things over a period of time will be asynchronous.
+If the function takes a callback, you can look at what the callback is used for and usually it will be obvious whether is is asynchronous or not." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/javascript-ii/" /><meta property="article:published_time" content="2018-12-10T14:44:59&#43;05:30"/>
 <meta property="article:modified_time" content="2018-12-10T14:44:59&#43;05:30"/>
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Javascript II"/>
-<meta name="twitter:description" content="Array methods forEach()  const arr = [1, 2, 3, 4, 5, 6]; arr.forEach(item =&gt; { console.log(item); // output: 1 2 3 4 5 6 });  ## includes()
-This method check if array includes the item passed in the method.
- const arr = [1, 2, 3, 4, 5, 6]; arr.includes(2); // output: true arr.includes(7); // output: false  filter() This method create new array with only elements passed condition inside the provided function."/>
+<meta name="twitter:description" content="JavaScript engine is single threaded so the language itself is synchronous and hence blocking in nature
+ Event Loops Provided by the environment where javascript is running which provides capability for asynchronous execution providing non-blocking functionality
+In general, any function that does networking or uses timers to do things over a period of time will be asynchronous.
+If the function takes a callback, you can look at what the callback is used for and usually it will be obvious whether is is asynchronous or not."/>
 
 
 
 <meta itemprop="name" content="Javascript II">
-<meta itemprop="description" content="Array methods forEach()  const arr = [1, 2, 3, 4, 5, 6]; arr.forEach(item =&gt; { console.log(item); // output: 1 2 3 4 5 6 });  ## includes()
-This method check if array includes the item passed in the method.
- const arr = [1, 2, 3, 4, 5, 6]; arr.includes(2); // output: true arr.includes(7); // output: false  filter() This method create new array with only elements passed condition inside the provided function.">
+<meta itemprop="description" content="JavaScript engine is single threaded so the language itself is synchronous and hence blocking in nature
+ Event Loops Provided by the environment where javascript is running which provides capability for asynchronous execution providing non-blocking functionality
+In general, any function that does networking or uses timers to do things over a period of time will be asynchronous.
+If the function takes a callback, you can look at what the callback is used for and usually it will be obvious whether is is asynchronous or not.">
 
 
 <meta itemprop="datePublished" content="2018-12-10T14:44:59&#43;05:30" />
 <meta itemprop="dateModified" content="2018-12-10T14:44:59&#43;05:30" />
-<meta itemprop="wordCount" content="541">
+<meta itemprop="wordCount" content="785">
 
 
 
@@ -171,6 +174,47 @@ th {
 <article class="post">
     <h1 class="title"> Javascript II </h1>
     <div class="content"> 
+
+<blockquote>
+<p>JavaScript engine is single threaded so the language itself is synchronous and hence blocking in nature</p>
+</blockquote>
+
+<h2 id="event-loops">Event Loops</h2>
+
+<p>Provided by the environment where javascript is running which provides capability for asynchronous execution providing non-blocking functionality</p>
+
+<p>In general, any function that does networking or uses timers to do things over a period of time will be asynchronous.</p>
+
+<p>If the function takes a callback, you can look at what the callback is used for and usually it will be obvious whether is is asynchronous or not. If the function does not offer a callback, then it has no way of communicating asynchronous results so it is probably synchronous.</p>
+
+<p>Using the File System module as an example, this is a synchronous file read:</p>
+
+<pre><code>const fs = require('fs');
+const data = fs.readFileSync('/file.md'); // blocks here until file is read
+console.log(data);
+// moreWork(); will run after console.log
+
+</code></pre>
+
+<p>And here is an equivalent asynchronous example:</p>
+
+<pre><code>const fs = require('fs');
+fs.readFile('/file.md', (err, data) =&gt; {
+  if (err) throw err;
+  console.log(data);
+});
+// moreWork(); will run before console.log
+</code></pre>
+
+<p><code>Libuv</code> -&gt;Event loop for NodeJs</p>
+
+<p>There is only one thread that executes JavaScript code and this is the thread where the event loop is running. The execution of callbacks is done by the event loop.</p>
+
+<p>Libuv by default creates a thread pool with four threads to offload asynchronous work to.</p>
+
+<p>The event loop as a process is a set of phases with specific tasks that are processed in a round-robin manner.Not stacks or queues</p>
+
+<hr />
 
 <h1 id="array-methods-https-dev-to-frugencefidel-10-javascript-array-methods-you-should-know-4lk3"><a href="https://dev.to/frugencefidel/10-javascript-array-methods-you-should-know-4lk3">Array methods</a></h1>
 
@@ -322,7 +366,9 @@ working with DOM
 
 <p>This create array from every arguments passed into it.</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-const nums = Array.of(1, 2, 3, 4, 5, 6);" data-lang="const nums = Array.of(1, 2, 3, 4, 5, 6);">  console.log(nums); // output: [1, 2, 3, 4, 5, 6]
-  </code></pre></div> </div>
+  </code></pre></div>
+<hr />
+ </div>
     <footer class="post-footer">
 
   <div class="post-footer-data">

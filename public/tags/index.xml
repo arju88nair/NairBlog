@@ -31,6 +31,15 @@
     </item>
     
     <item>
+      <title>Devops</title>
+      <link>/tags/devops/</link>
+      <pubDate>Sun, 20 Jan 2019 21:20:16 +0530</pubDate>
+      
+      <guid>/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Es6</title>
       <link>/tags/es6/</link>
       <pubDate>Fri, 30 Nov 2018 21:49:43 +0530</pubDate>
@@ -159,7 +168,7 @@
     <item>
       <title>Random</title>
       <link>/tags/random/</link>
-      <pubDate>Mon, 14 Jan 2019 12:35:39 +0530</pubDate>
+      <pubDate>Sun, 20 Jan 2019 21:20:16 +0530</pubDate>
       
       <guid>/tags/random/</guid>
       <description></description>
@@ -189,6 +198,15 @@
       <pubDate>Mon, 01 Oct 2018 21:39:04 +0530</pubDate>
       
       <guid>/tags/redux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Server</title>
+      <link>/tags/server/</link>
+      <pubDate>Sun, 20 Jan 2019 21:20:16 +0530</pubDate>
+      
+      <guid>/tags/server/</guid>
       <description></description>
     </item>
     

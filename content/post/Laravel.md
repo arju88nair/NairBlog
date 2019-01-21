@@ -125,3 +125,24 @@ class User extends Model
 > return $user->toJson();
 
 ---
+
+## `with()` and `compact()`
+`with()` is a Laravel function and `compact()` is a PHP function and have totally different purposes.
+
+`with()` allows you to pass variables to a view and `compact()` creates an array from existing variables given as string arguments to it.
+
+
+```
+<?php
+$firstname = "Peter";
+$lastname = "Griffin";
+$age = "41";
+
+$result = compact("firstname", "lastname", "age");
+
+print_r($result);
+?>
+
+Array ( [firstname] => Peter [lastname] => Griffin [age] => 41 )
+```
+---

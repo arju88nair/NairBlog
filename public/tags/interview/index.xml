@@ -52,9 +52,10 @@ function Welcome(props) { return &amp;lt;h1&amp;gt;Hello, {props.name}&amp;lt;/h
       <pubDate>Mon, 10 Dec 2018 14:44:59 +0530</pubDate>
       
       <guid>/post/javascript-ii/</guid>
-      <description>Array methods forEach()  const arr = [1, 2, 3, 4, 5, 6]; arr.forEach(item =&amp;gt; { console.log(item); // output: 1 2 3 4 5 6 });  ## includes()
-This method check if array includes the item passed in the method.
- const arr = [1, 2, 3, 4, 5, 6]; arr.includes(2); // output: true arr.includes(7); // output: false  filter() This method create new array with only elements passed condition inside the provided function.</description>
+      <description>JavaScript engine is single threaded so the language itself is synchronous and hence blocking in nature
+ Event Loops Provided by the environment where javascript is running which provides capability for asynchronous execution providing non-blocking functionality
+In general, any function that does networking or uses timers to do things over a period of time will be asynchronous.
+If the function takes a callback, you can look at what the callback is used for and usually it will be obvious whether is is asynchronous or not.</description>
     </item>
     
     <item>

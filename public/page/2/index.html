@@ -15,7 +15,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2018-12-18T09:42:13&#43;05:30"/>
+<meta property="og:updated_time" content="2019-01-07T12:01:26&#43;05:30"/>
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Today I learned"/>
@@ -162,6 +162,38 @@ th {
     <article class="post-preview">
 
   <header>
+    <h2 class="title"> <a href='/post/python/'> Python</a> </h2>
+    <div class="meta">
+      Jan 7, 2019 - 3 minutes
+    </div>
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/python">#Python</a>
+      </div>
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    Lists Collection of elements
+[0, 1, 2, 3, 4, 5]
+List Comprehension Allow you to create lists with a for loop with less code.
+ &gt;&gt;&gt; my_list = [] &gt;&gt;&gt; for x in range(10): ... my_list.append(x * 2) ... [0, 2, 4, 6, 8, 10, 12, 14, 16, 18] // LC &gt;&gt;&gt; comp_list = [x * 2 for x in range(10)] [0, 2, 4, 6, 8, 10, 12, 14, 16, 18] --- comp_list = [x ** 2 for x in range(7) if x % 2 == 0]  Combining two lists
+    <a href='/post/python/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
+    <article class="post-preview">
+
+  <header>
     <h2 class="title"> <a href='/post/event-sourcing/'> Event Sourcing</a> </h2>
     <div class="meta">
       Dec 18, 2018 - 2 minutes
@@ -229,45 +261,6 @@ Every time something happens that is relevant, you just record what it was, then
     React Hooks Lets you use state and other React features without writing a class.
  import { useState } from 'react'; function Example() { // Declare a new state variable, which we'll call &quot;count&quot; const [count, setCount] = useState(0); return ( &lt;div&gt; &lt;p&gt;You clicked {count} times&lt;/p&gt; &lt;button onClick={() =&gt; setCount(count + 1)}&gt; Click me &lt;/button&gt; &lt;/div&gt; ); }  In React class components, side-effects were mostly introduced in lifecycle methods (e.
     <a href='/post/react-hooks/' class="rmore">Read more ...</a>
-  </div>
-
-  <div class="rmore">
-  </div>
-
-</article>
-
-
-    <article class="post-preview">
-
-  <header>
-    <h2 class="title"> <a href='/post/react-js/'> React JS -1</a> </h2>
-    <div class="meta">
-      Dec 13, 2018 - 3 minutes
-    </div>
-    
-<div class="tags">
-    
-      <div class="tag">
-        <a href="/tags/react">#React </a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/interview">#Interview</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/javascript">#Javascript</a>
-      </div>
-    
-</div>
-
-  </header>
-
-  <div class="summary">
-    Basics Components splits the UI into independent, reusable pieces, and think about each piece in isolation.
- function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } // OR class Welcome extends React.Component { render() { return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;; } }  Rendering
-function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } const element = &lt;Welcome name=&quot;Sara&quot; /&gt;; ReactDOM.render( element, document.getElementById('root') );  componentDidMount() Invoked immediately after a component is mounted (inserted into the tree).
-    <a href='/post/react-js/' class="rmore">Read more ...</a>
   </div>
 
   <div class="rmore">

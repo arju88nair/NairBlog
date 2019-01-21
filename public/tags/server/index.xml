@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Server on Today I learned</title>
+    <link>/tags/server/</link>
+    <description>Recent content in Server on Today I learned</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright (c) 2018, all rights reserved.</copyright>
+    <lastBuildDate>Sun, 20 Jan 2019 21:20:16 +0530</lastBuildDate>
+    
+	<atom:link href="/tags/server/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Server Setup with Nginx, PHP, MongoDB, Django and Python</title>
+      <link>/post/server-setup/</link>
+      <pubDate>Sun, 20 Jan 2019 21:20:16 +0530</pubDate>
+      
+      <guid>/post/server-setup/</guid>
+      <description>Creating a sudo user adduser username usermod -aG sudo username sudo - username  Install nginx  sudo apt-get update sudo apt-get install nginx  Adjusting firewalls sudo ufw app list will give a list of nginx app profiles
+ Nginx Full: This profile opens both port 80 (normal, unencrypted web traffic) and port 443 (TLS/SSL encrypted traffic) Nginx HTTP: This profile opens only port 80 (normal, unencrypted web traffic) Nginx HTTPS: This profile opens only port 443 (TLS/SSL encrypted traffic)  Enable Full for 80 and 443</description>
+    </item>
+    
+  </channel>
+</rss>

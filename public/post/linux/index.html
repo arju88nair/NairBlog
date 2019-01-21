@@ -40,7 +40,7 @@ last - Who recently used the system.">
 
 <meta itemprop="datePublished" content="2018-11-19T20:19:34&#43;05:30" />
 <meta itemprop="dateModified" content="2018-11-19T20:19:34&#43;05:30" />
-<meta itemprop="wordCount" content="659">
+<meta itemprop="wordCount" content="672">
 
 
 
@@ -176,7 +176,9 @@ th {
 
 <article class="post">
     <h1 class="title"> Linux </h1>
-    <div class="content"> <p><code>Most of the notes are from LinuxNotesForProfessionals</code></p>
+    <div class="content"> 
+
+<p><code>Most of the notes are from LinuxNotesForProfessionals</code></p>
 
 <ul>
 <li>Terminal = text input/output environment</li>
@@ -340,6 +342,17 @@ Other r-x = 4+0+1 = 5
 <hr />
 
 <p><code>:w !sudo tee %</code> -  Sudo vim after opening</p>
+
+<hr />
+
+<h2 id="adding-sudo-user">Adding sudo user</h2>
+
+<pre><code>sudo adduser nair
+
+usermod -aG sudo nair
+ 
+su - nair
+</code></pre>
  </div>
     <footer class="post-footer">
 

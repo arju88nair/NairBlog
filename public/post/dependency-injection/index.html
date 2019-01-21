@@ -34,7 +34,7 @@ class Profile { public function deactivateProfile(Setting $setting) { $setting-&
 
 <meta itemprop="datePublished" content="2018-11-14T12:47:21&#43;05:30" />
 <meta itemprop="dateModified" content="2018-11-14T12:47:21&#43;05:30" />
-<meta itemprop="wordCount" content="725">
+<meta itemprop="wordCount" content="922">
 
 
 
@@ -357,6 +357,75 @@ class UserController extends Controller
 </code></pre>
 
 <p>Here, the <code>UserController</code> needs to retrieve users from a data source. So, we will inject a service that is able to retrieve users. In this context, our <code>UserRepository</code> most likely uses Eloquent to retrieve user information from the database. However, since the repository is injected, we are able to easily swap it out with another implementation. We are also able to easily &ldquo;mock&rdquo;, or create a dummy implementation of the <code>UserRepository</code> when testing our application.</p>
+
+<hr />
+
+<h3 id="without-dependency-injection-http-php-di-org-doc-understanding-di-html"><a href="http://php-di.org/doc/understanding-di.html">Without dependency injection </a></h3>
+
+<pre><code>class GoogleMaps
+{
+    public function getCoordinatesFromAddress($address) {
+        // calls Google Maps webservice
+    }
+}
+class OpenStreetMap
+{
+    public function getCoordinatesFromAddress($address) {
+        // calls OpenStreetMap webservice
+    }
+}
+
+</code></pre>
+
+<p>The classic way of doing things is:</p>
+
+<pre><code>class StoreService
+{
+    public function getStoreCoordinates($store) {
+        $geolocationService = new GoogleMaps();
+        // or $geolocationService = GoogleMaps::getInstance() if you use singletons
+
+        return $geolocationService-&gt;getCoordinatesFromAddress($store-&gt;getAddress());
+    }
+}
+</code></pre>
+
+<p>Now we want to use the <code>OpenStreetMap</code> instead of <code>GoogleMaps</code>, how do we do? We have to change the code of <code>StoreService</code>, and all the other classes that use <code>GoogleMaps</code>.</p>
+
+<p>Without dependency injection, your classes are tightly coupled to their dependencies.</p>
+
+<h3 id="with-dependency-injection">With dependency injection</h3>
+
+<p>The StoreService now uses dependency injection:</p>
+
+<pre><code>class StoreService {
+    private $geolocationService;
+
+    public function __construct(GeolocationService $geolocationService) {
+        $this-&gt;geolocationService = $geolocationService;
+    }
+
+    public function getStoreCoordinates($store) {
+        return $this-&gt;geolocationService-&gt;getCoordinatesFromAddress($store-&gt;getAddress());
+    }
+}
+</code></pre>
+
+<p>And the services are defined using an interface:</p>
+
+<pre><code>interface GeolocationService {
+    public function getCoordinatesFromAddress($address);
+}
+
+class GoogleMaps implements GeolocationService { ...
+
+class OpenStreetMap implements GeolocationService { ...
+
+</code></pre>
+
+<p>Now, it is for the user of the StoreService to decide which implementation to use. And it can be changed anytime, without having to rewrite the StoreService.</p>
+
+<p>The StoreService is no longer tightly coupled to its dependency.</p>
  </div>
     <footer class="post-footer">
 

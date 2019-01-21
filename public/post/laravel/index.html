@@ -40,7 +40,7 @@
 
 <meta itemprop="datePublished" content="2018-07-20T18:08:33&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-20T18:08:33&#43;05:30" />
-<meta itemprop="wordCount" content="539">
+<meta itemprop="wordCount" content="612">
 
 
 
@@ -304,12 +304,33 @@ return empty($name);
     }
 }</p>
 
-<p>```
-- When building JSON APIs, you will often need to convert your models and relationships to arrays or JSON.
+<pre><code>- When building JSON APIs, you will often need to convert your models and relationships to arrays or JSON. 
 &gt; return $user-&gt;toArray();
-&gt; return $user-&gt;toJson();</p>
+&gt; return $user-&gt;toJson();
 
-<hr />
+---
+
+## `with()` and `compact()`
+`with()` is a Laravel function and `compact()` is a PHP function and have totally different purposes.
+
+`with()` allows you to pass variables to a view and `compact()` creates an array from existing variables given as string arguments to it.
+
+
+</code></pre>
+
+<p>&lt;?php
+$firstname = &ldquo;Peter&rdquo;;
+$lastname = &ldquo;Griffin&rdquo;;
+$age = &ldquo;41&rdquo;;</p>
+
+<p>$result = compact(&ldquo;firstname&rdquo;, &ldquo;lastname&rdquo;, &ldquo;age&rdquo;);</p>
+
+<p>print_r($result);
+?&gt;</p>
+
+<p>Array ( [firstname] =&gt; Peter [lastname] =&gt; Griffin [age] =&gt; 41 )</p>
+
+<h2 id="toc_2">```</h2>
  </div>
     <footer class="post-footer">
 
