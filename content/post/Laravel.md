@@ -146,3 +146,9 @@ print_r($result);
 Array ( [firstname] => Peter [lastname] => Griffin [age] => 41 )
 ```
 ---
+
+## [Laravel View Composers](https://scotch.io/tutorials/sharing-data-between-views-using-laravel-view-composers)
+
+To share data between shared views
+
+>View composers are callbacks or class methods that are called when a view is rendered. If you have data that you want to be bound to a view each time that view is rendered, a view composer can help you organize that logic into a single location.
