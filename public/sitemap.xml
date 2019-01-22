@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/post/til/</loc>
+    <lastmod>2019-01-22T15:38:32+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/server-setup/</loc>
     <lastmod>2019-01-20T21:20:16+05:30</lastmod>
   </url>
@@ -240,7 +245,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-01-20T21:20:16+05:30</lastmod>
+    <lastmod>2019-01-22T15:38:32+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -258,7 +263,7 @@
   
   <url>
     <loc>/tags/random/</loc>
-    <lastmod>2019-01-20T21:20:16+05:30</lastmod>
+    <lastmod>2019-01-22T15:38:32+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -318,7 +323,7 @@
   
   <url>
     <loc>/tags/til/</loc>
-    <lastmod>2018-11-19T20:19:34+05:30</lastmod>
+    <lastmod>2019-01-22T15:38:32+05:30</lastmod>
     <priority>0</priority>
   </url>
   

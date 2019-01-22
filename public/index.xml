@@ -24,6 +24,18 @@ You can reach me at :</description>
     </item>
     
     <item>
+      <title>TIL</title>
+      <link>/post/til/</link>
+      <pubDate>Tue, 22 Jan 2019 15:38:32 +0530</pubDate>
+      
+      <guid>/post/til/</guid>
+      <description>Can&amp;rsquo;t believe I am starting this post well after the blog which is name TIL
+ Hypermedia As The Engine Of Application State (HATEOAS)  A client interacts with a network application whose application servers provide information dynamically through hypermedia
+ Example GET /accounts/12345 HTTP/1.1 Host: bank.example.com Accept: application/xml ...  The response is:
+Content-Type: application/xml Content-Length: ... &amp;lt;?xml version=&amp;#34;1.0&amp;#34;?&amp;gt; &amp;lt;account&amp;gt; &amp;lt;account_number&amp;gt;12345&amp;lt;/account_number&amp;gt; &amp;lt;balance currency=&amp;#34;usd&amp;#34;&amp;gt;100.00&amp;lt;/balance&amp;gt; &amp;lt;link rel=&amp;#34;deposit&amp;#34; href=&amp;#34;https://bank.example.com/accounts/12345/deposit&amp;#34; /&amp;gt; &amp;lt;link rel=&amp;#34;withdraw&amp;#34; href=&amp;#34;https://bank.</description>
+    </item>
+    
+    <item>
       <title>Server Setup with Nginx, PHP, MongoDB, Django and Python</title>
       <link>/post/server-setup/</link>
       <pubDate>Sun, 20 Jan 2019 21:20:16 +0530</pubDate>
