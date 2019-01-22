@@ -81,3 +81,20 @@ replicate-do-db has no effect on the master,since there is no relay log to read 
 
 The LOCK TABLES part is there, so that the data is consistent. It prevents that the data on the master is modified while backing up the data is still in process.
 
+---blem
+
+## N+1 pro
+Let's say you have a collection of Car objects (database rows), and each Car has a collection of Wheel objects (also rows). In other words,` Car -> Wheel` is a 1-to-many relationship.
+
+Now, let's say you need to iterate through all the cars, and for each one, print out a list of the wheels. 
+
+`SELECT * FROM Cars;
+`And then for each Car:
+
+`SELECT * FROM Wheel WHERE CarId = ?`
+
+
+Alternatively, one could get all wheels and perform the lookups in memory:
+
+`SELECT * FROM Wheel` 
+This reduces the number of round-trips to the database from N+1 to 2. 
