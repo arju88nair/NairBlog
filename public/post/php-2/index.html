@@ -34,7 +34,7 @@
 
 <meta itemprop="datePublished" content="2018-07-16T13:14:11&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-16T13:14:11&#43;05:30" />
-<meta itemprop="wordCount" content="1114">
+<meta itemprop="wordCount" content="1192">
 
 
 
@@ -425,7 +425,35 @@ parent::__construct($meta);
 
 <p>One library’s PHP code might use the same class name as another. When both libraries are used in the same namespace, they collide and cause trouble.Two files with the same name may co-exist in separate directories. Likewise, two PHP classes with the same name may co-exist in separate PHP namespaces.</p>
 
-<p>It allows you to use the same function or class name in different parts of the same program without causing a name collision.</p>
+<h2 id="it-allows-you-to-use-the-same-function-or-class-name-in-different-parts-of-the-same-program-without-causing-a-name-collision">It allows you to use the same function or class name in different parts of the same program without causing a name collision.</h2>
+
+<h2 id="namespaces">Namespaces</h2>
+
+<p>Namespacing does for functions and classes what scope does for variables. It allows you to use the same function or class name in different parts of the same program without causing a name collision</p>
+
+<blockquote>
+<p>Namespace as a person&rsquo;s surname</p>
+</blockquote>
+
+<p>```
+namespace MyProject;</p>
+
+<p>function output() {
+    # Output HTML page
+    echo &lsquo;HTML!&rsquo;;
+}</p>
+
+<p>namespace RSSLibrary;</p>
+
+<p>function output(){
+    # Output RSS feed
+    echo &lsquo;RSS!&rsquo;;
+}
+Later when we want to use the different functions, we&rsquo;d use:</p>
+
+<p>\MyProject\output();
+\RSSLibrary\output();
+````</p>
  </div>
     <footer class="post-footer">
 
