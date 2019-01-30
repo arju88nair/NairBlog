@@ -200,3 +200,7 @@ usermod -aG sudo nair
  
 su - nair
 ```
+
+--- 
+
+`find . -type f -size +4096c`
