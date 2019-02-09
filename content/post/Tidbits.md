@@ -169,3 +169,24 @@ To add dependencies you need to add it manually to the composer.json file.
 composer.json file dependencies will be installed and updated (if a dependency is not installed it will be downloaded)
 
 `composer require` - composer.json file will be modified automatically and the new dependency will be added
+
+
+
+## Synchronous programming 
+
+### Single threaded
+ 
+ - A thread is assigned to one task and starts working on it. Once the task completes then it is available for the next task. 
+ - Cannot leave the executing task in mid to take up another task. 
+
+
+### Multi-threaded
+ -  Pool/multiple threads which can take up these tasks and start working on that.
+ 
+ ### Asynchronous Programming Model
+ – A thread once start executing a task it can hold it in mid, save the current state and start executing another task.
+ - If our system is capable of having multiple threads then all the threads can work in asynchronous model as well
+ 
+ ### Concurrency 
+ - processing multiple requests at a time. 
+
