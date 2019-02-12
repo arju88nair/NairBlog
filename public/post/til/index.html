@@ -7,7 +7,7 @@
 <meta name="description" content="Personal blog." />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.53" />
+<meta name="generator" content="Hugo 0.54.0" />
 
 <link rel="canonical" href="/post/til/">
 <meta property="og:title" content="TIL" />
@@ -16,7 +16,8 @@
  Example GET /accounts/12345 HTTP/1.1 Host: bank.example.com Accept: application/xml ...  The response is:
 Content-Type: application/xml Content-Length: ... &lt;?xml version=&#34;1.0&#34;?&gt; &lt;account&gt; &lt;account_number&gt;12345&lt;/account_number&gt; &lt;balance currency=&#34;usd&#34;&gt;100.00&lt;/balance&gt; &lt;link rel=&#34;deposit&#34; href=&#34;https://bank.example.com/accounts/12345/deposit&#34; /&gt; &lt;link rel=&#34;withdraw&#34; href=&#34;https://bank." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/til/" /><meta property="article:published_time" content="2019-01-22T15:38:32&#43;05:30"/>
+<meta property="og:url" content="/post/til/" />
+<meta property="article:published_time" content="2019-01-22T15:38:32&#43;05:30"/>
 <meta property="article:modified_time" content="2019-01-22T15:38:32&#43;05:30"/>
 
 <meta name="twitter:card" content="summary"/>
@@ -37,7 +38,7 @@ Content-Type: application/xml Content-Length: ... &lt;?xml version=&#34;1.0&#34;
 
 <meta itemprop="datePublished" content="2019-01-22T15:38:32&#43;05:30" />
 <meta itemprop="dateModified" content="2019-01-22T15:38:32&#43;05:30" />
-<meta itemprop="wordCount" content="161">
+<meta itemprop="wordCount" content="278">
 
 
 
@@ -224,7 +225,38 @@ Content-Length: ...
 &lt;/account&gt;
 </code></pre>
 
-<p>Now only one link is available: to deposit more money. In its current state, the other links are not available. Hence the term  <code>Engine of Application State</code>. The available actions varies as the state of the resource varies.</p>
+<h2 id="now-only-one-link-is-available-to-deposit-more-money-in-its-current-state-the-other-links-are-not-available-hence-the-term-engine-of-application-state-the-available-actions-varies-as-the-state-of-the-resource-varies">Now only one link is available: to deposit more money. In its current state, the other links are not available. Hence the term  <code>Engine of Application State</code>. The available actions varies as the state of the resource varies.</h2>
+
+<h2 id="api">API</h2>
+
+<ul>
+<li>Contract between applications</li>
+<li>Following rules</li>
+</ul>
+
+<hr />
+
+<h2 id="synchronous-programming">Synchronous programming</h2>
+
+<h3 id="single-threaded">Single threaded</h3>
+
+<ul>
+<li>A thread is assigned to one task and starts working on it. Once the task completes then it is available for the next task.</li>
+<li>Cannot leave the executing task in mid to take up another task.</li>
+</ul>
+
+<h3 id="multi-threaded">Multi-threaded</h3>
+
+<ul>
+<li>Pool/multiple threads which can take up these tasks and start working on that.</li>
+</ul>
+
+<p>### Asynchronous Programming Model
+ – A thread once start executing a task it can hold it in mid, save the current state and start executing another task.
+ - If our system is capable of having multiple threads then all the threads can work in asynchronous model as well</p>
+
+<p>### Concurrency
+ - processing multiple requests at a time.</p>
  </div>
     <footer class="post-footer">
 

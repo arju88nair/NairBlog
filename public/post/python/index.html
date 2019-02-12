@@ -7,7 +7,7 @@
 <meta name="description" content="Personal blog." />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.53" />
+<meta name="generator" content="Hugo 0.54.0" />
 
 <link rel="canonical" href="/post/python/">
 <meta property="og:title" content="Python" />
@@ -16,7 +16,8 @@
 List Comprehension Allow you to create lists with a for loop with less code.
  &gt;&gt;&gt; my_list = [] &gt;&gt;&gt; for x in range(10): ... my_list.append(x * 2) ... [0, 2, 4, 6, 8, 10, 12, 14, 16, 18] // LC &gt;&gt;&gt; comp_list = [x * 2 for x in range(10)] [0, 2, 4, 6, 8, 10, 12, 14, 16, 18] --- comp_list = [x ** 2 for x in range(7) if x % 2 == 0]  Combining two lists" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/python/" /><meta property="article:published_time" content="2019-01-07T12:01:26&#43;05:30"/>
+<meta property="og:url" content="/post/python/" />
+<meta property="article:published_time" content="2019-01-07T12:01:26&#43;05:30"/>
 <meta property="article:modified_time" content="2019-01-07T12:01:26&#43;05:30"/>
 
 <meta name="twitter:card" content="summary"/>
@@ -37,7 +38,7 @@ List Comprehension Allow you to create lists with a for loop with less code.
 
 <meta itemprop="datePublished" content="2019-01-07T12:01:26&#43;05:30" />
 <meta itemprop="dateModified" content="2019-01-07T12:01:26&#43;05:30" />
-<meta itemprop="wordCount" content="510">
+<meta itemprop="wordCount" content="525">
 
 
 
@@ -277,6 +278,16 @@ False
 It works by installing a bunch of files in a directory (eg: env/), and then modifying the PATH environment variable to prefix it with a custom bin directory (eg: env/bin/). An exact copy of the python or python3 binary is placed in this directory, but Python is programmed to look for libraries relative to its path first, in the environment directory.
 <code>pyenv</code> and many others</li>
 </ul>
+
+<hr />
+
+<h2 id="env">Env</h2>
+
+<pre><code>sudo apt install python3-pip
+sudo apt install python3-venv
+python3.6 -m venv my_env
+source my_env/bin/activate
+</code></pre>
  </div>
     <footer class="post-footer">
 
