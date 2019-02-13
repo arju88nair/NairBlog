@@ -78,3 +78,13 @@ Now only one link is available: to deposit more money. In its current state, the
  ### Concurrency 
  - processing multiple requests at a time. 
 
+
+---
+```
+onomatopoeia
+/ˌɒnə(ʊ)matəˈpiːə/
+
+noun
+the formation of a word from a sound associated with what is named (e.g. cuckoo, sizzle ).
+the use of onomatopoeia for literary effect.
+```
