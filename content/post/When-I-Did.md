@@ -53,3 +53,13 @@ source ~/.bashrc
 - Give permissions: `grant all privileges on *.* to 'root'@'%' with grant option;`
 - Update permission tables: `flush privileges;`
 - Exit MYSQL and try to reconnect without sudo.
+
+
+## Changing mac address using macchanger
+
+
+- `service network-manager stop`
+- `ifconfig wlan0 down`
+- `macchanger -r wlan0`
+- `service network-manager start  `
+- `ifconfig wlan0 up`
