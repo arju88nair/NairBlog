@@ -112,3 +112,4 @@ SET @start_date = '2015-07-20';
 SET @start_yearmonth = (SELECT EXTRACT(YEAR_MONTH FROM @start_date));
 
 ```
+

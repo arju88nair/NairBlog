@@ -44,3 +44,12 @@ function on5() {
 source ~/.bashrc
 ```
 ---
+
+## For fixing mysql login which works only with sudo
+
+- Access with sudo: `sudo mysql -u root -p`
+- Delete the root user: drop user `'root'@'localhost';`
+- Create the root user again: create user `'root'@'%' identified by 'your_password';`
+- Give permissions: `grant all privileges on *.* to 'root'@'%' with grant option;`
+- Update permission tables: `flush privileges;`
+- Exit MYSQL and try to reconnect without sudo.

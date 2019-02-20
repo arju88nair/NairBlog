@@ -35,7 +35,7 @@ function gitl() { git add . git commit -a -m &quot;$*&quot; git push origin mast
 
 <meta itemprop="datePublished" content="2018-07-11T21:20:13&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-11T21:20:13&#43;05:30" />
-<meta itemprop="wordCount" content="80">
+<meta itemprop="wordCount" content="140">
 
 
 
@@ -219,6 +219,17 @@ th {
 
 <hr />
 </blockquote>
+
+<h2 id="for-fixing-mysql-login-which-works-only-with-sudo">For fixing mysql login which works only with sudo</h2>
+
+<ul>
+<li>Access with sudo: <code>sudo mysql -u root -p</code></li>
+<li>Delete the root user: drop user <code>'root'@'localhost';</code></li>
+<li>Create the root user again: create user <code>'root'@'%' identified by 'your_password';</code></li>
+<li>Give permissions: <code>grant all privileges on *.* to 'root'@'%' with grant option;</code></li>
+<li>Update permission tables: <code>flush privileges;</code></li>
+<li>Exit MYSQL and try to reconnect without sudo.</li>
+</ul>
  </div>
     <footer class="post-footer">
 
