@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2018, all rights reserved.</copyright>
-    <lastBuildDate>Tue, 22 Jan 2019 15:38:32 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 20 Feb 2019 17:59:03 +0530</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Regex</title>
+      <link>/post/regex/</link>
+      <pubDate>Wed, 20 Feb 2019 17:59:03 +0530</pubDate>
+      
+      <guid>/post/regex/</guid>
+      <description>Regex Uses test()to get a boolean response and match() to extract the match
+Patterns /blah/ -&amp;gt; For finding characters /yes|no|maybe/; - &amp;gt; | for OR condition
+Eg:
+let testString = &amp;quot;My test string&amp;quot;; let testRegex = /string/; testRegex.test(testString);  i for case sensitivity
+const match = &amp;quot;Hello World!&amp;quot;.match(/hello/i); // &amp;quot;Hello&amp;quot; ```` --- `g` to extract all matches in an array --- Uses `.` as a placeholder  // To match &amp;ldquo;cat&amp;rdquo;, &amp;ldquo;BAT&amp;rdquo;, &amp;ldquo;fAT&amp;rdquo;, &amp;ldquo;mat&amp;rdquo;</description>
+    </item>
     
     <item>
       <title>TIL</title>

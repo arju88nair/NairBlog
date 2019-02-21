@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="" />
+<meta name="description" content="Personal blog." />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.54.0" />
+
+<link rel="canonical" href="/post/regex/">
+<meta property="og:title" content="Regex" />
+<meta property="og:description" content="Regex Uses test()to get a boolean response and match() to extract the match
+Patterns /blah/ -&gt; For finding characters /yes|no|maybe/; - &gt; | for OR condition
+Eg:
+let testString = &quot;My test string&quot;; let testRegex = /string/; testRegex.test(testString);  i for case sensitivity
+const match = &quot;Hello World!&quot;.match(/hello/i); // &quot;Hello&quot; ```` --- `g` to extract all matches in an array --- Uses `.` as a placeholder  // To match &ldquo;cat&rdquo;, &ldquo;BAT&rdquo;, &ldquo;fAT&rdquo;, &ldquo;mat&rdquo;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/regex/" />
+<meta property="article:published_time" content="2019-02-20T17:59:03&#43;05:30"/>
+<meta property="article:modified_time" content="2019-02-20T17:59:03&#43;05:30"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Regex"/>
+<meta name="twitter:description" content="Regex Uses test()to get a boolean response and match() to extract the match
+Patterns /blah/ -&gt; For finding characters /yes|no|maybe/; - &gt; | for OR condition
+Eg:
+let testString = &quot;My test string&quot;; let testRegex = /string/; testRegex.test(testString);  i for case sensitivity
+const match = &quot;Hello World!&quot;.match(/hello/i); // &quot;Hello&quot; ```` --- `g` to extract all matches in an array --- Uses `.` as a placeholder  // To match &ldquo;cat&rdquo;, &ldquo;BAT&rdquo;, &ldquo;fAT&rdquo;, &ldquo;mat&rdquo;"/>
+
+
+
+<meta itemprop="name" content="Regex">
+<meta itemprop="description" content="Regex Uses test()to get a boolean response and match() to extract the match
+Patterns /blah/ -&gt; For finding characters /yes|no|maybe/; - &gt; | for OR condition
+Eg:
+let testString = &quot;My test string&quot;; let testRegex = /string/; testRegex.test(testString);  i for case sensitivity
+const match = &quot;Hello World!&quot;.match(/hello/i); // &quot;Hello&quot; ```` --- `g` to extract all matches in an array --- Uses `.` as a placeholder  // To match &ldquo;cat&rdquo;, &ldquo;BAT&rdquo;, &ldquo;fAT&rdquo;, &ldquo;mat&rdquo;">
+
+
+<meta itemprop="datePublished" content="2019-02-20T17:59:03&#43;05:30" />
+<meta itemprop="dateModified" content="2019-02-20T17:59:03&#43;05:30" />
+<meta itemprop="wordCount" content="226">
+
+
+
+<meta itemprop="keywords" content="random," />
+
+
+<link rel="stylesheet" href="/css/layout.css" />
+<style type="text/css">
+body {
+  background-color: #101010;
+  color: #dbdbdb;
+}
+
+a { color: #dbdbdb; }
+
+pre {
+  background: #1D1F21;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+code {
+  background: #1D1F21;
+}
+
+blockquote {
+  background: #1D1F21;
+  border-left: 3px solid #dbdbdb;
+}
+
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #dbdbdb;
+}
+
+th {
+  background: #dbdbdb;
+  color: #101010;
+}
+
+.siteTitle a { color: yellow; }
+
+.post .content h1{ color: yellow; }
+.post .content h2{ color: yellow; }
+.post .content h3{ color: yellow; }
+.post .content h4{ color: yellow; }
+.post .content h5{ color: yellow; }
+.post .content h6{ color: yellow; }
+.post .content a:hover { color: yellow; }
+.social-link:hover { color: yellow; }
+.nav-item-title:hover { color: yellow; }
+.tag a:hover { color: yellow; }
+.copyright { color: #404040 }
+.poweredby { color: #404040 }
+.poweredby a { color: #404040; }
+.post-preview .title a{ color: yellow; }
+.content-item a:hover{
+  text-decoration: underline;
+  color: yellow;
+}
+.post-list .title { color: yellow; }
+.rmore { color: yellow; }
+.terms .term a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+</style>
+
+
+
+<title>
+
+
+     Regex 
+
+</title>
+
+</head>
+
+
+<body>
+<div class="main">
+<header>
+
+<div class="header-bar">
+
+  <nav>
+    <div class="siteTitle">
+      <a href="/">Today I learned</a>
+    </div> 
+
+    
+    
+    <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
+    
+    <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
+    
+    <a class="nav-item" href="/about/"><div class="nav-item-title">About</div></a>
+    
+
+  </nav>
+</div>
+
+  
+<div class="social-links-header">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">gh</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">twtr</div></a>
+  
+
+  
+
+</div>
+
+
+</header>
+
+
+<article class="post">
+    <h1 class="title"> Regex </h1>
+    <div class="content"> 
+
+<h1 id="regex-https-dev-to-emmawedekind-regex-cheat-sheet-2j2a"><a href="https://dev.to/emmawedekind/regex-cheat-sheet-2j2a">Regex</a></h1>
+
+<p>Uses <code>test()</code>to get a boolean response and <code>match()</code> to extract the match</p>
+
+<h2 id="patterns">Patterns</h2>
+
+<p><code>/blah/</code> -&gt; For finding characters
+<code>/yes|no|maybe/;</code> - &gt; <code>|</code> for OR condition</p>
+
+<p>Eg:</p>
+
+<pre><code>let testString = &quot;My test string&quot;;
+let testRegex = /string/;
+testRegex.test(testString);
+</code></pre>
+
+<hr />
+
+<p><code>i</code> for case sensitivity</p>
+
+<pre><code>const match = &quot;Hello World!&quot;.match(/hello/i); // &quot;Hello&quot;
+````
+
+---
+
+`g` to extract all matches in an array
+
+---
+
+Uses `.` as a placeholder
+
+</code></pre>
+
+<p>// To match &ldquo;cat&rdquo;, &ldquo;BAT&rdquo;, &ldquo;fAT&rdquo;, &ldquo;mat&rdquo;</p>
+
+<p>const regexWithWildcard = /.at/gi;
+const testString = &ldquo;cat BAT cupcake fAT mat dog&rdquo;;
+const allMatchingWords = testString.match(regexWithWildcard);
+// [&ldquo;cat&rdquo;, &ldquo;BAT&rdquo;, &ldquo;fAT&rdquo;, &ldquo;mat&rdquo;]</p>
+
+<pre><code>
+
+</code></pre>
+
+<p>// Match &ldquo;cat&rdquo; &ldquo;fat&rdquo; and &ldquo;mat&rdquo; but not &ldquo;bat&rdquo;</p>
+
+<p>const regexWithCharClass = /[cfm]at/g;
+const testString = &ldquo;cat fat bat mat&rdquo;;
+const allMatchingWords = testString.match(regexWithCharClass);</p>
+
+<p>// [&ldquo;cat&rdquo;, &ldquo;fat&rdquo;, &ldquo;mat&rdquo;]</p>
+
+<pre><code>----
+
+### For range of al[habets]
+</code></pre>
+
+<p>const regexWithCharRange = /[a-e]at/;
+const catString = &ldquo;cat&rdquo;;
+const batString = &ldquo;bat&rdquo;;
+const fatString = &ldquo;fat&rdquo;;</p>
+
+<p>regexWithCharRange.test(catString); // true
+regexWithCharRange.test(batString); // true
+regexWithCharRange.test(fatString); // false</p>
+
+<pre><code>---
+
+### To negate
+
+</code></pre>
+
+<p>const allCharsNotVowels = /[^aeiou]/gi;
+const allCharsNotVowelsOrNumbers = /[^aeiou0-9]/gi;</p>
+
+<pre><code>
+---
+
+### Match occurrences n times
+
+Use the asterisk *
+
+`const zeroOrMoreOsRegex = /hi*/gi;`
+
+
+---
+
+### Lazy matching
+
+- Defaultly matches the longest.So use ?
+
+</code></pre>
+
+<p>const testString = &ldquo;catastrophe&rdquo;;
+const greedyRexex = /c[a-z]<em>t/gi;
+const lazyRegex = /c[a-z]</em>?t/gi;</p>
+
+<p>testString.match(greedyRexex); // [&ldquo;catast&rdquo;]
+testString.match(lazyRegex); // [&ldquo;cat&rdquo;]</p>
+
+<p>```</p>
+
+<h3 id="for-matching-character-at-the-beginning"><code>^</code> for matching character at the beginning</h3>
+
+<p><code>const startingStringRegex = /^Emma/;</code></p>
+
+<hr />
+
+<h3 id="ending-patterns">Ending Patterns</h3>
+
+<p><code>const startingStringRegex = /Emma$/;</code></p>
+
+<hr />
+ </div>
+    <footer class="post-footer">
+
+  <div class="post-footer-data">
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/random">#random</a>
+      </div>
+    
+</div>
+
+    <div class="date"> Feb 20, 2019 </div>
+  </div>
+
+</footer>
+
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "thenair" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</article>
+
+  <footer>
+
+  <div class="social-links-footer">
+
+  
+  <a href="mailto:arju88nair@gmail.com"><div class="social-link">Email</div></a>
+  
+
+  
+  <a href="https://github.com/https://github.com/arju88nair" target="_blank"><div class="social-link">GitHub</div></a>
+  
+
+  
+
+  
+  <a href="https://twitter.com/https://github.com/arju88nair" target="_blank"><div class="social-link">Twitter</div></a>
+  
+
+  
+
+  <div class="social-link">
+  <a href="/index.xml" target="_blank">RSS</a>
+  </div>
+
+</div>
+
+
+  <div class="copyright"> Copyright (c) 2018, all rights reserved. </div>
+
+  <div class="poweredby">
+    Powered by <a href="https://gohugo.io/">Hugo</a>.
+  </div>
+
+  </footer>
+
+</div> 
+
+</body>
+</html>
+

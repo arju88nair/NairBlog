@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/post/regex/</loc>
+    <lastmod>2019-02-20T17:59:03+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/til/</loc>
     <lastmod>2019-01-22T15:38:32+05:30</lastmod>
   </url>
@@ -245,7 +250,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-01-22T15:38:32+05:30</lastmod>
+    <lastmod>2019-02-20T17:59:03+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -263,7 +268,7 @@
   
   <url>
     <loc>/tags/random/</loc>
-    <lastmod>2019-01-22T15:38:32+05:30</lastmod>
+    <lastmod>2019-02-20T17:59:03+05:30</lastmod>
     <priority>0</priority>
   </url>
   

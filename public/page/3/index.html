@@ -16,7 +16,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
 
-<meta property="og:updated_time" content="2018-12-13T22:04:51&#43;05:30"/>
+<meta property="og:updated_time" content="2018-12-18T09:42:13&#43;05:30"/>
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Today I learned"/>
@@ -163,6 +163,42 @@ th {
     <article class="post-preview">
 
   <header>
+    <h2 class="title"> <a href='/post/event-sourcing/'> Event Sourcing</a> </h2>
+    <div class="meta">
+      Dec 18, 2018 - 2 minutes
+    </div>
+    
+<div class="tags">
+    
+      <div class="tag">
+        <a href="/tags/event-sourcing">#Event Sourcing</a>
+      </div>
+    
+      <div class="tag">
+        <a href="/tags/tidbits">#Tidbits</a>
+      </div>
+    
+</div>
+
+  </header>
+
+  <div class="summary">
+    References 1, 2
+Instead of focussing on current state, you focus on the changes that have occurred over time.
+ Thinking of application state as a frames in a video, we could &ldquo;scrub&rdquo; through different states of the application.
+Every time something happens that is relevant, you just record what it was, then you tie to it, any extra details that are really necessary to understand what happened. Then later you can turn those events into state, by running one after another to see how they stack up.
+    <a href='/post/event-sourcing/' class="rmore">Read more ...</a>
+  </div>
+
+  <div class="rmore">
+  </div>
+
+</article>
+
+
+    <article class="post-preview">
+
+  <header>
     <h2 class="title"> <a href='/post/react-hooks/'> React Hooks</a> </h2>
     <div class="meta">
       Dec 13, 2018 - 2 minutes
@@ -241,42 +277,6 @@ function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } con
 </article>
 
 
-    <article class="post-preview">
-
-  <header>
-    <h2 class="title"> <a href='/post/javascript-ii/'> Javascript II</a> </h2>
-    <div class="meta">
-      Dec 10, 2018 - 4 minutes
-    </div>
-    
-<div class="tags">
-    
-      <div class="tag">
-        <a href="/tags/javascript">#Javascript</a>
-      </div>
-    
-      <div class="tag">
-        <a href="/tags/interview">#Interview</a>
-      </div>
-    
-</div>
-
-  </header>
-
-  <div class="summary">
-    JavaScript engine is single threaded so the language itself is synchronous and hence blocking in nature
- Event Loops Provided by the environment where javascript is running which provides capability for asynchronous execution providing non-blocking functionality
-In general, any function that does networking or uses timers to do things over a period of time will be asynchronous.
-If the function takes a callback, you can look at what the callback is used for and usually it will be obvious whether is is asynchronous or not.
-    <a href='/post/javascript-ii/' class="rmore">Read more ...</a>
-  </div>
-
-  <div class="rmore">
-  </div>
-
-</article>
-
-
 
 
 <div class="page-nav">
@@ -287,7 +287,7 @@ If the function takes a callback, you can look at what the callback is used for 
   </div> 
 
   <div class="page-num">
-    3/9
+    3/10
   </div> 
 
   <div class="page-next">
