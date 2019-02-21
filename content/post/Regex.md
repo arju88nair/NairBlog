@@ -122,3 +122,48 @@ testString.match(lazyRegex); // ["cat"]
 `const startingStringRegex = /Emma$/;`
 
 ---
+
+##  Alphanumeric
+
+```
+const longHand = /[A-Za-z0-9_]+/;
+const shortHand = /\w+/;
+```
+
+## Everything except letters & numbers
+
+```
+const noAlphaNumericCharRegex = /\W/gi;
+const weirdCharacters = "!_$!!";
+const alphaNumericCharacters = "ab283AD";
+
+noAlphaNumericCharRegex.test(weirdCharacters); // true
+noAlphaNumericCharRegex.test(alphaNumericCharacters); // false
+
+```
+
+## Numbers
+
+```
+
+const digitsRegex = /\d/g;
+const stringWithDigits = "My cat eats $20.00 worth of food a week.";
+
+stringWithDigits.match(digitsRegex); // ["2", "0", "0", "0"]
+
+
+// Non-numbers `\D`
+
+```
+
+### Bits
+
+`\s` - > Whitespace
+
+`\S` - > Non-whitespace
+
+`{lowerBound, upperBound}` ->  /hi{1,4}/
+
+`{lowerBound,}`
+
+`{requiredCount}`
