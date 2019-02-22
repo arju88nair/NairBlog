@@ -63,3 +63,12 @@ source ~/.bashrc
 - `macchanger -r wlan0`
 - `service network-manager start  `
 - `ifconfig wlan0 up`
+
+
+---
+
+## Fixing mysql `Error 2002: Can't connect to local MySQL server through socket '/tmp/mysql.sock'`
+
+```
+sudo ln -s /var/run/mysqld/mysqld.sock /tmp/mysql.sock
+```

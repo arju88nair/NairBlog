@@ -41,7 +41,7 @@ const match = &quot;Hello World!&quot;.match(/hello/i); // &quot;Hello&quot; ```
 
 <meta itemprop="datePublished" content="2019-02-20T17:59:03&#43;05:30" />
 <meta itemprop="dateModified" content="2019-02-20T17:59:03&#43;05:30" />
-<meta itemprop="wordCount" content="226">
+<meta itemprop="wordCount" content="306">
 
 
 
@@ -279,19 +279,63 @@ const lazyRegex = /c[a-z]</em>?t/gi;</p>
 <p>testString.match(greedyRexex); // [&ldquo;catast&rdquo;]
 testString.match(lazyRegex); // [&ldquo;cat&rdquo;]</p>
 
+<pre><code>
+### `^` for matching character at the beginning
+
+`const startingStringRegex = /^Emma/;`
+
+---
+
+### Ending Patterns
+
+`const startingStringRegex = /Emma$/;`
+
+---
+
+##  Alphanumeric
+
+</code></pre>
+
+<p>const longHand = /[A-Za-z0-9_]+/;
+const shortHand = /\w+/;</p>
+
+<pre><code>
+## Everything except letters &amp; numbers
+
+</code></pre>
+
+<p>const noAlphaNumericCharRegex = /\W/gi;
+const weirdCharacters = &ldquo;!_$!!&ldquo;;
+const alphaNumericCharacters = &ldquo;ab283AD&rdquo;;</p>
+
+<p>noAlphaNumericCharRegex.test(weirdCharacters); // true
+noAlphaNumericCharRegex.test(alphaNumericCharacters); // false</p>
+
+<pre><code>
+## Numbers
+
+</code></pre>
+
+<p>const digitsRegex = /\d/g;
+const stringWithDigits = &ldquo;My cat eats $20.00 worth of food a week.&rdquo;;</p>
+
+<p>stringWithDigits.match(digitsRegex); // [&ldquo;2&rdquo;, &ldquo;0&rdquo;, &ldquo;0&rdquo;, &ldquo;0&rdquo;]</p>
+
+<p>// Non-numbers <code>\D</code></p>
+
 <p>```</p>
 
-<h3 id="for-matching-character-at-the-beginning"><code>^</code> for matching character at the beginning</h3>
+<h3 id="bits">Bits</h3>
 
-<p><code>const startingStringRegex = /^Emma/;</code></p>
+<p><code>\s</code> - &gt; Whitespace</p>
 
-<hr />
+<p><code>\S</code> - &gt; Non-whitespace</p>
 
-<h3 id="ending-patterns">Ending Patterns</h3>
+<p><code>{lowerBound, upperBound}</code> -&gt;  /hi{1,4}/</p>
 
-<p><code>const startingStringRegex = /Emma$/;</code></p>
+<p><code>{lowerBound,}</code></p>
 
-<hr />
+<p><code>{requiredCount}</code></p>
  </div>
     <footer class="post-footer">
 

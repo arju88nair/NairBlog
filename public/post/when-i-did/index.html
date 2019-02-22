@@ -35,7 +35,7 @@ function gitl() { git add . git commit -a -m &quot;$*&quot; git push origin mast
 
 <meta itemprop="datePublished" content="2018-07-11T21:20:13&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-11T21:20:13&#43;05:30" />
-<meta itemprop="wordCount" content="160">
+<meta itemprop="wordCount" content="178">
 
 
 
@@ -240,6 +240,13 @@ th {
 <li><code>service network-manager start</code></li>
 <li><code>ifconfig wlan0 up</code></li>
 </ul>
+
+<hr />
+
+<h2 id="fixing-mysql-error-2002-can-t-connect-to-local-mysql-server-through-socket-tmp-mysql-sock">Fixing mysql <code>Error 2002: Can't connect to local MySQL server through socket '/tmp/mysql.sock'</code></h2>
+
+<pre><code>sudo ln -s /var/run/mysqld/mysqld.sock /tmp/mysql.sock
+</code></pre>
  </div>
     <footer class="post-footer">
 
