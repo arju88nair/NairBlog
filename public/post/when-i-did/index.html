@@ -35,7 +35,7 @@ function gitl() { git add . git commit -a -m &quot;$*&quot; git push origin mast
 
 <meta itemprop="datePublished" content="2018-07-11T21:20:13&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-11T21:20:13&#43;05:30" />
-<meta itemprop="wordCount" content="236">
+<meta itemprop="wordCount" content="250">
 
 
 
@@ -257,6 +257,17 @@ th {
 - Give permissions: `grant all privileges on *.* to 'root'@'%' with grant option;`
 - Update permission tables: `flush privileges;`
 - Exit MYSQL and try to reconnect without sudo.
+</code></pre>
+
+<hr />
+
+<h2 id="fixing-this-is-incompatible-with-sql-mode-only-full-group-by-in-mysql">Fixing “this is incompatible with sql_mode=only_full_group_by” in MySQL</h2>
+
+<pre><code>
+## /etc/mysql/my.cnf
+
+[mysqld]
+sql_mode = STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
 </code></pre>
  </div>
     <footer class="post-footer">

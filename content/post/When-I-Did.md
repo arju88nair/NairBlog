@@ -84,3 +84,16 @@ sudo ln -s /var/run/mysqld/mysqld.sock /tmp/mysql.sock
     - Give permissions: `grant all privileges on *.* to 'root'@'%' with grant option;`
     - Update permission tables: `flush privileges;`
     - Exit MYSQL and try to reconnect without sudo.
+
+---
+
+## Fixing “this is incompatible with sql_mode=only_full_group_by” in MySQL
+
+
+```
+
+## /etc/mysql/my.cnf
+
+[mysqld]
+sql_mode = STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+```
