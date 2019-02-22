@@ -72,3 +72,15 @@ source ~/.bashrc
 ```
 sudo ln -s /var/run/mysqld/mysqld.sock /tmp/mysql.sock
 ```
+
+---
+
+## Fixing mysql which only allows to login as sudo user
+
+
+
+    -  Delete the root user: `drop user 'root'@'localhost';`
+    - Create the root user again: `create user 'root'@'%' identified by 'your_password';`
+    - Give permissions: `grant all privileges on *.* to 'root'@'%' with grant option;`
+    - Update permission tables: `flush privileges;`
+    - Exit MYSQL and try to reconnect without sudo.

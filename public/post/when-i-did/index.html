@@ -35,7 +35,7 @@ function gitl() { git add . git commit -a -m &quot;$*&quot; git push origin mast
 
 <meta itemprop="datePublished" content="2018-07-11T21:20:13&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-11T21:20:13&#43;05:30" />
-<meta itemprop="wordCount" content="178">
+<meta itemprop="wordCount" content="236">
 
 
 
@@ -246,6 +246,17 @@ th {
 <h2 id="fixing-mysql-error-2002-can-t-connect-to-local-mysql-server-through-socket-tmp-mysql-sock">Fixing mysql <code>Error 2002: Can't connect to local MySQL server through socket '/tmp/mysql.sock'</code></h2>
 
 <pre><code>sudo ln -s /var/run/mysqld/mysqld.sock /tmp/mysql.sock
+</code></pre>
+
+<hr />
+
+<h2 id="fixing-mysql-which-only-allows-to-login-as-sudo-user">Fixing mysql which only allows to login as sudo user</h2>
+
+<pre><code>-  Delete the root user: `drop user 'root'@'localhost';`
+- Create the root user again: `create user 'root'@'%' identified by 'your_password';`
+- Give permissions: `grant all privileges on *.* to 'root'@'%' with grant option;`
+- Update permission tables: `flush privileges;`
+- Exit MYSQL and try to reconnect without sudo.
 </code></pre>
  </div>
     <footer class="post-footer">
