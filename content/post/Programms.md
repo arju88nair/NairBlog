@@ -210,3 +210,19 @@ var temp = "This is a string.";
 var count = (temp.match(/is/g) || []).length;
 console.log(temp.match(/is/g) || []);
 ```
+
+--- 
+
+##  Reversel of string
+
+```
+$res=0;
+
+while ($x <0)
+{
+    $res=($res*10)+($x%10);
+    $x/-10;
+    
+}
+
+```
