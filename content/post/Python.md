@@ -113,3 +113,10 @@ sudo apt install python3-venv
 python3.6 -m venv my_env
 source my_env/bin/activate
 ```
+
+---
+## Reversing
+```
+>>> a = '1232'
+>>> a[::-1]
+'2321'```

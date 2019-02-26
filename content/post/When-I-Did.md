@@ -57,7 +57,7 @@ source ~/.bashrc
 
 ## Changing mac address using macchanger
 
-
+s t
 - `service network-manager stop`
 - `ifconfig wlan0 down`
 - `macchanger -r wlan0`
