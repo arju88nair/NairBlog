@@ -88,3 +88,54 @@ noun
 the formation of a word from a sound associated with what is named (e.g. cuckoo, sizzle ).
 the use of onomatopoeia for literary effect.
 ```
+
+----
+
+SQL vs NoSQL
+
+ - SQL databases -  vertically scalable, which means that you can increase the load on a single server by increasing things like CPU, RAM or SSD. 
+ 
+ - NoSQL databases -> are horizontally scalable. This means that you handle more traffic by sharding, or adding more servers in your NoSQL database.
+ 
+  - NoSQL databases can ultimately become larger and more powerful, making NoSQL databases the preferred choice for large or ever-changing data sets.
+
+  ---
+## [Bits](https://web.stanford.edu/class/cs101/bits-bytes.html)
+
+
+Number of bits and patterns
+
+```
+1 -	0 1
+
+2 -	00 01 10 11
+
+3 -	000 001 010 011
+100 101 110 111
+```
+
+1 byte is group of 8 bits
+
+8 bits can make 256 different patterns 
+
+`2^n`
+
+1 byte is enough to hold about 1 typed character, e.g. 'b' or 'X' or '$' 
+
+Each letter is stored in a byte
+
+100 typed letters takes up 100 bytes 
+
+Adding in binary is just like normal addition with carrying
+
+But when you run out of bits you can't carry anymore
+
+Leftmost bit indicates sign, so carrying to the leftmost bit changes a number ffrom positive to negative.
+
+So adding 1 to 2147483647 goes to -2147483648!
+Called Integer Overflow
+
+
+----
+
+HTMLPurifier library to prevent attacks by cleaning html

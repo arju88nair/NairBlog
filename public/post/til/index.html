@@ -38,7 +38,7 @@ Content-Type: application/xml Content-Length: ... &lt;?xml version=&#34;1.0&#34;
 
 <meta itemprop="datePublished" content="2019-01-22T15:38:32&#43;05:30" />
 <meta itemprop="dateModified" content="2019-01-22T15:38:32&#43;05:30" />
-<meta itemprop="wordCount" content="305">
+<meta itemprop="wordCount" content="505">
 
 
 
@@ -267,6 +267,59 @@ noun
 the formation of a word from a sound associated with what is named (e.g. cuckoo, sizzle ).
 the use of onomatopoeia for literary effect.
 </code></pre>
+
+<hr />
+
+<p>SQL vs NoSQL</p>
+
+<ul>
+<li><p>SQL databases -  vertically scalable, which means that you can increase the load on a single server by increasing things like CPU, RAM or SSD.</p></li>
+
+<li><p>NoSQL databases -&gt; are horizontally scalable. This means that you handle more traffic by sharding, or adding more servers in your NoSQL database.</p>
+
+<ul>
+<li>NoSQL databases can ultimately become larger and more powerful, making NoSQL databases the preferred choice for large or ever-changing data sets.</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h2 id="bits-https-web-stanford-edu-class-cs101-bits-bytes-html"><a href="https://web.stanford.edu/class/cs101/bits-bytes.html">Bits</a></h2>
+
+<p>Number of bits and patterns</p>
+
+<pre><code>1 -	0 1
+
+2 -	00 01 10 11
+
+3 -	000 001 010 011
+100 101 110 111
+</code></pre>
+
+<p>1 byte is group of 8 bits</p>
+
+<p>8 bits can make 256 different patterns</p>
+
+<p><code>2^n</code></p>
+
+<p>1 byte is enough to hold about 1 typed character, e.g. &lsquo;b&rsquo; or &lsquo;X&rsquo; or &lsquo;$&rsquo;</p>
+
+<p>Each letter is stored in a byte</p>
+
+<p>100 typed letters takes up 100 bytes</p>
+
+<p>Adding in binary is just like normal addition with carrying</p>
+
+<p>But when you run out of bits you can&rsquo;t carry anymore</p>
+
+<p>Leftmost bit indicates sign, so carrying to the leftmost bit changes a number ffrom positive to negative.</p>
+
+<p>So adding 1 to 2147483647 goes to -2147483648!
+Called Integer Overflow</p>
+
+<hr />
+
+<p>HTMLPurifier library to prevent attacks by cleaning html</p>
  </div>
     <footer class="post-footer">
 
