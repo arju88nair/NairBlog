@@ -38,7 +38,7 @@ Content-Type: application/xml Content-Length: ... &lt;?xml version=&#34;1.0&#34;
 
 <meta itemprop="datePublished" content="2019-01-22T15:38:32&#43;05:30" />
 <meta itemprop="dateModified" content="2019-01-22T15:38:32&#43;05:30" />
-<meta itemprop="wordCount" content="505">
+<meta itemprop="wordCount" content="619">
 
 
 
@@ -320,6 +320,22 @@ Called Integer Overflow</p>
 <hr />
 
 <p>HTMLPurifier library to prevent attacks by cleaning html</p>
+
+<ul>
+<li><code>mysql_real_escape_string</code> used when insert into database</li>
+<li><code>htmlentities()</code> used when outputting data into webpage</li>
+<li><code>htmlspecialchars()</code>  is roughly the same as htmlentities. The difference: character encodings.</li>
+</ul>
+
+<p>Both encode control characters like &lt;, &gt;, &amp; and so on used for opening tags etc. htmlentities also encode chars from other languages like umlauts, euro-symbols and such. If your websites are UTF, use htmlspecialchars(), otherwise use htmlentities().</p>
+
+<ul>
+<li><p><code>strip_tags()</code> -</p>
+
+<p>htmlspecialchars / entities encode the special chars, so they&rsquo;re displayed but not interpreted. strip_tags REMOVES them.</p></li>
+
+<li><p><code>addslashes()</code> - Returns a string with backslashes before characters that need to be quoted in database queries etc. These characters are single quote (&lsquo;), double quote (&ldquo;), backslash () and NUL (the NULL byte).</p></li>
+</ul>
  </div>
     <footer class="post-footer">
 

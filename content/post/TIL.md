@@ -139,3 +139,16 @@ Called Integer Overflow
 ----
 
 HTMLPurifier library to prevent attacks by cleaning html
+
+
+- `mysql_real_escape_string` used when insert into database
+- `htmlentities()` used when outputting data into webpage
+- `htmlspecialchars()`  is roughly the same as htmlentities. The difference: character encodings.
+
+  Both encode control characters like <, >, & and so on used for opening tags etc. htmlentities also encode chars from other languages like umlauts, euro-symbols and such. If your websites are UTF, use htmlspecialchars(), otherwise use htmlentities().
+
+-  `strip_tags() ` - 
+
+      htmlspecialchars / entities encode the special chars, so they're displayed but not interpreted. strip_tags REMOVES them. 
+- `addslashes() ` - Returns a string with backslashes before characters that need to be quoted in database queries etc. These characters are single quote ('), double quote ("), backslash () and NUL (the NULL byte).
+

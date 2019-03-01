@@ -35,7 +35,7 @@
 
 <meta itemprop="datePublished" content="2018-07-16T13:14:11&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-16T13:14:11&#43;05:30" />
-<meta itemprop="wordCount" content="1192">
+<meta itemprop="wordCount" content="1299">
 
 
 
@@ -328,6 +328,7 @@ $logger-&gt;send('Bar');
 // Call function  
  echo $greeting();  
  // Returns &quot;Hello world&quot;   
+
 </code></pre>
 
 <p>Closures are more or less Lambdas.</p>
@@ -418,6 +419,7 @@ parent::__construct($meta);
 }
 
 }  
+
 </code></pre>
 
 <hr />
@@ -436,25 +438,49 @@ parent::__construct($meta);
 <p>Namespace as a person&rsquo;s surname</p>
 </blockquote>
 
-<p>```
-namespace MyProject;</p>
+<pre><code>namespace MyProject;
 
-<p>function output() {
+function output() {
     # Output HTML page
-    echo &lsquo;HTML!&rsquo;;
-}</p>
-
-<p>namespace RSSLibrary;</p>
-
-<p>function output(){
-    # Output RSS feed
-    echo &lsquo;RSS!&rsquo;;
+    echo 'HTML!';
 }
-Later when we want to use the different functions, we&rsquo;d use:</p>
 
-<p>\MyProject\output();
+namespace RSSLibrary;
+
+function output(){
+    # Output RSS feed
+    echo 'RSS!';
+}
+
+\MyProject\output();
 \RSSLibrary\output();
-````</p>
+
+</code></pre>
+
+<hr />
+
+<h2 id="buffer">Buffer</h2>
+
+<p>*_clean variants just empty the buffer, whereas *_flush functions print what is in the buffer (send the contents to the output buffer).
+Example:</p>
+
+<pre><code>ob_start();
+print &quot;foo&quot;;      // This never prints because ob_end_clean just empties
+ob_end_clean();   //    the buffer and never prints or returns anything.
+
+ob_start();  // Turns on
+print &quot;bar&quot;;      // This IS printed, but just not right here.
+ob_end_flush();   // It's printed here, because ob_end_flush &quot;prints&quot; what's in
+                  // the buffer, rather than returning it
+                  //     (unlike the ob_get_* functions)
+
+</code></pre>
+
+<blockquote>
+<p>If outbut buffering is still active when the script ends, PHP outputs it automatically. In effect, every script ends with ob_end_flush()</p>
+</blockquote>
+
+<p><code>ob_get_contents ( void ) : string</code> -  Gets the contents of the output buffer without clearing it.</p>
  </div>
     <footer class="post-footer">
 

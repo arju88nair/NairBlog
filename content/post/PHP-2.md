@@ -157,7 +157,9 @@ A Lambda is an anonymous function that can be assigned to a variable or passed t
 // Call function  
  echo $greeting();  
  // Returns "Hello world"   
+
 ```
+
  Closures are more or less Lambdas.
 
  ```
@@ -252,9 +254,11 @@ parent::__construct($meta);
 }
 
 }  
+
 ```
 
 ------
+
 
 ## Namespace
 One library’s PHP code might use the same class name as another. When both libraries are used in the same namespace, they collide and cause trouble.Two files with the same name may co-exist in separate directories. Likewise, two PHP classes with the same name may co-exist in separate PHP namespaces. 
@@ -265,7 +269,8 @@ It allows you to use the same function or class name in different parts of the s
 
 Namespacing does for functions and classes what scope does for variables. It allows you to use the same function or class name in different parts of the same program without causing a name collision
 
->Namespace as a person's surname
+> Namespace as a person's surname
+
 
 ```
 namespace MyProject;
@@ -281,8 +286,33 @@ function output(){
     # Output RSS feed
     echo 'RSS!';
 }
-Later when we want to use the different functions, we'd use:
 
 \MyProject\output();
 \RSSLibrary\output();
-````
+
+```
+
+----
+
+## Buffer
+
+ *_clean variants just empty the buffer, whereas *_flush functions print what is in the buffer (send the contents to the output buffer).
+Example:
+
+```
+ob_start();
+print "foo";      // This never prints because ob_end_clean just empties
+ob_end_clean();   //    the buffer and never prints or returns anything.
+
+ob_start();  // Turns on
+print "bar";      // This IS printed, but just not right here.
+ob_end_flush();   // It's printed here, because ob_end_flush "prints" what's in
+                  // the buffer, rather than returning it
+                  //     (unlike the ob_get_* functions)
+
+```
+
+
+> If outbut buffering is still active when the script ends, PHP outputs it automatically. In effect, every script ends with ob_end_flush()
+
+ `ob_get_contents ( void ) : string` -  Gets the contents of the output buffer without clearing it. 

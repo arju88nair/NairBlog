@@ -225,4 +225,7 @@ while ($x <0)
     
 }
 
+
+
+Also return str_x[:half_num] == str_x[::-1][:half_num]
 ```
