@@ -38,7 +38,7 @@ If the function takes a callback, you can look at what the callback is used for 
 
 <meta itemprop="datePublished" content="2018-12-10T14:44:59&#43;05:30" />
 <meta itemprop="dateModified" content="2018-12-10T14:44:59&#43;05:30" />
-<meta itemprop="wordCount" content="785">
+<meta itemprop="wordCount" content="1051">
 
 
 
@@ -369,6 +369,85 @@ working with DOM
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-const nums = Array.of(1, 2, 3, 4, 5, 6);" data-lang="const nums = Array.of(1, 2, 3, 4, 5, 6);">  console.log(nums); // output: [1, 2, 3, 4, 5, 6]
   </code></pre></div>
 <hr />
+
+<p>## Functions</p>
+
+<p>### Lambda =&gt; arrow function</p>
+
+<p><code>const lambda = (a, b) =&gt; a + b;</code></p>
+
+<p>### First class functions</p>
+
+<blockquote>
+<p>Can be used as a value of a variable.</p>
+
+<p>That doesn’t accept other function as an argument and doesn’t return a function as its return value.</p>
+</blockquote>
+
+<pre><code>   const handler = () =&gt; console.log ('I am function');
+
+document.addEventListener ('click', handler); 
+</code></pre>
+
+<h3 id="higher-order-function">Higher-order function</h3>
+
+<blockquote>
+<p>Accepts other function as an argument or returns a function as a return value.</p>
+</blockquote>
+
+<pre><code>const firstOrder = () =&gt; console.log ('First order strikes back!');
+
+const higherOrder = whoStrikesBack =&gt; whoStrikesBack ();
+
+higherOrder (firstOrder);
+
+</code></pre>
+
+<hr />
+
+<h3 id="unary-function">Unary function</h3>
+
+<blockquote>
+<p>(i.e. monadic) is a function that accepts exactly one argument.</p>
+</blockquote>
+
+<pre><code>const unaryFunction = message =&gt; console.log (message);
+
+const binaryFunction = (color, message) =&gt;
+  console.log (`%c${message}`, `color:${color}`);
+
+const ternaryFunction = (fnc, color, message) =&gt;
+  fnc (`%c${message}`, `color:${color}`);
+
+</code></pre>
+
+<p>###  Pure function</p>
+
+<blockquote>
+<p>Where the return value is only determined by its arguments without any side effects.</p>
+
+<hr />
+</blockquote>
+
+<p>## Currying</p>
+
+<blockquote>
+<p>Currying is the process of taking a function with multiple arguments and turning it into a sequence of functions each with only a single argument.</p>
+</blockquote>
+
+<pre><code>  const binaryFunction = (a, b) =&gt; a + b;
+
+const curryUnaryFunction = a =&gt; b =&gt; a + b;
+
+curryUnaryFunction (1); // returns a function: b =&gt; 1 + b
+
+curryUnaryFunction (1) (2); // returns the number 3
+
+</code></pre>
+
+<p><code>Push</code> function is impure itself and it alters the array it is called on and as such produces a side effect. The return value of push is a number index.</p>
+
+<p><code>Concat</code> on the other hand takes the array and concatenates it with the other array producing a whole new array without side effects.</p>
  </div>
     <footer class="post-footer">
 

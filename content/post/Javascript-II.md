@@ -209,3 +209,81 @@ This create array from every arguments passed into it.
   ```
 
   ---
+
+
+  ## Functions
+
+  ### Lambda => arrow function
+
+  `const lambda = (a, b) => a + b;`
+
+
+  ### First class functions
+
+   >Can be used as a value of a variable.
+
+   > That doesn’t accept other function as an argument and doesn’t return a function as its return value.
+
+   ```
+   const handler = () => console.log ('I am function');
+
+document.addEventListener ('click', handler); 
+```
+
+### Higher-order function
+
+> Accepts other function as an argument or returns a function as a return value.
+
+```
+const firstOrder = () => console.log ('First order strikes back!');
+
+const higherOrder = whoStrikesBack => whoStrikesBack ();
+
+higherOrder (firstOrder);
+
+```
+
+---
+### Unary function 
+
+> (i.e. monadic) is a function that accepts exactly one argument.
+
+
+```
+const unaryFunction = message => console.log (message);
+
+const binaryFunction = (color, message) =>
+  console.log (`%c${message}`, `color:${color}`);
+
+const ternaryFunction = (fnc, color, message) =>
+  fnc (`%c${message}`, `color:${color}`);
+
+  ```
+
+
+  ###  Pure function
+
+> Where the return value is only determined by its arguments without any side effects.
+
+>
+  ---
+
+  ## Currying
+
+  > Currying is the process of taking a function with multiple arguments and turning it into a sequence of functions each with only a single argument. 
+
+
+  ```
+  const binaryFunction = (a, b) => a + b;
+
+const curryUnaryFunction = a => b => a + b;
+
+curryUnaryFunction (1); // returns a function: b => 1 + b
+
+curryUnaryFunction (1) (2); // returns the number 3
+
+```
+
+`Push` function is impure itself and it alters the array it is called on and as such produces a side effect. The return value of push is a number index.
+
+`Concat` on the other hand takes the array and concatenates it with the other array producing a whole new array without side effects.
