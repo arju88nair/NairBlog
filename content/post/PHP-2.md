@@ -342,3 +342,16 @@ ob_end_flush();   // It's printed here, because ob_end_flush "prints" what's in
 ### FastCGI Process Manager (FPM) 
  
  - Advanced FastCGI with better features
+
+
+
+ ----
+ ## Request Lifecycle 
+
+
+
+ - Apache gets the request
+ -  Search for `index.php`
+ -  Sends the file to the interpreter
+ - Does the stuff and returns the response to the server
+ -  Displays the response in the browser
