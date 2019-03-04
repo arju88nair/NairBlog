@@ -316,3 +316,29 @@ ob_end_flush();   // It's printed here, because ob_end_flush "prints" what's in
 > If outbut buffering is still active when the script ends, PHP outputs it automatically. In effect, every script ends with ob_end_flush()
 
  `ob_get_contents ( void ) : string` -  Gets the contents of the output buffer without clearing it. 
+
+
+ ----
+
+ ## PHP server mods and such
+
+### Apache Module (mod_php)
+
+- PHP interpreter is embedded in each Apache process that’s spawned on the server. 
+-  No need to deal with any external process unlike CGI or FastCGI
+- Good for apps like Wordpress etc where they deal with many requests contain PHP codes
+-  Larger footprint
+
+
+
+### FastCGI
+
+- External interpreter
+-  PHP scripts with FastCGI, each request is passed from the web server to FastCGI via a communication socket. 
+- Cannot use PHP directives in .htaccess. 
+- Improved security as PHP code execution is isolated from web server.
+- Static content will not be processed by PHP interpreter.
+
+### FastCGI Process Manager (FPM) 
+ 
+ - Advanced FastCGI with better features
