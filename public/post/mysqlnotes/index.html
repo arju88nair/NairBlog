@@ -44,7 +44,7 @@ Users and Roles CREATE USER &#39;user&#39;@&#39;localhost&#39; IDENTIFIED BY &#3
 
 <meta itemprop="datePublished" content="2018-11-28T21:42:31&#43;05:30" />
 <meta itemprop="dateModified" content="2018-11-28T21:42:31&#43;05:30" />
-<meta itemprop="wordCount" content="395">
+<meta itemprop="wordCount" content="522">
 
 
 
@@ -280,6 +280,46 @@ FROM student AS st ;
 SET @start_yearmonth = (SELECT EXTRACT(YEAR_MONTH FROM @start_date));
 
 </code></pre>
+
+<hr />
+
+<h1 id="performance-improvement">Performance improvement</h1>
+
+<ul>
+<li>Have the most efficient SQL queries</li>
+<li>Design a logical schema that support the application&rsquo;s need (e.g. type of the columns, etc.)</li>
+<li>Design trade-off to support some use case better than other</li>
+<li>Relational constraints</li>
+<li>Normalization</li>
+
+<li><p>Checking the connection pool</p></li>
+
+<li><p>Keep statistics up to date</p></li>
+
+<li><p>Re-sequence critical tables periodically</p></li>
+
+<li><p>Disk maintenance</p></li>
+
+<li><p>All the system stuff to have a server that rocks</p></li>
+</ul>
+
+<h2 id="normalisation">Normalisation</h2>
+
+<blockquote>
+<p>Organizes tables in a manner that reduces redundancy and dependency of data.</p>
+
+<p>A composite key is a primary key composed of <code>multiple columns</code> used to identify a record uniquely</p>
+</blockquote>
+
+<p>1NF -  Same table
+2NF - Different table for relation and so on  .Used Foreign key
+3NF -  Decomposing further</p>
+
+<h2 id="partitioning-https-www-sqlshack-com-database-table-partitioning-sql-server"><a href="https://www.sqlshack.com/database-table-partitioning-sql-server/">Partitioning</a></h2>
+
+<blockquote>
+<p>Partitioning is the database process where very large tables are divided into multiple smaller parts.</p>
+</blockquote>
  </div>
     <footer class="post-footer">
 

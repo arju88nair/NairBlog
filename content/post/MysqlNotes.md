@@ -113,3 +113,39 @@ SET @start_yearmonth = (SELECT EXTRACT(YEAR_MONTH FROM @start_date));
 
 ```
 
+---
+
+
+# Performance improvement
+
+
+-  Have the most efficient SQL queries
+-   Design a logical schema that support the application's need (e.g. type of the columns, etc.)
+-   Design trade-off to support some use case better than other
+-   Relational constraints
+-   Normalization
+-  Checking the connection pool
+
+
+- Keep statistics up to date
+- Re-sequence critical tables periodically
+- Disk maintenance
+- All the system stuff to have a server that rocks
+
+
+
+
+## Normalisation
+
+>Organizes tables in a manner that reduces redundancy and dependency of data. 
+
+>  A composite key is a primary key composed of `multiple columns` used to identify a record uniquely 
+
+1NF -  Same table
+2NF - Different table for relation and so on  .Used Foreign key
+3NF -  Decomposing further
+
+## [Partitioning](https://www.sqlshack.com/database-table-partitioning-sql-server/)
+
+> Partitioning is the database process where very large tables are divided into multiple smaller parts.
+
