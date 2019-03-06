@@ -29,7 +29,7 @@
 
 <meta itemprop="datePublished" content="2018-07-22T13:51:09&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-22T13:51:09&#43;05:30" />
-<meta itemprop="wordCount" content="364">
+<meta itemprop="wordCount" content="440">
 
 
 
@@ -385,6 +385,39 @@ while ($x &lt;0)
 
 
 Also return str_x[:half_num] == str_x[::-1][:half_num]
+</code></pre>
+
+<hr />
+
+<h2 id="romans-to-integers">Romans to Integers</h2>
+
+<pre><code>$romans = array(
+    'M' =&gt; 1000,
+    'CM' =&gt; 900,
+    'D' =&gt; 500,
+    'CD' =&gt; 400,
+    'C' =&gt; 100,
+    'XC' =&gt; 90,
+    'L' =&gt; 50,
+    'XL' =&gt; 40,
+    'X' =&gt; 10,
+    'IX' =&gt; 9,
+    'V' =&gt; 5,
+    'IV' =&gt; 4,
+    'I' =&gt; 1,
+);
+
+$roman = 'MMMCMXCIX';
+$result = 0;
+
+foreach ($romans as $key =&gt; $value) {
+    while (strpos($roman, $key) === 0) {
+        $result += $value;
+        $roman = substr($roman, strlen($key));
+    }
+}
+echo $result;
+
 </code></pre>
  </div>
     <footer class="post-footer">
