@@ -7,6 +7,13 @@ tags : [
    ]
 ---
 
+# Javascript
+
+Single threaded - Single call stack
+
+
+
+
 ## Callback functions
 -------------------
 

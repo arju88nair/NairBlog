@@ -35,7 +35,7 @@
 
 <meta itemprop="datePublished" content="2018-07-11T17:02:17&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-11T17:02:17&#43;05:30" />
-<meta itemprop="wordCount" content="2011">
+<meta itemprop="wordCount" content="2140">
 
 
 
@@ -504,6 +504,11 @@ Token -CSRF</p>
 
 <blockquote>
 <p>A Class has one instance, It provides a global access point to it, Following code will explain about singleton concept.</p>
+</blockquote>
+
+<p>Shared resources. , a database class, a template class, and a global variable depot class. All have to be shared by all modules/classes that are being used throughout the code.</p>
+
+<p>Logging is a specific example of an &ldquo;acceptable&rdquo; Singleton because it doesn&rsquo;t affect the execution of your code.</p>
 
 <pre><code>&lt;?php
    class Singleton {
@@ -511,9 +516,9 @@ Token -CSRF</p>
          static $instance = null;
          
          if (null === $instance) {
-            $instance = new static();
-         }
-         return $instance;
+            self::$instance = new __CLASS__;    
+                 }
+         return self::$instance;
       }
       protected function __construct() {
       }
@@ -536,7 +541,11 @@ Token -CSRF</p>
    var_dump($anotherObj === SingletonChild::getInstance()); 
 ?&gt;
 </code></pre>
-</blockquote>
+
+<pre><code>- Debug Logging: Almost all developers will agree that a way to debug logging should be available for every function and part of the code. A singleton could serve this purpose without harming readability, testability or maintainability.
+
+- Filesystem and Database Access: The argument can be made for Singletons proving access to the filesystem and database, now this might work if you need a single global filesystem or database access point it trades flexibility and testability for modicum amount of convenience.
+</code></pre>
 
 <h3 id="factory">Factory</h3>
 

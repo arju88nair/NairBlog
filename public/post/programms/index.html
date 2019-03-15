@@ -11,7 +11,7 @@
 
 <link rel="canonical" href="/post/programms/">
 <meta property="og:title" content="Programms" />
-<meta property="og:description" content="Factorial &lt;?php $number = 6; /*number to get factorial */ $fact = 1; for($k=1;$k&lt;=$number;&#43;&#43;$k) { $fact = $fact*$k; } echo &quot;Factorial of $number is &quot;.$fact; ?&gt;  Factorial (Recursion)  function factorial($number) { if ($number &lt; 2) { return 1; } else { return ($number * factorial($number-1)); } }  Fibonacci a, b = 1, 1 total = 0 while a &lt;= 10: a, b = b, a&#43;b # the real formula for Fibonacci sequence print(a)  Amstrong &lt;?" />
+<meta property="og:description" content="Factorial &lt;?php $number = 6; /*number to get factorial */ $fact = 1; for($k=1;$k&lt;=$number;&#43;&#43;$k) { $fact = $fact*$k; } echo &quot;Factorial of $number is &quot;.$fact; ?&gt;  Factorial (Recursion)  function factorial($number) { if ($number &lt; 2) { return 1; } else { return ($number * factorial($number-1)); } }  Fibonacci a, b = 1, 1 total = 0 while a &lt;= 10: a, b = b, a&#43;b # the real formula for Fibonacci sequence print(a)  Fibonacci (PHP) &lt;?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/programms/" />
 <meta property="article:published_time" content="2018-07-22T13:51:09&#43;05:30"/>
@@ -19,17 +19,17 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Programms"/>
-<meta name="twitter:description" content="Factorial &lt;?php $number = 6; /*number to get factorial */ $fact = 1; for($k=1;$k&lt;=$number;&#43;&#43;$k) { $fact = $fact*$k; } echo &quot;Factorial of $number is &quot;.$fact; ?&gt;  Factorial (Recursion)  function factorial($number) { if ($number &lt; 2) { return 1; } else { return ($number * factorial($number-1)); } }  Fibonacci a, b = 1, 1 total = 0 while a &lt;= 10: a, b = b, a&#43;b # the real formula for Fibonacci sequence print(a)  Amstrong &lt;?"/>
+<meta name="twitter:description" content="Factorial &lt;?php $number = 6; /*number to get factorial */ $fact = 1; for($k=1;$k&lt;=$number;&#43;&#43;$k) { $fact = $fact*$k; } echo &quot;Factorial of $number is &quot;.$fact; ?&gt;  Factorial (Recursion)  function factorial($number) { if ($number &lt; 2) { return 1; } else { return ($number * factorial($number-1)); } }  Fibonacci a, b = 1, 1 total = 0 while a &lt;= 10: a, b = b, a&#43;b # the real formula for Fibonacci sequence print(a)  Fibonacci (PHP) &lt;?"/>
 
 
 
 <meta itemprop="name" content="Programms">
-<meta itemprop="description" content="Factorial &lt;?php $number = 6; /*number to get factorial */ $fact = 1; for($k=1;$k&lt;=$number;&#43;&#43;$k) { $fact = $fact*$k; } echo &quot;Factorial of $number is &quot;.$fact; ?&gt;  Factorial (Recursion)  function factorial($number) { if ($number &lt; 2) { return 1; } else { return ($number * factorial($number-1)); } }  Fibonacci a, b = 1, 1 total = 0 while a &lt;= 10: a, b = b, a&#43;b # the real formula for Fibonacci sequence print(a)  Amstrong &lt;?">
+<meta itemprop="description" content="Factorial &lt;?php $number = 6; /*number to get factorial */ $fact = 1; for($k=1;$k&lt;=$number;&#43;&#43;$k) { $fact = $fact*$k; } echo &quot;Factorial of $number is &quot;.$fact; ?&gt;  Factorial (Recursion)  function factorial($number) { if ($number &lt; 2) { return 1; } else { return ($number * factorial($number-1)); } }  Fibonacci a, b = 1, 1 total = 0 while a &lt;= 10: a, b = b, a&#43;b # the real formula for Fibonacci sequence print(a)  Fibonacci (PHP) &lt;?">
 
 
 <meta itemprop="datePublished" content="2018-07-22T13:51:09&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-22T13:51:09&#43;05:30" />
-<meta itemprop="wordCount" content="440">
+<meta itemprop="wordCount" content="479">
 
 
 
@@ -206,6 +206,34 @@ while a &lt;= 10:
     a, b = b, a+b  # the real formula for Fibonacci sequence
     print(a)
 
+
+</code></pre>
+
+<hr />
+
+<h2 id="fibonacci-php">Fibonacci (PHP)</h2>
+
+<pre><code>&lt;?php
+        //Enter your code here, enjoy!
+
+function Fibonacci($n){ 
+  
+    $num1 = 0; 
+    $num2 = 1; 
+  
+    $counter = 0; 
+    while ($counter &lt; $n){ 
+       echo &quot; &quot;.$num1;
+       $num3=$num1+$num2;
+       $num1=$num2;
+       $num2=$num3;
+       $counter++;
+    } 
+} 
+  
+// Driver Code 
+$n = 10; 
+Fibonacci($n); 
 
 </code></pre>
 

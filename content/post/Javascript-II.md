@@ -274,7 +274,7 @@ const ternaryFunction = (fnc, color, message) =>
 
 
   ```
-  const binaryFunction = (a, b) => a + b;
+const binaryFunction = (a, b) => a + b;
 
 const curryUnaryFunction = a => b => a + b;
 

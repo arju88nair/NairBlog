@@ -328,6 +328,11 @@ Token -CSRF
 
 ### Singleton Pattern
 > A Class has one instance, It provides a global access point to it, Following code will explain about singleton concept.
+
+
+Shared resources. , a database class, a template class, and a global variable depot class. All have to be shared by all modules/classes that are being used throughout the code. 
+
+Logging is a specific example of an "acceptable" Singleton because it doesn't affect the execution of your code.
 ```
 <?php
    class Singleton {
@@ -335,9 +340,9 @@ Token -CSRF
          static $instance = null;
          
          if (null === $instance) {
-            $instance = new static();
-         }
-         return $instance;
+            self::$instance = new __CLASS__;    
+                 }
+         return self::$instance;
       }
       protected function __construct() {
       }
@@ -360,6 +365,13 @@ Token -CSRF
    var_dump($anotherObj === SingletonChild::getInstance()); 
 ?>
 ```
+
+
+
+    - Debug Logging: Almost all developers will agree that a way to debug logging should be available for every function and part of the code. A singleton could serve this purpose without harming readability, testability or maintainability.
+
+    - Filesystem and Database Access: The argument can be made for Singletons proving access to the filesystem and database, now this might work if you need a single global filesystem or database access point it trades flexibility and testability for modicum amount of convenience.
+
 
 
 ### Factory

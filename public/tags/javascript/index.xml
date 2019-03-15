@@ -86,10 +86,10 @@ Spread operator or splat operator copies the contents of one array object into a
       <pubDate>Sun, 22 Jul 2018 13:50:50 +0530</pubDate>
       
       <guid>/post/javascript/</guid>
-      <description>Callback functions They are derived from a programming paradigm known as functional programmings
+      <description>Javascript Single threaded - Single call stack
+Callback functions They are derived from a programming paradigm known as functional programmings
 A callback function, also known as a higher-order function, is a function that is passed to another function Eg:
- $(&amp;quot;#btn_1&amp;quot;).click(function() { alert(&amp;quot;Btn 1 Clicked&amp;quot;); });  Functional programming (often abbreviated FP) is the process of building software by composing pure functions, avoiding shared state, mutable data, and side-effects
-A pure function is a function which: Given the same inputs, always returns the same output, and Has no side-effects</description>
+ $(&amp;quot;#btn_1&amp;quot;).click(function() { alert(&amp;quot;Btn 1 Clicked&amp;quot;); });  Functional programming (often abbreviated FP) is the process of building software by composing pure functions, avoiding shared state, mutable data, and side-effects</description>
     </item>
     
   </channel>
