@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/post/interviewnotes/</loc>
+    <lastmod>2019-03-21T11:23:50+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/regex/</loc>
     <lastmod>2019-02-20T17:59:03+05:30</lastmod>
   </url>
@@ -250,7 +255,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-02-20T17:59:03+05:30</lastmod>
+    <lastmod>2019-03-21T11:23:50+05:30</lastmod>
     <priority>0</priority>
   </url>
   
