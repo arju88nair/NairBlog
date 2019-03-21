@@ -204,7 +204,7 @@ function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } con
   <header>
     <h2 class="title"> <a href='/post/javascript-ii/'> Javascript II</a> </h2>
     <div class="meta">
-      Dec 10, 2018 - 5 minutes
+      Dec 10, 2018 - 6 minutes
     </div>
     
 <div class="tags">
@@ -223,9 +223,9 @@ function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } con
 
   <div class="summary">
     JavaScript engine is single threaded so the language itself is synchronous and hence blocking in nature
- Event Loops Provided by the environment where javascript is running which provides capability for asynchronous execution providing non-blocking functionality
-In general, any function that does networking or uses timers to do things over a period of time will be asynchronous.
-If the function takes a callback, you can look at what the callback is used for and usually it will be obvious whether is is asynchronous or not.
+ Event Loops Not in the v8 source
+Single threaded language - single call stack
+Async is non blocking. So when a blocking setTimeOut is called, it&rsquo;s pushed to the webapis from the stack which are threaded. When task is done,pushes to task queue. EL does one thing,if the stack from is empty, it pushes the thing from queue to stack
     <a href='/post/javascript-ii/' class="rmore">Read more ...</a>
   </div>
 

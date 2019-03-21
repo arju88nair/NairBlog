@@ -12,9 +12,9 @@
 <link rel="canonical" href="/post/javascript-ii/">
 <meta property="og:title" content="Javascript II" />
 <meta property="og:description" content="JavaScript engine is single threaded so the language itself is synchronous and hence blocking in nature
- Event Loops Provided by the environment where javascript is running which provides capability for asynchronous execution providing non-blocking functionality
-In general, any function that does networking or uses timers to do things over a period of time will be asynchronous.
-If the function takes a callback, you can look at what the callback is used for and usually it will be obvious whether is is asynchronous or not." />
+ Event Loops Not in the v8 source
+Single threaded language - single call stack
+Async is non blocking. So when a blocking setTimeOut is called, it&rsquo;s pushed to the webapis from the stack which are threaded. When task is done,pushes to task queue. EL does one thing,if the stack from is empty, it pushes the thing from queue to stack" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/javascript-ii/" />
 <meta property="article:published_time" content="2018-12-10T14:44:59&#43;05:30"/>
@@ -23,22 +23,22 @@ If the function takes a callback, you can look at what the callback is used for 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Javascript II"/>
 <meta name="twitter:description" content="JavaScript engine is single threaded so the language itself is synchronous and hence blocking in nature
- Event Loops Provided by the environment where javascript is running which provides capability for asynchronous execution providing non-blocking functionality
-In general, any function that does networking or uses timers to do things over a period of time will be asynchronous.
-If the function takes a callback, you can look at what the callback is used for and usually it will be obvious whether is is asynchronous or not."/>
+ Event Loops Not in the v8 source
+Single threaded language - single call stack
+Async is non blocking. So when a blocking setTimeOut is called, it&rsquo;s pushed to the webapis from the stack which are threaded. When task is done,pushes to task queue. EL does one thing,if the stack from is empty, it pushes the thing from queue to stack"/>
 
 
 
 <meta itemprop="name" content="Javascript II">
 <meta itemprop="description" content="JavaScript engine is single threaded so the language itself is synchronous and hence blocking in nature
- Event Loops Provided by the environment where javascript is running which provides capability for asynchronous execution providing non-blocking functionality
-In general, any function that does networking or uses timers to do things over a period of time will be asynchronous.
-If the function takes a callback, you can look at what the callback is used for and usually it will be obvious whether is is asynchronous or not.">
+ Event Loops Not in the v8 source
+Single threaded language - single call stack
+Async is non blocking. So when a blocking setTimeOut is called, it&rsquo;s pushed to the webapis from the stack which are threaded. When task is done,pushes to task queue. EL does one thing,if the stack from is empty, it pushes the thing from queue to stack">
 
 
 <meta itemprop="datePublished" content="2018-12-10T14:44:59&#43;05:30" />
 <meta itemprop="dateModified" content="2018-12-10T14:44:59&#43;05:30" />
-<meta itemprop="wordCount" content="1051">
+<meta itemprop="wordCount" content="1149">
 
 
 
@@ -180,7 +180,24 @@ th {
 <p>JavaScript engine is single threaded so the language itself is synchronous and hence blocking in nature</p>
 </blockquote>
 
-<h2 id="event-loops">Event Loops</h2>
+<h2 id="event-loops-https-www-youtube-com-watch-v-8aghzqkofbq"><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ">Event Loops</a></h2>
+
+<p>Not in the v8 source</p>
+
+<p>Single threaded language - single call stack</p>
+
+<p>Async is non blocking. So when a blocking setTimeOut is called, it&rsquo;s pushed to the <code>webapis</code> from the <code>stack</code> which are threaded.
+When task is done,pushes to <code>task queue</code>. EL does one thing,if the stack from is <code>empty</code>, it pushes the thing from queue to stack</p>
+
+<p>Same for xhr request making.</p>
+
+<p>Timeout is not accurate. It&rsquo;s the minimum time for execution</p>
+
+<p>Browser repaints <code>60fps</code>
+Can&rsquo;t do render if there&rsquo;s anything in the stack.
+Render got higher priority than Callbacks.</p>
+
+<p>Render/repaints managed to get in between async</p>
 
 <p>Provided by the environment where javascript is running which provides capability for asynchronous execution providing non-blocking functionality</p>
 

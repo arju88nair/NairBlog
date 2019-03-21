@@ -9,7 +9,25 @@ tags : [
 ---
 >JavaScript engine is single threaded so the language itself is synchronous and hence blocking in nature
 
-## Event Loops
+## [Event Loops](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+
+Not in the v8 source
+
+Single threaded language - single call stack
+
+Async is non blocking. So when a blocking setTimeOut is called, it's pushed to the `webapis` from the `stack` which are threaded.
+When task is done,pushes to `task queue`. EL does one thing,if the stack from is `empty`, it pushes the thing from queue to stack
+
+Same for xhr request making.
+
+Timeout is not accurate. It's the minimum time for execution
+
+Browser repaints `60fps`
+Can't do render if there's anything in the stack.
+Render got higher priority than Callbacks.
+
+Render/repaints managed to get in between async
+
 
 Provided by the environment where javascript is running which provides capability for asynchronous execution providing non-blocking functionality
 
