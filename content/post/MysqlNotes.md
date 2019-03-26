@@ -149,3 +149,30 @@ SET @start_yearmonth = (SELECT EXTRACT(YEAR_MONTH FROM @start_date));
 
 > Partitioning is the database process where very large tables are divided into multiple smaller parts.
 
+
+----
+
+
+## Stored Procedure
+
+> Batch of SQL statements
+
+`PL/SQL` includes procedural language elements such as conditions and loops. It allows declaration of constants and variables, procedures and functions, types and variables of those types, and triggers. It can handle exceptions (runtime errors)
+
+```
+CREATE PROCEDURE SelectAllCustomers @City nvarchar(30)
+AS
+SELECT * FROM Customers WHERE City = @City
+GO;
+
+
+ EXEC SelectAllCustomers City = "London"; 
+```
+
+---
+
+## Triggers
+
+- Special type of stored procedure. 
+- Not called directly like a stored procedure. 
+- Trigger is called `automatically` when a data modification event is made against a table whereas a stored procedure must be called `explicitly`.

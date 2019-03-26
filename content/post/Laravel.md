@@ -152,3 +152,12 @@ Array ( [firstname] => Peter [lastname] => Griffin [age] => 41 )
 To share data between shared views
 
 >View composers are callbacks or class methods that are called when a view is rendered. If you have data that you want to be bound to a view each time that view is rendered, a view composer can help you organize that logic into a single location.
+
+---
+
+## [Observers](https://appdividend.com/2018/01/02/laravel-model-observers-tutorial-example/)
+
+> Eloquent models fire several events, allowing you to hook into the following points in a model's lifecycle: `retrieved, creating, created, updating, updated, saving, saved, deleting, deleted, restoring, restored`
+
+
+To group multiple events, observers are used

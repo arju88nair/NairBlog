@@ -59,13 +59,26 @@ source ~/.bashrc
 
 
 - `service network-manager stop`
-- `ifconfig wlan0 down`
-- `macchanger -r wlan0`
+- `ifconfig wlp4s0 down`
+- `macchanger -r wlp4s0`
 - `service network-manager start  `
-- `ifconfig wlan0 up`
+- `ifconfig wlp4s0 up`
 
 
 ---
+
+### bash command
+
+
+```
+
+function macc()
+{
+sudo service network-manager stop && sudo ifconfig wlp4s0 down && sudo macchanger -r wlp4s0 && sudo service network-manager start && sudo ifconfig wlp4s0 up
+
+}
+
+```
 
 ## Fixing mysql `Error 2002: Can't connect to local MySQL server through socket '/tmp/mysql.sock'`
 

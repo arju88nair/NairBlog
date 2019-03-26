@@ -44,7 +44,7 @@ Users and Roles CREATE USER &#39;user&#39;@&#39;localhost&#39; IDENTIFIED BY &#3
 
 <meta itemprop="datePublished" content="2018-11-28T21:42:31&#43;05:30" />
 <meta itemprop="dateModified" content="2018-11-28T21:42:31&#43;05:30" />
-<meta itemprop="wordCount" content="522">
+<meta itemprop="wordCount" content="617">
 
 
 
@@ -320,6 +320,35 @@ SET @start_yearmonth = (SELECT EXTRACT(YEAR_MONTH FROM @start_date));
 <blockquote>
 <p>Partitioning is the database process where very large tables are divided into multiple smaller parts.</p>
 </blockquote>
+
+<hr />
+
+<h2 id="stored-procedure">Stored Procedure</h2>
+
+<blockquote>
+<p>Batch of SQL statements</p>
+</blockquote>
+
+<p><code>PL/SQL</code> includes procedural language elements such as conditions and loops. It allows declaration of constants and variables, procedures and functions, types and variables of those types, and triggers. It can handle exceptions (runtime errors)</p>
+
+<pre><code>CREATE PROCEDURE SelectAllCustomers @City nvarchar(30)
+AS
+SELECT * FROM Customers WHERE City = @City
+GO;
+
+
+ EXEC SelectAllCustomers City = &quot;London&quot;; 
+</code></pre>
+
+<hr />
+
+<h2 id="triggers">Triggers</h2>
+
+<ul>
+<li>Special type of stored procedure.</li>
+<li>Not called directly like a stored procedure.</li>
+<li>Trigger is called <code>automatically</code> when a data modification event is made against a table whereas a stored procedure must be called <code>explicitly</code>.</li>
+</ul>
  </div>
     <footer class="post-footer">
 
