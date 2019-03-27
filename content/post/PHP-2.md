@@ -77,8 +77,10 @@ $foo->stop();
   > A class should have one and only one reason to change, meaning that a class should only have one job.
   -  O — Open closed principle
   > Objects or entities should be open for extension, but closed for modification.
-   - L — Liskov substitution principle
+
+  - L — Liskov substitution principle
    > Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T.
+
   -  I — Interface segregation principle
   > A client should never be forced to implement an interface that it doesn't use or clients shouldn't be forced to depend on methods they do not use.
   -  D — Dependency Inversion principle
@@ -87,8 +89,7 @@ $foo->stop();
  ---
 
 
-
- ## Generators
+## Generators
 
  Generators provide an easy way to implement simple iterators without the overhead or complexity of implementing a class that implements the Iterator interface.
 
@@ -320,7 +321,7 @@ ob_end_flush();   // It's printed here, because ob_end_flush "prints" what's in
 
  ----
 
- ## PHP server mods and such
+## PHP server mods and such
 
 ### Apache Module (mod_php)
 
@@ -346,7 +347,7 @@ ob_end_flush();   // It's printed here, because ob_end_flush "prints" what's in
 
 
  ----
- ## Request Lifecycle 
+## Request Lifecycle 
 
 
 

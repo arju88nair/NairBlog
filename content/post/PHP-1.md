@@ -66,7 +66,7 @@ echo calculateArea($circle);
 ___
 
 - An abstract class is a mix between an interface and a class. It can define functionality as well as interface 
-- Abstract classes are look like interfaces.Abstract classes may contain code although it may also have abstract method that do not have code. Abstract classes defines only signature of the method ,not implementation. The child class which inherit the abstarct class must define all the abstarct methods of its parent class .
+- Abstract classes look like interfaces.Abstract classes may contain code although it may also have abstract method that do not have code. Abstract classes defines only signature of the method ,not implementation. The child class which inherit the abstarct class must define all the abstarct methods of its parent class .
 
 - Encapsulation - Packing of data and functions into a single component
 
