@@ -204,3 +204,13 @@ su - nair
 --- 
 
 `find . -type f -size +4096c`
+
+
+
+## Grep
+
+> grep version package.json 
+
+>grep "#" blah.md blahss.md   -  Searching for # in multiple files
+
+>grep -i “harry” /etc/passwd  -  Ignore case match
