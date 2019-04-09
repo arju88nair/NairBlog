@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Random on Today I learned</title>
+    <title>random on Today I learned</title>
     <link>/tags/random/</link>
-    <description>Recent content in Random on Today I learned</description>
+    <description>Recent content in random on Today I learned</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2018, all rights reserved.</copyright>

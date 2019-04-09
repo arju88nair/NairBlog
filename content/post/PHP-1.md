@@ -86,6 +86,36 @@ Example: Database instantiation
 
 - Overloading − a type of polymorphism in which some or all of operators have different implementations depending on the types of their arguments. Similarly functions can also be overloaded with different implementation.
 
+```
+class overload {
+    public $name;
+    public function __construct($agr) {
+        $this->name = $agr;
+    }
+    public function __call($methodname, $agrument) {
+         if($methodname == 'sum2') {
+
+          if(count($agrument) == 2) {
+              $this->sum($agrument[0], $agrument[1]);
+          }
+          if(count($agrument) == 3) {
+
+              echo $this->sum1($agrument[0], $agrument[1], $agrument[2]);
+          }
+        }
+    }
+    public function sum($a, $b) {
+        return $a + $b;
+    }
+    public function sum1($a,$b,$c) {
+
+        return $a + $b + $c;
+    }
+}
+$object = new overload('Sum');
+echo $object->sum2(1,2,3);
+```
+
 - Data Abstraction − Any representation of data in which the implementation details are hidden (abstracted).
 
 - Encapsulation − refers to a concept where we encapsulate all the data and member functions together to form an object.

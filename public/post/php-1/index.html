@@ -7,7 +7,7 @@
 <meta name="description" content="Personal blog." />
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.55.0" />
 
 <link rel="canonical" href="/post/php-1/">
 <meta property="og:title" content="PHP Part 1" />
@@ -35,7 +35,7 @@
 
 <meta itemprop="datePublished" content="2018-07-11T17:02:17&#43;05:30" />
 <meta itemprop="dateModified" content="2018-07-11T17:02:17&#43;05:30" />
-<meta itemprop="wordCount" content="2139">
+<meta itemprop="wordCount" content="2207">
 
 
 
@@ -137,8 +137,6 @@ th {
     <a class="nav-item active" href="/post/"><div class="nav-item-title">Posts</div></a>
     
     <a class="nav-item" href="/tags/"><div class="nav-item-title">Tags</div></a>
-    
-    <a class="nav-item" href="/about/"><div class="nav-item-title">About</div></a>
     
 
   </nav>
@@ -247,7 +245,38 @@ Example: Database instantiation</p></li>
 <li><p>Polymorphism − This is an object oriented concept where same function can be used for different purposes. For example function name will remain same but it make take different number of arguments and can do different task.</p></li>
 
 <li><p>Overloading − a type of polymorphism in which some or all of operators have different implementations depending on the types of their arguments. Similarly functions can also be overloaded with different implementation.</p></li>
+</ul>
 
+<pre><code>class overload {
+    public $name;
+    public function __construct($agr) {
+        $this-&gt;name = $agr;
+    }
+    public function __call($methodname, $agrument) {
+         if($methodname == 'sum2') {
+
+          if(count($agrument) == 2) {
+              $this-&gt;sum($agrument[0], $agrument[1]);
+          }
+          if(count($agrument) == 3) {
+
+              echo $this-&gt;sum1($agrument[0], $agrument[1], $agrument[2]);
+          }
+        }
+    }
+    public function sum($a, $b) {
+        return $a + $b;
+    }
+    public function sum1($a,$b,$c) {
+
+        return $a + $b + $c;
+    }
+}
+$object = new overload('Sum');
+echo $object-&gt;sum2(1,2,3);
+</code></pre>
+
+<ul>
 <li><p>Data Abstraction − Any representation of data in which the implementation details are hidden (abstracted).</p></li>
 
 <li><p>Encapsulation − refers to a concept where we encapsulate all the data and member functions together to form an object.</p></li>

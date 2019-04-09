@@ -7,26 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Copyright (c) 2018, all rights reserved.</copyright>
-    <lastBuildDate>Fri, 23 Nov 2018 22:13:24 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 20 Feb 2019 17:59:03 +0530</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Basics</title>
-      <link>/tags/basics/</link>
-      <pubDate>Fri, 23 Nov 2018 22:13:24 +0530</pubDate>
+      <title>random</title>
+      <link>/tags/random/</link>
+      <pubDate>Wed, 20 Feb 2019 17:59:03 +0530</pubDate>
       
-      <guid>/tags/basics/</guid>
+      <guid>/tags/random/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Databases</title>
-      <link>/tags/databases/</link>
-      <pubDate>Wed, 08 Aug 2018 19:59:38 +0530</pubDate>
+      <title>TIL</title>
+      <link>/tags/til/</link>
+      <pubDate>Tue, 22 Jan 2019 15:38:32 +0530</pubDate>
       
-      <guid>/tags/databases/</guid>
+      <guid>/tags/til/</guid>
       <description></description>
     </item>
     
@@ -40,29 +40,11 @@
     </item>
     
     <item>
-      <title>Es6</title>
-      <link>/tags/es6/</link>
-      <pubDate>Fri, 30 Nov 2018 21:49:43 +0530</pubDate>
+      <title>Server</title>
+      <link>/tags/server/</link>
+      <pubDate>Sun, 20 Jan 2019 21:20:16 +0530</pubDate>
       
-      <guid>/tags/es6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Event Sourcing</title>
-      <link>/tags/event-sourcing/</link>
-      <pubDate>Tue, 18 Dec 2018 09:42:13 +0530</pubDate>
-      
-      <guid>/tags/event-sourcing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hacks</title>
-      <link>/tags/hacks/</link>
-      <pubDate>Wed, 11 Jul 2018 21:20:13 +0530</pubDate>
-      
-      <guid>/tags/hacks/</guid>
+      <guid>/tags/server/</guid>
       <description></description>
     </item>
     
@@ -76,61 +58,7 @@
     </item>
     
     <item>
-      <title>Javascript</title>
-      <link>/tags/javascript/</link>
-      <pubDate>Thu, 13 Dec 2018 22:04:51 +0530</pubDate>
-      
-      <guid>/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Laravel</title>
-      <link>/tags/laravel/</link>
-      <pubDate>Fri, 20 Jul 2018 18:08:33 +0530</pubDate>
-      
-      <guid>/tags/laravel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>/tags/linux/</link>
-      <pubDate>Mon, 19 Nov 2018 20:19:34 +0530</pubDate>
-      
-      <guid>/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mysql</title>
-      <link>/tags/mysql/</link>
-      <pubDate>Wed, 28 Nov 2018 21:42:31 +0530</pubDate>
-      
-      <guid>/tags/mysql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nginx</title>
-      <link>/tags/nginx/</link>
-      <pubDate>Wed, 11 Jul 2018 17:31:55 +0530</pubDate>
-      
-      <guid>/tags/nginx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Oop</title>
-      <link>/tags/oop/</link>
-      <pubDate>Mon, 16 Jul 2018 13:14:11 +0530</pubDate>
-      
-      <guid>/tags/oop/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Php</title>
+      <title>PHP</title>
       <link>/tags/php/</link>
       <pubDate>Wed, 16 Jan 2019 22:33:33 +0530</pubDate>
       
@@ -139,20 +67,11 @@
     </item>
     
     <item>
-      <title>Php7</title>
-      <link>/tags/php7/</link>
-      <pubDate>Wed, 14 Nov 2018 12:47:21 +0530</pubDate>
+      <title>Testing</title>
+      <link>/tags/testing/</link>
+      <pubDate>Wed, 16 Jan 2019 22:33:33 +0530</pubDate>
       
-      <guid>/tags/php7/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programms</title>
-      <link>/tags/programms/</link>
-      <pubDate>Sun, 22 Jul 2018 13:51:09 +0530</pubDate>
-      
-      <guid>/tags/programms/</guid>
+      <guid>/tags/testing/</guid>
       <description></description>
     </item>
     
@@ -166,11 +85,29 @@
     </item>
     
     <item>
-      <title>Random</title>
-      <link>/tags/random/</link>
-      <pubDate>Wed, 20 Feb 2019 17:59:03 +0530</pubDate>
+      <title>Event Sourcing</title>
+      <link>/tags/event-sourcing/</link>
+      <pubDate>Tue, 18 Dec 2018 09:42:13 +0530</pubDate>
       
-      <guid>/tags/random/</guid>
+      <guid>/tags/event-sourcing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tidbits</title>
+      <link>/tags/tidbits/</link>
+      <pubDate>Tue, 18 Dec 2018 09:42:13 +0530</pubDate>
+      
+      <guid>/tags/tidbits/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>/tags/javascript/</link>
+      <pubDate>Thu, 13 Dec 2018 22:04:51 +0530</pubDate>
+      
+      <guid>/tags/javascript/</guid>
       <description></description>
     </item>
     
@@ -193,20 +130,20 @@
     </item>
     
     <item>
-      <title>Redux</title>
-      <link>/tags/redux/</link>
-      <pubDate>Mon, 01 Oct 2018 21:39:04 +0530</pubDate>
+      <title>ES6</title>
+      <link>/tags/es6/</link>
+      <pubDate>Fri, 30 Nov 2018 21:49:43 +0530</pubDate>
       
-      <guid>/tags/redux/</guid>
+      <guid>/tags/es6/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Server</title>
-      <link>/tags/server/</link>
-      <pubDate>Sun, 20 Jan 2019 21:20:16 +0530</pubDate>
+      <title>Mysql</title>
+      <link>/tags/mysql/</link>
+      <pubDate>Wed, 28 Nov 2018 21:42:31 +0530</pubDate>
       
-      <guid>/tags/server/</guid>
+      <guid>/tags/mysql/</guid>
       <description></description>
     </item>
     
@@ -220,6 +157,87 @@
     </item>
     
     <item>
+      <title>Basics</title>
+      <link>/tags/basics/</link>
+      <pubDate>Fri, 23 Nov 2018 22:13:24 +0530</pubDate>
+      
+      <guid>/tags/basics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Mon, 19 Nov 2018 20:19:34 +0530</pubDate>
+      
+      <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PHP7</title>
+      <link>/tags/php7/</link>
+      <pubDate>Wed, 14 Nov 2018 12:47:21 +0530</pubDate>
+      
+      <guid>/tags/php7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Redux</title>
+      <link>/tags/redux/</link>
+      <pubDate>Mon, 01 Oct 2018 21:39:04 +0530</pubDate>
+      
+      <guid>/tags/redux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Databases</title>
+      <link>/tags/databases/</link>
+      <pubDate>Wed, 08 Aug 2018 19:59:38 +0530</pubDate>
+      
+      <guid>/tags/databases/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programms</title>
+      <link>/tags/programms/</link>
+      <pubDate>Sun, 22 Jul 2018 13:51:09 +0530</pubDate>
+      
+      <guid>/tags/programms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Laravel</title>
+      <link>/tags/laravel/</link>
+      <pubDate>Fri, 20 Jul 2018 18:08:33 +0530</pubDate>
+      
+      <guid>/tags/laravel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OOP</title>
+      <link>/tags/oop/</link>
+      <pubDate>Mon, 16 Jul 2018 13:14:11 +0530</pubDate>
+      
+      <guid>/tags/oop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hacks</title>
+      <link>/tags/hacks/</link>
+      <pubDate>Wed, 11 Jul 2018 21:20:13 +0530</pubDate>
+      
+      <guid>/tags/hacks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Stupid</title>
       <link>/tags/stupid/</link>
       <pubDate>Wed, 11 Jul 2018 21:20:13 +0530</pubDate>
@@ -229,29 +247,11 @@
     </item>
     
     <item>
-      <title>Testing</title>
-      <link>/tags/testing/</link>
-      <pubDate>Wed, 16 Jan 2019 22:33:33 +0530</pubDate>
+      <title>Nginx</title>
+      <link>/tags/nginx/</link>
+      <pubDate>Wed, 11 Jul 2018 17:31:55 +0530</pubDate>
       
-      <guid>/tags/testing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tidbits</title>
-      <link>/tags/tidbits/</link>
-      <pubDate>Tue, 18 Dec 2018 09:42:13 +0530</pubDate>
-      
-      <guid>/tags/tidbits/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Til</title>
-      <link>/tags/til/</link>
-      <pubDate>Tue, 22 Jan 2019 15:38:32 +0530</pubDate>
-      
-      <guid>/tags/til/</guid>
+      <guid>/tags/nginx/</guid>
       <description></description>
     </item>
     
